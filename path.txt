@@ -1,0 +1,40 @@
+0
+ Etudiants
+1
+Beaulieu
+8
+SPM
+3
+L2 - PCGS - S4
+1
+Compléments
+5
+GET_EDT
+__Cplt Méca2 (Gr2)
+2
+GET_EDT
+__Cplt PCS (Gr1)
+UP
+5
+Gr Physique
+2
+GET_EDT
+__Gr.p1 CMI (6)
+UP
+UP
+UP
+UP
+UP
+2
+Salles
+1
+Beaulieu
+1
+Apparitrices
+1
+1er CYCLE/Zone nord
+5
+BAT 27
+1
+GET_EDT
+__B27-Salle d'examens
