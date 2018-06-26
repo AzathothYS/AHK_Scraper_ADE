@@ -231,7 +231,7 @@ def getUpdates():
     for file in DATABASE_DIR.glob("**/*.json"):
         fileStr = str(file.relative_to(DATABASE_DIR))[:-5]
         fileStr = storageNameToName(fileStr, isPathLike=True)
-        fileStr = fileStr.replace("\\\\", "\\")
+        fileStr = fileStr.replace("/", "$%$").replace("\\", "/")
 
         toUpdate.append(fileStr)
 
@@ -447,7 +447,7 @@ def parseArgs():
               "\t-update\t\t\tmet à jour la database avec les fichiers NN.json stockés dans 'EdTOut/',\n\t\t\t\tliste toutes les mises à jour dans '" + UPDATE_FILE + "'\n" +
               "\t-clean\t\t\tnettoie la database des fichiers trop anciens ou pas utilisés\n" +
               "\t-verify\t\t\tvérifie la correspondance entre les dossiers de la database et le dernier\n\t\t\t\tfichier de l'arborescence d'ADE stocké\n" +
-              "\t-getUpdates file\técrit dans 'file' la liste des emplois du temps présents dans\n\t\t\t\tla database à metre à jour\n")
+              "\t-getUpdates\t\t\técrit dans 'requests.txt' la liste des emplois du temps présents dans\n\t\t\t\tla database à metre à jour\n")
         return
 
     log("ParseArgs", "Started with params: " + str(sys.argv))
@@ -486,16 +486,7 @@ def parseArgs():
             verifyDatabase()
 
         elif arg == "-getUpdates":
-            try:
-                global updatesOutput
-                updatesOutput = args_it.__next__()
-
-            except StopIteration:
-                print("Vous n'avez pas spécifé de fichier!")
-                exit(0)
-
-            else:
-                getUpdates()
+            getUpdates()
 
         else:
             log("ParseArgs", "Invalid parameter: '" + arg + "'", True)

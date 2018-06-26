@@ -3,7 +3,17 @@ from traceback import format_exc
 from datetime import datetime
 
 WORKING_DIR = "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/"
-REQUEST_OUT_FILE = "requests.txt"
+REQUEST_FILE = "requests.txt"
+
+SLASH_ESCAPE = "$%$"
+REQUEST_SEPARATOR = "~~~"
+
+SCRAPER_COMMANDS = [
+    "RESTART",      # ferme tous les dossiers ouverts dans ADE, pour s'assurer que ça ne lag pas, le scraper reprend ensuit
+    "RELOAD",       # recherge ADE, pour rafraichir le token par example et minimiser le lag        TODO : REMOVE ?
+    "GET_EDT",      # exporte le ficher sur lequel le pointeur se trouve
+    "UP"            # remonte d'un cran dans l'arborescence
+]
 
 def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_corrected.txt"):
     """
@@ -56,7 +66,7 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
 
 
     # stockage des requests formattées, utilisées plus tard pour updater la database
-    with open(REQUEST_OUT_FILE, "w") as requestsFile:
+    with open(REQUEST_FILE, "w") as requestsFile:
         requestsFile.writelines(req + '\n' for req in requests)
 
 
@@ -114,7 +124,7 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
 
     pathOutput[0] = str(int(pathOutput[0]) - 1) # le 1er dossier est la ligne initiale, il ne faut pas la compter
 
-    with open(WORKING_DIR + path_out, 'w', encoding="UTF-8") as out:
+    with open(WORKING_DIR + path_out, 'w', encoding="UTF-8", newline='') as out: # pas de transformation des caractères de fin de ligne
         for order in pathOutput:
             out.write(order + '\n') # seulement '\n' car c'est comme ça que fonctionne le scraper
 
@@ -197,7 +207,7 @@ def addOptimizationOrders(path: list):
         # on en rajoute un toutes les centaines, après un 'GET_EDT' pour éviter les actions inutiles
         for i in range(100, len(path), 100):
             try:
-                j = path[i:].index(SCRAPER_COMMANDS[2])
+                j = path[i:].index(SCRAPER_COMMANDS[2]) # TOTRY
             except ValueError:
                 break
             path.insert(j+1, SCRAPER_COMMANDS[0])
@@ -205,15 +215,11 @@ def addOptimizationOrders(path: list):
         log("Path is HUGE. Added breaks.")
 
 
-SLASH_ESCAPE = "$%$"
-REQUEST_SEPARATOR = "~~~"
 
-SCRAPER_COMMANDS = [
-    "RESTART",      # ferme tous les dossiers ouverts dans ADE, pour s'assurer que ça ne lag pas, le scraper reprend ensuit
-    "RELOAD",       # recherge ADE, pour rafraichir le token par example et minimiser le lag        TODO : REMOVE ?
-    "GET_EDT",      # exporte le ficher sur lequel le pointeur se trouve
-    "UP"            # remonte d'un cran dans l'arborescence
-]
+def log(text, tag="INFO"):
+    with open(WORKING_DIR + "log.txt", "a") as log:
+        log.write("\n{}\t- makePathFileFromRequests:\t{}:\t{}".format(datetime.now(), tag, text))
+
 
 
 def test():
@@ -233,37 +239,30 @@ def test():
 
 
 
-
-def log(text, tag="INFO"):
-    with open(WORKING_DIR + "log.txt", "a") as log:
-        log.write("\n{}\t- makePathFileFromRequests:\t{}:\t{}".format(datetime.now(), tag, text))
-
-
 def main():
     try:
-        if (len(sys.argv) > 1):
-            requests = sys.argv[1:]
+        with open(REQUEST_FILE, "r", buffering=1, encoding="UTF-8") as reqFile:
+            strFile = reqFile.read()
 
-            # toutes les requêtes ont été découpées à cause des espaces dans les noms des dossiers/fichiers
-            str_requests = ""
-            for arg in requests:
-                str_requests += str(arg) + " "
-            if (len(requests) > 1):
-                str_requests = str_requests[:-1]  # on supprime l'éventuel espace en fin de ligne
+        strFile = strFile.replace('\r', '').replace('\n', REQUEST_SEPARATOR)
 
-            makePathFromRequests(str_requests)
+        # on supprime l'éventuel espace en fin de ligne
+        if strFile.endswith(REQUEST_SEPARATOR):
+            strFile = strFile[:-len(REQUEST_SEPARATOR)]
+
+        log(strFile)
+
+        makePathFromRequests(strFile)
 
     except Exception:
         log(format_exc() + ("\n\tWith params: " + str(sys.argv[1:])) if len(sys.argv) > 1 else "", "ERROR")
         sys.stdout.write("ERROR")
 
     else:
-        log("Path made with params:\n\t" + str_requests if len(sys.argv) > 1 else "None")
+        log("Path made with params:\n\t" + strFile if len(sys.argv) > 1 else "None")
         sys.stdout.write("OK")
 
 
 
-
 if __name__ == '__main__':
-    #main()
-    test()
+    main()

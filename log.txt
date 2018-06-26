@@ -442,8 +442,8 @@ database failed!
   File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in test
     verifyDatabase()
   File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 207, in verifyDatabase
-    raise Exception("Le summary est corrompu! {} erreurs trouvées dans l'arborescence et {} erreurs trouvées dans la database.".format(arbo_errors, database_errors))
-Exception: Le summary est corrompu! 1 erreurs trouvées dans l'arborescence et 1 erreurs trouvées dans la database.
+    raise Exception("Le summary est corrompu! {} erreurs trouvï¿½es dans l'arborescence et {} erreurs trouvï¿½es dans la database.".format(arbo_errors, database_errors))
+Exception: Le summary est corrompu! 1 erreurs trouvï¿½es dans l'arborescence et 1 erreurs trouvï¿½es dans la database.
 
 database failed!
 
@@ -460,55 +460,48 @@ database failed!
 2018-06-21 13:11	- database:	main:	INFO  - Started.
 2018-06-21 13:11	- database:	ParseArgs:	INFO  - Started with params: ['database.py', '-getUpdates', 'yolo']
 2018-06-21 13:11	- database:	main:	INFO  - Finished.
-2018-06-25 21:00	- database:	main:	INFO  - Started.
-2018-06-25 21:00	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:00	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:00	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2).json', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1).json', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr---01R---p1 CMI (6).json', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE---00R---Zone nord\\BAT 27\\B27-Salle d'examens.json"]
-2018-06-25 21:00	- database:	main:	INFO  - Finished.
-2018-06-25 21:05	- database:	main:	INFO  - Started.
-2018-06-25 21:05	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:05	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:05	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE---00R---Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:05	- database:	main:	INFO  - Finished.
-2018-06-25 21:06	- database:	main:	INFO  - Started.
-2018-06-25 21:06	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:06	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:06	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE---00R---Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:06	- database:	main:	INFO  - Finished.
-2018-06-25 21:14	- database:	main:	INFO  - Started.
-2018-06-25 21:14	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:14	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:14	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:14	- database:	main:	INFO  - Finished.
-2018-06-25 21:15	- database:	main:	INFO  - Started.
-2018-06-25 21:15	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:15	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:15	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:15	- database:	main:	INFO  - Finished.
-2018-06-25 21:17	- database:	main:	INFO  - Started.
-2018-06-25 21:17	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:17	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:17	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:17	- database:	getUpdates:	INFO  - char at '\': \ - and the one after: B
-2018-06-25 21:17	- database:	main:	INFO  - Finished.
-2018-06-25 21:17	- database:	main:	INFO  - Started.
-2018-06-25 21:17	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:17	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:17	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:17	- database:	getUpdates:	INFO  - char at '\': \ - and the one after: B - and the one before: s
-2018-06-25 21:17	- database:	main:	INFO  - Finished.
-2018-06-25 21:23	- database:	main:	INFO  - Started.
-2018-06-25 21:23	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:23	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:23	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:23	- database:	main:	INFO  - Finished.
-2018-06-25 21:23	- database:	main:	INFO  - Started.
-2018-06-25 21:23	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:23	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:23	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:23	- database:	main:	INFO  - Finished.
-2018-06-25 21:25	- database:	main:	INFO  - Started.
-2018-06-25 21:25	- database:	main:	INFO  - TEST MODE
-2018-06-25 21:25	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 21:25	- database:	getUpdates:	INFO  - [' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt Méca2 (Gr2)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Compléments\\Cplt PCS (Gr1)', ' Etudiants\\Beaulieu\\SPM\\L2 - PCGS - S4\\Gr Physique\\Gr.p1 CMI (6)', "Salles\\Beaulieu\\Apparitrices\\1er CYCLE/Zone nord\\BAT 27\\B27-Salle d'examens"]
-2018-06-25 21:25	- database:	main:	INFO  - Finished.
+2018-06-25 23:59	- database:	main:	INFO  - Started.
+2018-06-25 23:59	- database:	main:	INFO  - TEST MODE
+2018-06-25 23:59	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-25 23:59	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-25 23:59	- database:	main:	INFO  - Finished.
+2018-06-25 23:59:47.403716	- makePathFileFromRequests:	INFO:	Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~
+2018-06-25 23:59:47.406716	- makePathFileFromRequests:	ERROR:	Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/makePathFileFromRequests.py", line 23, in makePathFromRequests
+    lastFile = request.rindex('/') + 1
+ValueError: substring not found
+
+	Unable to parse this request:
+	
+	Ignoring...
+2018-06-25 23:59:47.444715	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	
+	at folder : Etudiants
+	Ignoring this request...
+2018-06-25 23:59:47.485715	- makePathFileFromRequests:	INFO:	Done. Length of path: 37
+2018-06-25 23:59:47.486715	- makePathFileFromRequests:	INFO:	None
+2018-06-26 00:10:58.821638	- makePathFileFromRequests:	ERROR:	
+2018-06-26 00:11	- database:	main:	INFO  - Started.
+2018-06-26 00:11	- database:	main:	INFO  - TEST MODE
+2018-06-26 00:11	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-26 00:11	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-26 00:11	- database:	main:	INFO  - Finished.
+2018-06-26 00:11:09.111980	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~
+2018-06-26 00:11:09.114981	- makePathFileFromRequests:	ERROR:	Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/makePathFileFromRequests.py", line 33, in makePathFromRequests
+    lastFile = request.rindex('/') + 1
+ValueError: substring not found
+
+	Unable to parse this request:
+	
+	Ignoring...
+2018-06-26 00:11:09.178980	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-26 00:11:09.180979	- makePathFileFromRequests:	INFO:	None
+2018-06-26 00:14	- database:	main:	INFO  - Started.
+2018-06-26 00:14	- database:	main:	INFO  - TEST MODE
+2018-06-26 00:14	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-26 00:14	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-26 00:14	- database:	main:	INFO  - Finished.
+2018-06-26 00:14:26.236445	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-26 00:14:26.292444	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-26 00:14:26.293444	- makePathFileFromRequests:	INFO:	None

@@ -1,46 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba66f7e1-93b7-4929-8614-d9c16f0dabf2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Database/arborescence.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/summary.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/updateLog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ADEwait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/calendrierDate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/devToolsConsoleCross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/downloadCross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/exportButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/exportError.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/exportOkButtonOff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/exportOkButtonOn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/exportTitle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/scrollHautOn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/arbo_ADE for app.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/arbo_ADE[2].txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/charCounter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icsToJson.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/makePathFileFromRequests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArboScraper.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/ArboScraper.ahk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArboScraper.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ArboScraper.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arboADE_corrected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/arboADE_corrected.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20170924191627/ArborescenceScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20170927103106/ArborescenceScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20170927103146/ArborescenceScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20170927103340/ArborescenceScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154556/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154601/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154620/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154624/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154635/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154851/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/20171101154856/ArboScraper.ahk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outCrash.txt" beforeDir="false" />
+    <list default="true" id="ba66f7e1-93b7-4929-8614-d9c16f0dabf2" name="Default" comment="Project update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makePathFileFromRequests.py" beforeDir="false" afterPath="$PROJECT_DIR$/makePathFileFromRequests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path.txt" beforeDir="false" afterPath="$PROJECT_DIR$/path.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pathCrash.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_ADEScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_ADEScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requests.txt" afterDir="false" />
     </list>
     <ignored path="AHK_Scraper_ADE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="1386">
+              <caret line="489" lean-forward="true" selection-start-line="489" selection-end-line="489" />
               <folding>
                 <element signature="e#16#25#0" expanded="true" />
               </folding>
@@ -75,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/log.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
-              <caret line="485" column="65" selection-start-line="485" selection-start-column="65" selection-end-line="485" selection-end-column="65" />
+              <caret line="488" column="64" selection-start-line="488" selection-start-column="64" selection-end-line="488" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -83,17 +50,17 @@
       <file leaf-file-name="requests.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requests.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="17">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="makePathFileFromRequests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="makePathFileFromRequests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
+            <state relative-caret-position="315">
+              <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
             </state>
           </provider>
         </entry>
@@ -125,6 +92,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="AzathothYS &lt;34173752+azathothys@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -132,20 +104,20 @@
       <list>
         <option value="$PROJECT_DIR$/arboADE_corrected.txt" />
         <option value="$PROJECT_DIR$/run_ADEScraper.py" />
-        <option value="$PROJECT_DIR$/log.txt" />
         <option value="$PROJECT_DIR$/updateDAt&amp;a.py" />
         <option value="$PROJECT_DIR$/updateDatabase.py" />
-        <option value="$PROJECT_DIR$/makePathFileFromRequests.py" />
         <option value="$PROJECT_DIR$/icsToJson.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$PROJECT_DIR$/requests.txt" />
+        <option value="$PROJECT_DIR$/log.txt" />
+        <option value="$PROJECT_DIR$/makePathFileFromRequests.py" />
         <option value="$PROJECT_DIR$/database.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="960" />
@@ -156,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,13 +144,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.database">
+  <component name="RunManager" selected="Python.makePathFileFromRequests">
     <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AHK_Scraper_ADE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,7 +183,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="icsToJson" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="makePathFileFromRequests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AHK_Scraper_ADE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,7 +195,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/icsToJson.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/makePathFileFromRequests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,18 +276,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.scratch" />
-      <item itemvalue="Python.icsToJson" />
       <item itemvalue="Python.database" />
       <item itemvalue="Python.scratch_1" />
       <item itemvalue="Python.scratch_2" />
+      <item itemvalue="Python.makePathFileFromRequests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.makePathFileFromRequests" />
         <item itemvalue="Python.database" />
         <item itemvalue="Python.scratch_2" />
         <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.icsToJson" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +304,7 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -345,10 +316,9 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13859275" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32985386" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32985386" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32776618" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3308977" />
@@ -362,7 +332,34 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -374,6 +371,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,13 +652,6 @@
         <state relative-caret-position="-9658" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_ADEScraper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -761,37 +755,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Database/requests.txt" />
+    <entry file="file://$PROJECT_DIR$/path.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
-          <caret line="485" column="65" selection-start-line="485" selection-start-column="65" selection-end-line="485" selection-end-column="65" />
+          <caret line="488" column="64" selection-start-line="488" selection-start-column="64" selection-end-line="488" selection-end-column="64" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/requests.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/requests.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
+        <state relative-caret-position="315">
+          <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="489" lean-forward="true" selection-start-line="489" selection-end-line="489" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
