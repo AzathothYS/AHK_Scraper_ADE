@@ -139,369 +139,82 @@
 2018-06-18 12:10	- database:	saveUpdateLog:	INFO  - Saved update log.
 2018-06-18 12:10	- database:	saveSummary:	INFO  - Sucessfully saved new summary
 2018-06-18 12:10	- database:	main:	INFO  - Finished.
-2018-06-19 13:08	- database:	main:	INFO  - Started.
-2018-06-19 13:08	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:08	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 442, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 430, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 157, in verifyDatabase
-    with open(ARBORESCENCE_FILE, "r", buffering=1) as arbo: # buffering par ligne
-FileNotFoundError: [Errno 2] No such file or directory: 'arborescence.txt'
 
-database failed!
 
-2018-06-19 13:09	- database:	main:	INFO  - Started.
-2018-06-19 13:09	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:09	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 442, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 430, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 162, in verifyDatabase
-    line = gotoNextFolder(arbo, getIndentOfLine(line))
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 265, in gotoNextFolder
-    line = file.readLine()
-AttributeError: '_io.TextIOWrapper' object has no attribute 'readLine'
 
-database failed!
 
-2018-06-19 13:25	- database:	main:	INFO  - Started.
-2018-06-19 13:25	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:25	- database:	gotoNextfolder:	INFO  - type: <class '_io.TextIOWrapper'> - attributes: ['_CHUNK_SIZE', '__class__', '__del__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__ne__', '__new__', '__next__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_checkClosed', '_checkReadable', '_checkSeekable', '_checkWritable', '_finalizing', 'buffer', 'close', 'closed', 'detach', 'encoding', 'errors', 'fileno', 'flush', 'isatty', 'line_buffering', 'mode', 'name', 'newlines', 'read', 'readable', 'readline', 'readlines', 'seek', 'seekable', 'tell', 'truncate', 'writable', 'write', 'writelines']
-2018-06-19 13:25	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 443, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 431, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 162, in verifyDatabase
-    line = gotoNextFolder(arbo, getIndentOfLine(line))
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 266, in gotoNextFolder
-    line = file.readLine()
-AttributeError: '_io.TextIOWrapper' object has no attribute 'readLine'
 
-database failed!
 
-2018-06-19 13:26	- database:	main:	INFO  - Started.
-2018-06-19 13:26	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:26	- database:	gotoNextfolder:	INFO  - type: <class '_io.TextIOWrapper'> - attributes: ['_CHUNK_SIZE', '__class__', '__del__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__ne__', '__new__', '__next__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_checkClosed', '_checkReadable', '_checkSeekable', '_checkWritable', '_finalizing', 'buffer', 'close', 'closed', 'detach', 'encoding', 'errors', 'fileno', 'flush', 'isatty', 'line_buffering', 'mode', 'name', 'newlines', 'read', 'readable', 'readline', 'readlines', 'seek', 'seekable', 'tell', 'truncate', 'writable', 'write', 'writelines']
-2018-06-19 13:26	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 443, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 431, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 162, in verifyDatabase
-    line = gotoNextFolder(arbo, getIndentOfLine(line))
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 269, in gotoNextFolder
-    line = file.readline()
-  File "D:\Python\Python36\lib\encodings\cp1252.py", line 23, in decode
-    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
-UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 4478: character maps to <undefined>
 
-database failed!
+2018-06-28 11:44	- database:	main:	INFO  - Started.
+2018-06-28 11:44	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-06-28 11:44	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-28 11:44	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-28 11:44	- database:	main:	INFO  - Finished.
+2018-06-28 11:44:37.280419	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-28 11:44:37.284419	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-06-28 11:44:37.341418	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-28 11:44:37.343419	- makePathFileFromRequests:	INFO:	None2018-06-28-11:44:37	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-19 13:27	- database:	main:	INFO  - Started.
-2018-06-19 13:27	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:27	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 13:27	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 442, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 430, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 161, in verifyDatabase
-    while not compareFromLine(line, entry):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 259, in compareFromLine
-    return line.__contains__(name)
-AttributeError: 'bool' object has no attribute '__contains__'
+2018-06-28-11:44:37	SCRAPER 	INFO_: Starting the script in normal mode and startup mode
+2018-06-28-11:44:50	SCRAPER 	INFO_Stop: Escaped!
+2018-06-28-11:44:50	SCRAPER 	INFO_Stop: Errors occured
+2018-06-28-11:44:50	SCRAPER 	INFO_Stop: run time: 13297 ms
 
-database failed!
+2018-06-28 11:51	- database:	main:	INFO  - Started.
+2018-06-28 11:51	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-06-28 11:51	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-28 11:51	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-28 11:51	- database:	main:	INFO  - Finished.
+2018-06-28 11:51:14.676030	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-28 11:51:14.676030	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-06-28 11:51:14.722854	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-28 11:51:14.722854	- makePathFileFromRequests:	INFO:	None2018-06-28-11:51:16	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-19 13:29	- database:	main:	INFO  - Started.
-2018-06-19 13:29	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:29	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 13:29	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Cplt Mï¿½ca2 (Gr2)' eu 'Cplt Mï¿½ca2 (Gr2).json'
-2018-06-19 13:29	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 441, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 429, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 173, in verifyDatabase
-    for entry_summary, entry_database in zip(iterateThroughSummary(summary, outputFileInfo=True), iterateThroughDatabase()):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 240, in iterateThroughDatabase
-    yield from iterateThroughDatabase(obj)
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 240, in iterateThroughDatabase
-    yield from iterateThroughDatabase(obj)
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 240, in iterateThroughDatabase
-    yield from iterateThroughDatabase(obj)
-  [Previous line repeated 1 more times]
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 247, in iterateThroughDatabase
-    yield json.load(obj)[-1] # output file info, toujours ï¿½ la fin du fichier
-  File "D:\Python\Python36\lib\json\__init__.py", line 296, in load
-    return loads(fp.read(),
-AttributeError: 'WindowsPath' object has no attribute 'read'
+2018-06-28-11:51:16	SCRAPER 	INFO_: Starting the script in normal mode and startup mode
+2018-06-28-11:51:59	SCRAPER 	INFO_Stop: Errors occured
+2018-06-28-11:51:59	SCRAPER 	INFO_Stop: run time: 41969 ms
 
-database failed!
+2018-06-28 14:36	- database:	main:	INFO  - Started.
+2018-06-28 14:36	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-06-28 14:36	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-28 14:36	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-28 14:36	- database:	main:	INFO  - Finished.
+2018-06-28 14:36:57.858656	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-28 14:36:57.860656	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-06-28 14:36:57.919655	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-28 14:36:57.921655	- makePathFileFromRequests:	INFO:	None
+2018-06-28 14:40	- database:	main:	INFO  - Started.
+2018-06-28 14:40	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-06-28 14:40	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-28 14:40	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-28 14:40	- database:	main:	INFO  - Finished.
+2018-06-28 14:40:56.460787	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-28 14:40:56.461782	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-06-28 14:40:56.519781	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-28 14:40:56.521781	- makePathFileFromRequests:	INFO:	None2018-06-28-14:40:56	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-19 13:33	- database:	main:	INFO  - Started.
-2018-06-19 13:33	- database:	main:	INFO  - TEST MODE
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Cplt PCS (Gr1)' eu '{'file_sum': 'e8f2eba26b636920798ff0ea806eaca3', 'source_file': '__Cplt Mï¿½ca2 (Gr2)'}'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Gr Physique' eu 'Cplt PCS (Gr1)'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Gr---01R---p1 CMI (6)' eu '{'file_sum': 'fe73ac98d7ecc32e3365f574f4bde796', 'source_file': '__Cplt PCS (Gr1)'}'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Salles' eu 'Gr Physique'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Beaulieu' eu 'Gr---01R---p1 CMI (6)'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'Apparitrices' eu '{'file_sum': '1308cb8b5bbff84037d64449292c80a3', 'source_file': '__Gr.p1 CMI (6)'}'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: '1er CYCLE---00R---Zone nord' eu 'Salles'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'BAT 27' eu 'Beaulieu'
-2018-06-19 13:33	- database:	verifyDatabase:	ERROR - La database et le summary ne coï¿½ncident pas! Voulu: 'B27-Salle d'examens' eu 'Apparitrices'
-2018-06-19 13:33	- database:	verifyDatabse:	INFO  - La database est corrompue!
-2018-06-19 13:33	- database:	main:	INFO  - Finished.
-2018-06-19 14:10	- database:	main:	INFO  - Started.
-2018-06-19 14:10	- database:	main:	INFO  - TEST MODE
-2018-06-19 14:10	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 14:10	- database:	verifyDatabse:	INFO  - La database est corrompue!
-2018-06-19 14:10	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 444, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 432, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 189, in verifyDatabase
-    raise Exception("La database est corrompue. {} erreurs trouvï¿½es.".format(errors))
-Exception: La database est corrompue. 1 erreurs trouvï¿½es.
+2018-06-28-14:40:56	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-06-28-14:41:17	SCRAPER 	ERROR_Startup: Unable to open or find DevTools! active window :DevTools - planning.univ-rennes1.fr/direct/myplanning.jsp?ticket=ST-50987-k0ihAx19yKjq0SePku0j-sso-cas.univ-rennes1.fr
+2018-06-28-14:41:17	SCRAPER 	INFO_Stop: Errors occured
+2018-06-28-14:41:17	SCRAPER 	INFO_Stop: run time: 20438 ms
 
-database failed!
+2018-06-28 14:44	- database:	main:	INFO  - Started.
+2018-06-28 14:44	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-06-28 14:44	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-06-28 14:44	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-06-28 14:44	- database:	main:	INFO  - Finished.
+2018-06-28 14:44:25.835096	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-06-28 14:44:25.837095	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-06-28 14:44:25.901094	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-06-28 14:44:25.904096	- makePathFileFromRequests:	INFO:	None2018-06-28-14:44:27	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-19 14:12	- database:	main:	INFO  - Started.
-2018-06-19 14:12	- database:	main:	INFO  - TEST MODE
-2018-06-19 14:12	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 14:12	- database:	verifyDatabse:	INFO  - La database est corrompue!
-2018-06-19 14:12	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 444, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 432, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 189, in verifyDatabase
-    raise Exception("La database est corrompue. {} erreurs trouvï¿½es.".format(errors))
-Exception: La database est corrompue. 1 erreurs trouvï¿½es.
-
-database failed!
-
-2018-06-19 14:15	- database:	main:	INFO  - Started.
-2018-06-19 14:15	- database:	main:	INFO  - TEST MODE
-2018-06-19 14:15	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 14:15	- database:	verifyDatabase:	INFO  - La database est corrompue!
-2018-06-19 14:15	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 450, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 438, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 195, in verifyDatabase
-    raise Exception("La database est corrompue. {} erreurs trouvï¿½es.".format(errors))
-Exception: La database est corrompue. 1 erreurs trouvï¿½es.
-
-database failed!
-
-2018-06-19 14:23	- database:	main:	INFO  - Started.
-2018-06-19 14:23	- database:	main:	INFO  - TEST MODE
-2018-06-19 14:23	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 14:23	- database:	verifyDatabase:	INFO  - La taille de la database et du summary ne correspondent pas!
-2018-06-19 14:23	- database:	verifyDatabase:	INFO  - Le summary est corrompu!
-2018-06-19 14:23	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 461, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 449, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 204, in verifyDatabase
-    raise Exception("Le summary est corrompu! {} erreurs trouvï¿½es dans l'arborescence et {} erreurs trouvï¿½es dans la database.".format(arbo_errors, database_errors))
-Exception: Le summary est corrompu! 1 erreurs trouvï¿½es dans l'arborescence et 1 erreurs trouvï¿½es dans la database.
-
-database failed!
-
-2018-06-19 14:24	- database:	main:	INFO  - Started.
-2018-06-19 14:24	- database:	main:	INFO  - TEST MODE
-2018-06-19 14:24	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 14:24	- database:	verifyDatabase:	ERROR - Le checksum de la database et du summary sont diffï¿½rents pour '__B27-Salle d'examens' ('__B27-Salle d'examens')
-2018-06-19 14:24	- database:	verifyDatabase:	INFO  - Le summary est corrompu!
-2018-06-19 14:24	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 461, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 449, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 204, in verifyDatabase
-    raise Exception("Le summary est corrompu! {} erreurs trouvï¿½es dans l'arborescence et {} erreurs trouvï¿½es dans la database.".format(arbo_errors, database_errors))
-Exception: Le summary est corrompu! 1 erreurs trouvï¿½es dans l'arborescence et 1 erreurs trouvï¿½es dans la database.
-
-database failed!
-
-2018-06-19 15:31	- database:	main:	INFO  - Started.
-2018-06-19 15:31	- database:	main:	INFO  - TEST MODE
-2018-06-19 15:31	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 15:31	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 470, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 458, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 188, in verifyDatabase
-    if database_errors == 0 and (gen_summary.__next__() != None or gen_database.__next__() != None):
-StopIteration
-
-database failed!
-
-2018-06-19 15:57	- database:	main:	INFO  - Started.
-2018-06-19 15:57	- database:	main:	INFO  - TEST MODE
-2018-06-19 15:57	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 473, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 461, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 161, in verifyDatabase
-    line = gotoNextFolder(arbo, level)
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 299, in gotoNextFolder
-    log("gotoNextFolder-" + indent, line) # TODO DEBUG
-TypeError: must be str, not int
-
-database failed!
-
-2018-06-19 15:58	- database:	main:	INFO  - Started.
-2018-06-19 15:58	- database:	main:	INFO  - TEST MODE
-2018-06-19 15:58	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Beaulieu' dans l'arborescence!
-2018-06-19 15:58	- database:	verifyDatabase:	INFO  - L'arborescence est corrompue!
-2018-06-19 15:58	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 473, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 461, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 202, in verifyDatabase
-    raise Exception("L'arborescence est corrompue! {} erreurs trouvï¿½es.".format(arbo_errors))
-Exception: L'arborescence est corrompue! 1 erreurs trouvï¿½es.
-
-database failed!
-
-2018-06-19 16:03	- database:	main:	INFO  - Started.
-2018-06-19 16:03	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:03	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Gr---01R---p1 CMI (6)' dans l'arborescence!
-2018-06-19 16:03	- database:	verifyDatabase:	INFO  - L'arborescence est corrompue!
-2018-06-19 16:03	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 475, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 202, in verifyDatabase
-    raise Exception("L'arborescence est corrompue! {} erreurs trouvï¿½es.".format(arbo_errors))
-Exception: L'arborescence est corrompue! 1 erreurs trouvï¿½es.
-
-database failed!
-
-2018-06-19 16:04	- database:	main:	INFO  - Started.
-2018-06-19 16:04	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:04	- database:	verifyDatabase:	ERROR - Impossible de trouver 'Gr---01R---p1 CMI (6)' dans l'arborescence!
-2018-06-19 16:04	- database:	verifyDatabase:	INFO  - L'arborescence est corrompue!
-2018-06-19 16:04	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 475, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 202, in verifyDatabase
-    raise Exception("L'arborescence est corrompue! {} erreurs trouvï¿½es.".format(arbo_errors))
-Exception: L'arborescence est corrompue! 1 erreurs trouvï¿½es.
-
-database failed!
-
-2018-06-19 16:07	- database:	main:	INFO  - Started.
-2018-06-19 16:07	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:07	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 476, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 464, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 160, in verifyDatabase
-    entryInArbo = storageNameToName(entry, isPathLike=False)
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 247, in storageNameToName
-    for keyChar, replacementChars in REPLACEMENTS.items()[1 if isPathLike else 0:]:
-TypeError: 'dict_items' object is not subscriptable
-
-database failed!
-
-2018-06-19 16:15	- database:	main:	INFO  - Started.
-2018-06-19 16:15	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:15	- database:	verifyDatabase:	INFO  - Aucune erreur trouvï¿½e.
-2018-06-19 16:15	- database:	main:	INFO  - Finished.
-2018-06-19 16:16	- database:	main:	INFO  - Started.
-2018-06-19 16:16	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:16	- database:	verifyDatabase:	INFO  - Aucune erreur trouvï¿½e.
-2018-06-19 16:16	- database:	main:	INFO  - Finished.
-2018-06-19 16:21	- database:	main:	INFO  - Started.
-2018-06-19 16:21	- database:	main:	INFO  - TEST MODE
-2018-06-19 16:21	- database:	verifyDatabase:	ERROR - Impossible de trouver 'swagg' dans l'arborescence!
-2018-06-19 16:21	- database:	verifyDatabase:	INFO  - La taille de la database et du summary ne correspondent pas!
-2018-06-19 16:21	- database:	verifyDatabase:	INFO  - Le summary est corrompu!
-2018-06-19 16:21	- database:	main:	ERROR - Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 475, in <module>
-    test()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in test
-    verifyDatabase()
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 207, in verifyDatabase
-    raise Exception("Le summary est corrompu! {} erreurs trouvï¿½es dans l'arborescence et {} erreurs trouvï¿½es dans la database.".format(arbo_errors, database_errors))
-Exception: Le summary est corrompu! 1 erreurs trouvï¿½es dans l'arborescence et 1 erreurs trouvï¿½es dans la database.
-
-database failed!
-
-2018-06-21 13:02	- database:	main:	INFO  - Started.
-2018-06-21 13:02	- database:	main:	INFO  - Finished.
-2018-06-21 13:02	- database:	main:	INFO  - Started.
-2018-06-21 13:02	- database:	main:	INFO  - Finished.
-2018-06-21 13:02	- database:	main:	INFO  - Started.
-2018-06-21 13:02	- database:	main:	INFO  - Finished.
-2018-06-21 13:11	- database:	main:	INFO  - Started.
-2018-06-21 13:11	- database:	ParseArgs:	INFO  - Started with params: ['database.py', '-getUpdates']
-2018-06-21 13:11	- database:	main:	INFO  - Started.
-2018-06-21 13:11	- database:	ParseArgs:	INFO  - Started with params: ['database.py', '-getUpdates']
-2018-06-21 13:11	- database:	main:	INFO  - Started.
-2018-06-21 13:11	- database:	ParseArgs:	INFO  - Started with params: ['database.py', '-getUpdates', 'yolo']
-2018-06-21 13:11	- database:	main:	INFO  - Finished.
-2018-06-25 23:59	- database:	main:	INFO  - Started.
-2018-06-25 23:59	- database:	main:	INFO  - TEST MODE
-2018-06-25 23:59	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-25 23:59	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-25 23:59	- database:	main:	INFO  - Finished.
-2018-06-25 23:59:47.403716	- makePathFileFromRequests:	INFO:	Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~
-2018-06-25 23:59:47.406716	- makePathFileFromRequests:	ERROR:	Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/makePathFileFromRequests.py", line 23, in makePathFromRequests
-    lastFile = request.rindex('/') + 1
-ValueError: substring not found
-
-	Unable to parse this request:
-	
-	Ignoring...
-2018-06-25 23:59:47.444715	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
-	
-	at folder : Etudiants
-	Ignoring this request...
-2018-06-25 23:59:47.485715	- makePathFileFromRequests:	INFO:	Done. Length of path: 37
-2018-06-25 23:59:47.486715	- makePathFileFromRequests:	INFO:	None
-2018-06-26 00:10:58.821638	- makePathFileFromRequests:	ERROR:	
-2018-06-26 00:11	- database:	main:	INFO  - Started.
-2018-06-26 00:11	- database:	main:	INFO  - TEST MODE
-2018-06-26 00:11	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-26 00:11	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-26 00:11	- database:	main:	INFO  - Finished.
-2018-06-26 00:11:09.111980	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~
-2018-06-26 00:11:09.114981	- makePathFileFromRequests:	ERROR:	Traceback (most recent call last):
-  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/makePathFileFromRequests.py", line 33, in makePathFromRequests
-    lastFile = request.rindex('/') + 1
-ValueError: substring not found
-
-	Unable to parse this request:
-	
-	Ignoring...
-2018-06-26 00:11:09.178980	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-26 00:11:09.180979	- makePathFileFromRequests:	INFO:	None
-2018-06-26 00:14	- database:	main:	INFO  - Started.
-2018-06-26 00:14	- database:	main:	INFO  - TEST MODE
-2018-06-26 00:14	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-26 00:14	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-26 00:14	- database:	main:	INFO  - Finished.
-2018-06-26 00:14:26.236445	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-26 00:14:26.292444	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-26 00:14:26.293444	- makePathFileFromRequests:	INFO:	None
+2018-06-28-14:44:27	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-06-28-14:44:43	SCRAPER 	ERROR_Startup: Couldn't find devToolsElements.png!
+2018-06-28-14:44:44	SCRAPER 	INFO_Stop: Errors occured
+2018-06-28-14:44:44	SCRAPER 	INFO_Stop: run time: 15375 ms

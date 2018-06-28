@@ -59,11 +59,11 @@ Loop %0% {
 			}
 		}
 		If (P_path == "") {
-			MsgBox, , ArboScraper, Vous n'avez pas spécifié de path.
+			DebugPrint("args", "Vous n'avez pas spécifié de path.", false)
 			Stop()
 		}
 		If (InStr(P_path, "/") or InStr(P_path, "\")) {
-			MsgBox, , ArboScraper, % "Le path spécifié est incorrect. Il doit faire référence à un fichier se trouvant dans le dossier du script. " . P_path
+			DebugPrint("args", "Le path spécifié est incorrect. Il doit faire référence à un fichier se trouvant dans le dossier du script. " . P_path, false)
 			Stop()
 		}
 		
@@ -74,7 +74,7 @@ Loop %0% {
 			}
 		}
 		If (P_out == "") {
-			MsgBox, , ArboScraper, Vous n'avez pas spécifié de fichier out.
+			DebugPrint("args", "Vous n'avez pas spécifié de fichier out.", false)
 			Stop()
 		}
 		
@@ -85,7 +85,7 @@ Loop %0% {
 			}
 		}
 		If (P_log == "") {
-			MsgBox, , ArboScraper, Vous n'avez pas spécifié de fichier log.
+			DebugPrint("args", "Vous n'avez pas spécifié de fichier log.", false)
 			Stop()
 		}
 		
@@ -96,7 +96,7 @@ Loop %0% {
 			}
 		}
 		If (DownLoads_Folder == "") {
-			MsgBox, , ArboScraper, Vous n'avez pas spécifié de dossier 'Téléchargements'
+			DebugPrint("args", "Vous n'avez pas spécifié de dossier 'Téléchargements'", false)
 			Stop()
 		}
 		
@@ -107,7 +107,7 @@ Loop %0% {
 			}
 		}
 		If (EdT_Out_Folder == "") {
-			MsgBox, , ArboScraper, Vous n'avez pas spécifié de dossier 'EdT_Out'
+			DebugPrint("args", "Vous n'avez pas spécifié de dossier 'EdT_Out'", false)
 			Stop()
 		}
 		
@@ -141,7 +141,7 @@ If (nbParams == 0) {
 
 If (P_mode == -1) {
 	; uninitialized mode
-	MsgBox, , ArboScraper, The mode must be specified (-arbo or -path)
+	DebugPrint("main", "The mode must be specified (-arbo or -path)", true)
 	ExitApp
 }
 
@@ -154,7 +154,7 @@ DebugPrint("", "Script started with parameters: " . paramPrint . "`n", true)
 global indent := "", arboX := 0, arboY := 0, arboFinX := 0, arboFinY := 0, lineHeight := 0, lineWidth := 0, devToolsX := 0, devToolsY := 0, coinScrollX := 0, coinScrollY := 0
 
 global ADE_Height := "", ADE_Width := "" ; dimensions de la fenêtre d'ADE
-global WIN_ADE := "ADE - ahk_class Chrome_WidgetWin_1", WIN_DEV := "Developer Tools ahk_class Chrome_WidgetWin_1" ; strings permettant d'identifier chaque fenêtre
+global WIN_ADE := "ADE - ahk_class Chrome_WidgetWin_1", WIN_DEV := "DevTools ahk_class Chrome_WidgetWin_1" ; strings permettant d'identifier chaque fenêtre
 
 If (P_mode == 1) {
 	; initialisation des variables pour l'EdT scraping
@@ -168,7 +168,7 @@ If (TEST_MODE) {
 }
 
 If (P_startup) {
-	DebugPrint("", "Starting the script in normal mode and startup mode", true)
+	DebugPrint("main", "Starting the script in normal mode and startup mode", true)
 	Startup()
 }
 
@@ -216,8 +216,8 @@ InitFiles() {
 	logFile := FileOpen(P_log, "a")
 	
 	If !IsObject(logFile) {
-		MsgBox, , % "Can't open " . P_log . "!"
-		ExitApp
+		DebugPrint("InitFiles", "Can't open " . P_log . "!", false)
+		Stop()
 	}
 	
 	If (P_mode == 0) {
@@ -278,11 +278,11 @@ Startup() {
 	
 	;on change la position de la fenêtre avec le racourci Win+Droite jusqu'a la position voulue
 	pixelTop := 0x000000
-	while(pixelTop != 0xFFFFFF) {
+	while(pixelTop != 0xCCCCCC) {
 		ControlFocus, , Nouvel onglet - Google Chrome, Chrome Legacy Window, , Chrome Legacy Window`nChrome Legacy Window	;focus la nouvelle fenêtre
 		Sleep 25
 		SendInput, {Right}
-		Sleep 200
+		Sleep 300
 		PixelGetColor, pixelTop, 5, 5
 		
 		If (A_Index == 5) {
@@ -296,7 +296,7 @@ Startup() {
 		If (A_Index > 10) {
 			SendInput, {LWin up}
 			Sleep 50
-			MsgBox, , ArboScraper, Unable to get the window to the correct position!
+			DebugPrint("Startup", "Unable to get the window to the correct position!", false)
 			Stop()
 		}
 	}
@@ -317,7 +317,7 @@ Startup() {
 	;si ADE nous demande de se connecter
 	ImageSearch, loginX, loginY, 0, 0, 750, 1000, Images\ecranConnection2.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search for ecranConnection2.png!
+		DebugPrint("Startup", "Unable to search for ecranConnection2.png!", false)
 		Stop()
 	} else if (ErrorLevel == 0) {
 		SendInput, {Tab 2}
@@ -334,7 +334,7 @@ Startup() {
 		
 		If (A_Index > 100) {
 			MouseMove, 10, 100
-			MsgBox, , ArboScraper, % "Timeout : ADE didn't load? pixel:" . pixelADE
+			DebugPrint("Startup", "Timeout : ADE didn't load? pixel:" . pixelADE, false)
 			Stop()
 		}
 	}
@@ -350,29 +350,30 @@ Startup() {
 		Sleep 100
 		WinGetActiveTitle, title
 		
-		If(InStr(title, "Developer Tools")) {
+		If(InStr(title, "DevTools")) {
 			Break
 		}
 		
 		If (A_Index > 50) {
-			MsgBox, , ArboScraper, %  "Unable to open or find DevTools! active window :" . title
+			DebugPrint("Startup", "Unable to open or find DevTools! active window :" . title, false)
 			Stop()
 		}
 	}
 	
 	Sleep 100
-	WinMove, Developer Tools, , 10, 10, 800, 256
+	WinMove, %WIN_DEV%, , 10, 10, 800, 256
 	Sleep 250
 	
 	;on s'assure que l'onglet 'Elements' est actif
 	ImageSearch, elementsX, elementsY, 0, 0, 800, 256, Images\devToolsElements.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search devToolsElements.png!
+		DebugPrint("Startup", "Unable to search devToolsElements.png!", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Couldn't find devToolsElements.png!
+		DebugPrint("Startup", "Couldn't find devToolsElements.png!", false)
 		Stop()
 	} 
+	
 	MouseMove, elementsX + 5, elementsY + 5
 	Click
 	Sleep 500
@@ -380,10 +381,10 @@ Startup() {
 	;on enlève l'affichage des 'Styles', pour qu'il ne ralentisse pas le scraping
 	ImageSearch, styleSwitchX, styleSwitchY, 400, elementsY + 5, 800, 256, *50 Images\switchStyleDevTools.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search switchStyleDevTools.png!
+		DebugPrint("Startup", "Unable to search switchStyleDevTools.png!", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Couldn't find switchStyleDevTools.png!
+		DebugPrint("Startup", "Couldn't find switchStyleDevTools.png!", false)
 		Stop()
 	}
 	
@@ -398,7 +399,7 @@ Startup() {
 	; si la fenêtre de la console est ouverte, on clique sur la croix pour la fermer
 	ImageSearch, croixX, croixY, 750, elementsY + 100, 800, 256, *50 Images\devToolsConsoleCross.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search devToolsConsoleCross.png!
+		DebugPrint("Startup", "Unable to search devToolsConsoleCross.png!", false)
 		Stop()
 	} else if (ErrorLevel != 1) {
 		MouseMove, croixX + 3, croixY + 3
@@ -411,16 +412,16 @@ Startup() {
 	Sleep 250
 	
 	;on revient sur ADE
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	Sleep 250
 	
 	;on agrandit l'arborescence
 	ImageSearch, resizeStartX, resizeStartY, 200, 500, 500, 800, Images\limiteListeADE.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search for limiteListeADE.png!
+		DebugPrint("Startup", "Unable to search for limiteListeADE.png!", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Couldn't find limiteListeADE.png!
+		DebugPrint("Startup", "Couldn't find limiteListeADE.png!", false)
 		Stop()
 	}
 	
@@ -449,10 +450,10 @@ Init() {
 		ImageSearch, arboX, arboY, 0, 0, 1000, 1000, Images\nom_liste_dossiers.png
 		
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Could not search for image : nom_liste_dossiers.png
+			DebugPrint("Init", "Could not search for image : nom_liste_dossiers.png", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
-			MsgBox, , ArboScraper, Image not found : nom_liste_dossiers.png
+			DebugPrint("Init", "Image not found : nom_liste_dossiers.png", false)
 			Stop()
 		}
 		
@@ -465,17 +466,17 @@ Init() {
 	ImageSearch, arboFinX, arboFinY, arboX, arboY, 1000, 1000, Images\scrollBasOn.png
 	
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search for image : scrollBasOn.png
+		DebugPrint("Init", "Could not search for image : scrollBasOn.png", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
 		
 		ImageSearch, arboFinX, arboFinY, arboX, arboY, 1000, 1000, Images\scrollBasOff.png
 		
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Could not search for image : scrollBasOff.png
+			DebugPrint("Init", "Could not search for image : scrollBasOff.png", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
-			MsgBox, , ArboScraper, Image not found : scrollBasOff.png
+			DebugPrint("Init", "Image not found : scrollBasOff.png", false)
 			Stop()
 		}
 	}
@@ -486,10 +487,10 @@ Init() {
 	;coord du coin en bas à droite de la liste
 	ImageSearch, coinScrollX, coinScrollY, arboFinX - 5, arboFinY - 5, arboFinX + 30, arboFinY + 30, Images\coinScrollBas.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search for image : coinScrollBas.png
+		DebugPrint("Init", "Could not search for image : coinScrollBas.png", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Could not find image : coinScrollBas.png
+		DebugPrint("Init", "Could not find image : coinScrollBas.png", false)
 		Stop()
 	}
 	
@@ -500,7 +501,7 @@ Init() {
 FindStartingPosOfArbo_OLD() {
 	; on commence par l'axe Y
 	
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	Sleep 25
 	
 	x := 100
@@ -671,11 +672,11 @@ SetDevToolsWinSize() {
 		;dev tools is the active window
 		WinGetPos, , , devToolsX, devToolsY 
 	} else {
-		MsgBox, , ArboScraper, Unable to find the Developer Tools window
+		DebugPrint("Init", "Unable to find the Developer Tools window", false)
 		Stop()
 	}
 	
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	
 	Sleep 200
 }
@@ -684,7 +685,7 @@ SetDevToolsWinSize() {
 
 Main_Arbo() {	
 	
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	
 	MouseMove, -5, -50, 0, R
 	
@@ -758,7 +759,7 @@ Main_Arbo() {
 				;si on a un dossier sur la dernière ligne, quand on va l'ouvrir le prochain scroll sera foiré
 				ImageSearch, , , arboX, y + lineHeight, arboX + 5, y + lineHeight + 3, Images\ADEblue.png
 				If (ErrorLevel == 2) {
-					MsgBox, , ArboScraper, ERROR : Unable to search ADEblue.png
+					DebugPrint("Main_Arbo", "Unable to search ADEblue.png", false)
 					Stop()
 				} else if (ErrorLevel == 0) {
 					DebugPrint("Main_Arbo", "On a un dossier en fin de liste", true)
@@ -803,7 +804,7 @@ Main_Arbo() {
 		If (progression == 1) {
 			ImageSearch, , , arboX, y, arboX + 5, y + 3, Images\ADEblue.png
 			If (ErrorLevel == 2) {
-				MsgBox, , ArboScraper, ERROR : Unable to search ADEblue.png
+				DebugPrint("Main_Arbo", "Unable to search ADEblue.png", false)
 				Stop()
 			} else if (ErrorLevel == 0) {
 				DebugPrint("Main_Arbo", "ADE blue found! ENDING scraping", true)
@@ -821,14 +822,14 @@ Main_Arbo() {
 
 GetFirstLine(errNb) {
 	
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	
 	MouseMove, arboX + 50, arboY + 50, 0
 	
 	return arboY ; DEBUG : ça devrait fonctionner mieux ?
 	
 	errMessage := ""
-	If !(WinActive("ahk_class Chrome_WidgetWin_1", , "Developer Tools")) {
+	If !(WinActive(WIN_ADE, , WIN_DEV)) {
 		errMessage .= " - Wrong Window!"
 	}
 	
@@ -847,8 +848,7 @@ GetFirstLine(errNb) {
 				Stop()
 			} else if (ErrorLevel == 1) {
 				DebugPrint("GetFirstLine", "Couldn't find pixel of folders' image", false)
-				MsgBox, , ArboScraper, Cannot find pixel of first line! DEBUG SEARCH..., 3
-				DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
+				;DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
 			} else {
 				DebugPrint("GetFirstLine", "Successfully found pixel of folders' image", true)
 				return y
@@ -863,17 +863,17 @@ GetFirstLine(errNb) {
 		return GetFirstLine(errNb -1)
 		
 	} else if (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, % "ERROR : Unable to search firstLine2.png with : (" arboX - 5 ", " arboY - 5 ", " arboX + lineWidth * 4 ", " arboY + lineHeight ")"
-		ControlFocus, , ADE - Default, , Developer Tools
-		Sleep 1000
-		DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
+		DebugPrint("GetFirstLine", "Unable to search firstLine2.png with : (" . (arboX - 5) . ", " . (arboY - 5) . ", " . (arboX + lineWidth * 4) . ", " . (arboY + lineHeight) . ")", false)
+		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
+		;Sleep 1000
+		;DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
 		Stop()
 		
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, % "ERROR : Couldn't find firstLine2.png with : (" arboX - 5 ", " arboY - 5 ", " arboX + lineWidth * 4 ", " arboY + lineHeight ")"
-		ControlFocus, , ADE - Default, , Developer Tools
-		Sleep 1000
-		DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
+		DebugPrint("GetFirstLine", "Couldn't find firstLine2.png with : (" . (arboX - 5) . ", " . (arboY - 5) . ", " . (arboX + lineWidth * 4) . ", " . (arboY + lineHeight) . ")", false)
+		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
+		;Sleep 1000
+		;DebugImageSearch(arboX - 5, arboY - 5, arboX + lineWidth * 4, arboY + lineHeight)
 		Stop()
 	}
 	
@@ -886,13 +886,13 @@ ScrollDown() {
 	
 	ImageSearch, , , arboFinX, arboFinY, arboFinX + 20, arboFinY + 20, Images\scrollBasOn.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search scrollBasOn.png
+		DebugPrint("ScrollDown", "Could not search scrollBasOn.png", false)
 		Stop()
 	} else {
 		;on cherche si on ne trouve pas la couleur de la flèche du scroll, pour être sûr
 		PixelSearch, , , arboFinX, arboFinY, coinScrollX, coinScrollY, 0x505050, , Fast RGB
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Could not search for pixels!
+			DebugPrint("ScrollDown", "Could not search for pixels!", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
 			return false
@@ -912,7 +912,7 @@ IsFolderAt(y, ByRef x, errNb, folderCanBeOpened:=false) {
 		ImageSearch, x, , arboX, y, arboFinX - 10, y + lineHeight, *TransBlack Images\flecheOn.png
 		
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Could not search for image : flecheOn.png
+			DebugPrint("IsFolderAt", "Could not search for image : flecheOn.png", false)
 			Stop()
 		} else if (ErrorLevel == 0) {
 			x += 14
@@ -923,7 +923,7 @@ IsFolderAt(y, ByRef x, errNb, folderCanBeOpened:=false) {
 	ImageSearch, x, , arboX, y, arboFinX - 10, y + lineHeight, *TransBlack Images\flecheOff.png
 	
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search for image : flecheOff.png
+		DebugPrint("IsFolderAt", "Could not search for image : flecheOff.png", false)
 		Stop()
 	} else if (ErrorLevel == 0) {
 		x += 14	;offset pour localiser l'icône du dossier, et donc sa position horizontale dans l'arborescence
@@ -933,7 +933,7 @@ IsFolderAt(y, ByRef x, errNb, folderCanBeOpened:=false) {
 	ImageSearch, x, , arboX, y, arboFinX - 10, y + lineHeight, *TransBlack Images\fichierADE.png
 	
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search for image : fichierADE.png
+		DebugPrint("IsFolderAt", "Could not search for image : fichierADE.png", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
 		If (errNb != 0) {
@@ -941,8 +941,7 @@ IsFolderAt(y, ByRef x, errNb, folderCanBeOpened:=false) {
 			return IsFolderAt(y, x, errNb - 1) 	;retry
 		} else {
 			; debug
-			DebugPrint("IsFolderAt", "Unable to analyse line " . y . " because there is nothing to see here i swear", false)
-			MsgBox, , ArboScraper, ERROR : nothing to analyse at line : y=%y% - ymax= %lineHeight%
+			DebugPrint("IsFolderAt", "Unable to analyse line " . y . " (ymax=" . lineHeight . ") because there is nothing to see here i swear", false)
 			Stop()
 		}
 	}
@@ -966,7 +965,6 @@ findStartingLineX(y) {
 	}
 	
 	DebugPrint("findStartingLineX", "Couldn't find starting line point at y=" . y, false)
-	MsgBox, , ArboScraper, % "Couldn't find starting line point at y=" . y
 	Stop()
 }
 
@@ -982,7 +980,7 @@ ManageUnusualScrolls(y, lineToFind, siDossierEnFinDeLigne) {
 	ImageSearch, , , arboFinX, arboFinY, arboFinX + 20, arboFinY + 20, Images\scrollBasOn.png
 	
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Could not search scrollBasOn.png
+		DebugPrint("ManageUnusualScrolls", "Could not search scrollBasOn.png", false)
 		Stop()
 	} else if (ErrorLevel == 0 and !siDossierEnFinDeLigne) {
 		;on a monté de 3 lignes
@@ -1013,8 +1011,7 @@ ManageUnusualScrolls(y, lineToFind, siDossierEnFinDeLigne) {
 		}
 	}
 	
-	DebugPrint("ManageUnusualScrolls", "Unable to find currentLine after scrolling!", false)
-	MsgBox, , ArboScraper, Unable to find lineToFind after scrolling! `n %lineToFind%
+	DebugPrint("ManageUnusualScrolls", "Unable to find currentLine after scrolling! " . lineToFind, false)
 	Stop()
 }
 
@@ -1039,17 +1036,18 @@ UpdateIndent(x) {
 GetName(errNb, isFolder) {
 	
 	If (errNb < 0) {
-		MsgBox, , ArboScraper, ERROR : unable to retrieve the name for this element...
+		DebugPrint("GetName", "Unable to retrieve the name for this element...", false)
 		Stop()
 	}
 	
 	WinGetActiveTitle, title
 	If (InStr(title, "ADE - Default") == 0) {
 		;wrong window!
-		DebugPrint("PreciseLine", "wrong window! : " . title, false)
-		ControlFocus, , ADE - Default, , Developer Tools
+		DebugPrint("GetName", "wrong window! : " . title, false)
+		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	}
 	
+	; clipboard reset
 	Clipboard =
 	
 	Sleep 25
@@ -1092,7 +1090,7 @@ GetName(errNb, isFolder) {
 			ImageSearch, , , 20, 20, 50, devToolsY - 30, Images\devToolsBlueSelected.png
 			
 			If (ErrorLevel == 2) {
-				MsgBox, , ArboScraper, Unable to find devToolsBlueSelected.png!
+				DebugPrint("GetName", "Unable to find devToolsBlueSelected.png!", false)
 				Stop()
 			} else if (ErrorLevel == 0) {
 				Break
@@ -1101,7 +1099,7 @@ GetName(errNb, isFolder) {
 			Sleep 25
 			
 			If (A_Index > 120) {	;3 sec
-				MsgBox, , ArboScraper, ERROR : Timeout while waiting for dev tools to select the element!
+				DebugPrint("GetName", "Timeout while waiting for dev tools to select the element!", false)
 				Stop()
 			}
 		}
@@ -1115,7 +1113,7 @@ GetName(errNb, isFolder) {
 		; the clipboard never got filled, reset and try again
 		MouseMove, -20, -4, 0, R
 		Sleep 25
-		ControlFocus, , ADE - Default, , Developer Tools
+		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 		Sleep 200
 		return GetName(errNb -1, isFolder)
 	}
@@ -1126,7 +1124,7 @@ GetName(errNb, isFolder) {
 	
 	MouseMove, -20, -4, 0, R	;return to initial pos
 	Sleep 10
-	ControlFocus, , ADE - Default, , Developer Tools				;switch to the chrome window that isn't the devtool one, aka ADE
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%				;switch to the chrome window that isn't the devtool one, aka ADE
 	Sleep 10
 	
 	If (isFolder) {
@@ -1147,7 +1145,7 @@ WaitFolderLoad(y) {
 		ImageSearch, , , arboX, y - 5, arboFinX, y + lineHeight, *TransBlack Images\flecheOff.png
 		
 		if (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Unable to search flecheOff.png
+			DebugPrint("WaitFolderLoad", "Unable to search flecheOff.png", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
 			return true
@@ -1171,7 +1169,6 @@ isPixelBlue(errNb) {
 	PixelGetColor, nameColor, curPosX - 2, curPosY, RGB
 	
 	If (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Problem with pixelGetColor!
 		DebugPrint("isPixelBlue", "pixelGetColor failed at " . curPosX . " - " . curPosY, false)
 		Stop()
 	}
@@ -1218,13 +1215,13 @@ PreciseLine(y, errNb) {
 	;first errNb is always 5
 	ImageSearch, , new_y, arboX, y - errNb, arboX + errNb, y + errNb, *errNb*5 Images\lineBorder.png			;on précise y en cherchant la bordure de ligne exacte autour de y (mesure de sécurité)
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, ERROR : Unable to search lineBorder.png
+		DebugPrint("PreciseLine", "Unable to search lineBorder.png", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
 		
 		ImageSearch, , new_y, arboX, y - errNb, arboX + errNb, y + errNb, Images\lineSelectedBorder.png	;la ligne a peut-être été sélectionnée
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, ERROR : Unable to search lineSelectedBorder.png
+			DebugPrint("PreciseLine", "Unable to search lineSelectedBorder.png", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
 			
@@ -1236,8 +1233,7 @@ PreciseLine(y, errNb) {
 				DebugPrint("PreciseLine", "failed to find the line at " . y, false)
 				
 				If (!TestADEcrash()) {
-					DebugPrint("PreciseLine", "ADE n'a pas crashé", true)
-					MsgBox, , ArboScraper, ERROR : Couldn't find line at %y%
+					DebugPrint("PreciseLine", "Couldn't find line at " . y, true)
 					Stop()
 				}
 			}
@@ -1251,18 +1247,15 @@ PreciseLine(y, errNb) {
 closeAllTheFolders() {
 	;searches an impossible file name, closing all of the folders in the process
 	
-	;MsgBox, , ArboScraper, closeAllTheFolders start..., 1
-	
 	Sleep 2000
 	
 	ImageSearch, searchX, searchY, arboFinX - 125, arboY - 100, arboFinX - 30, arboY - 20, Images\searchBar.png
 	
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search searchBar.png!
+		DebugPrint("closeAllTheFolders", "Unable to search searchBar.png!", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
-		MsgBox, , ArboScraper, Couldn't find searchBar.png!
-		
+		DebugPrint("closeAllTheFolders", "Couldn't find searchBar.png!", false)		
 		Stop()
 	}
 	
@@ -1293,7 +1286,7 @@ closeAllTheFolders() {
 		ImageSearch, , , arboX - 25, arboFinY - 40, arboFinX + 10, arboFinY + 50, Images\zeroElementTrouveRecherche.png
 		
 		If (ErrorLevel == 2) {
-			MsgBox, , ArboScraper, Unable to search zeroElementTrouveRecherche.png!
+			DebugPrint("closeAllTheFolders", "Unable to search zeroElementTrouveRecherche.png!", false)
 			Stop()
 		} else if (ErrorLevel == 0) {
 			waiting := false
@@ -1303,7 +1296,6 @@ closeAllTheFolders() {
 		
 		If (A_Index > 90) {  ;1 min
 			DebugPrint("closeAllTheFolders", "timeout", false)
-			MsgBox, , ArboScraper, ERROR : Timeout for closeAllTheFolders!
 			Stop()
 		}
 	}
@@ -1331,7 +1323,7 @@ getPathToRemember(outFile := "") {
 	out := FileOpen(P_out, "a")	; re-open the file
 	
 	If !IsObject(out) {
-		MsgBox, , % "Cannot append to " . P_out . "!"
+		DebugPrint("getPathToRemember", "Cannot append to " . P_out . "!", false)
 		ExitApp
 	}
 	
@@ -1374,7 +1366,6 @@ getPathToRemember(outFile := "") {
 		
 		If (A_Index > 10000) {
 			DebugPrint("getPathToRemember", "Unable to create path! Stuck in while-loop!", false)
-			MsgBox, , ArboScraper, ERROR : Unable to create path! Stuck in while-loop!
 			Stop()
 		}
 	}
@@ -1393,7 +1384,7 @@ getPathToRemember(outFile := "") {
 	;checking path length
 	If (Mod(pathToFollow.Length(), 2) != 0) {
 		DebugPrint("getPathToRemember", "the path has an incorrect length : " . pathToFollow.Length(), false)
-		MsgBox, , ArboScraper, the path has an incorrect length!, 3
+		Stop()
 	}
 	
 	/*
@@ -1405,7 +1396,6 @@ getPathToRemember(outFile := "") {
 		}
 		
 		Clipboard := disp_pathtoFollow
-		MsgBox, , ArboScraper, %disp_pathtoFollow%, 2
 	*/
 	
 	return pathToFollow
@@ -1473,13 +1463,11 @@ ReadThroughThePath(path) {
 		
 		If (path[i -1] != folderName) {
 			DebugPrint("ReadThroughThePath", "'" folderName "' isn't the wanted '" path[i -1] "' cannot continue!", false)
-			MsgBox, , ArboScraper, % "ERROR : '" folderName "' isn't the wanted '" path[i -1] "' cannot continue!"
 			Stop()
 		}
 		
 		If !(isFolder) {
 			DebugPrint("ReadThroughThePath", "'" folderName "' isn't a folder name! Expected : " path[i -1], false)
-			MsgBox, , ArboScraper, % "ERROR : '" folderName "' isn't a folder name! Expected : " path[i -1]
 			Stop()
 		}
 		
@@ -1500,7 +1488,6 @@ ReadThroughThePath(path) {
 	
 	DebugPrint("ReadThroughThePath", "finished", true)
 	
-	;MsgBox, , ArboScraper, % "Done resuming the scraping at " path[1], 1
 	return y
 }
 
@@ -1511,8 +1498,8 @@ WriteThePath(path, name:="path.txt") {
 	pathFile := FileOpen(name, "w")
 	
 	If !IsObject(pathFile) {
-		MsgBox, , Can't open pathFile !
-		ExitApp
+		DebugPrint("WriteThePath", "Can't open pathFile !", false)
+		Stop()
 	}
 	
 	for i, thing in path {
@@ -1533,8 +1520,8 @@ ReadThePath(nameOfPathFile) {
 	path := Object()
 	
 	If !IsObject(pathFile) {
-		MsgBox, , Can't open %nameOfPathFile% !
-		ExitApp
+		DebugPrint("ReadThePath", "Can't open " . nameOfPathFile . "!", false)
+		Stop()
 	}
 	
 	while (!pathFile.AtEOF()) {
@@ -1567,14 +1554,12 @@ ReadThePath(nameOfPathFile) {
 			if thing is digit
 			{
 				DebugPrint("ReadThePath", "the path read from " . nameOfPathFile . " is wrong because of " . thing . " isn't a string.", false)
-				MsgBox, , ArboScraper, % "ERROR_ReadThePath:the path read from " . nameOfPathFile . " is wrong because of " . thing . " isn't a string."
 				Stop()
 			}
 		} else {
 			if thing is not digit
 			{
 				DebugPrint("ReadThePath", "the path read from " . nameOfPathFile . " is wrong because of " . thing . " isn't a number.", false)
-				MsgBox, , ArboScraper, % "ERROR_ReadThePath:the path read from " . nameOfPathFile . " is wrong because of " . thing . " isn't a number."
 				Stop()
 			} 
 		}
@@ -1583,7 +1568,6 @@ ReadThePath(nameOfPathFile) {
 	If (Mod(path.Length(), 2) != 0) {
 		;path isn't even.
 		DebugPrint("ReadThePath", "the path is uneven!", false)
-		MsgBox, , ArboScraper, ERROR_ReadThePath: the path is uneven!
 		Stop()
 	}
 	
@@ -1604,7 +1588,7 @@ TestADEcrash() {
 	
 	ImageSearch, , , arboX, arboY, arboFinX, arboFinY, Images\testADEcrash.png
 	If (ErrorLevel == 2) {
-		MsgBox, , ArboScraper, Unable to search for testADEcrash.png!
+		DebugPrint("TestADEcrash", "Unable to search for testADEcrash.png!", false)
 		Stop()
 	} else if (ErrorLevel == 1) {
 		return false ;ADE n'a pas crash
@@ -1637,8 +1621,8 @@ TestADEcrash() {
 	out := FileOpen("outCrash.txt", "a")	; on ouvre le fichier out que l'on vient de modifier
 	
 	If !IsObject(out) {
-		MsgBox, , % "Cannot append to outCrash.txt !"
-		ExitApp
+		DebugPrint("TestADEcrash", "Cannot append to outCrash.txt !", false)
+		Stop()
 	}
 	
 	DebugPrint("TestADEcrash", "outCrash.txt have been created!", true)
@@ -1655,25 +1639,25 @@ TestADEcrash() {
 	
 	Sleep 1000
 	
-	WinKill, ADE - Default, , 5, Developer Tools
+	WinKill, %WIN_ADE%, , 5, %WIN_DEV%
 	
 	Sleep 1000
 	
-	IfWinExist, ADE - Default, , Developer Tools
+	IfWinExist, %WIN_ADE%, , %WIN_DEV%
 	{
 		SendInput, {Enter}
 		Sleep 1000
 	}
 	
-	IfWinExist, ADE - Default, , Developer Tools
+	IfWinExist, %WIN_ADE%, , %WIN_DEV%
 	{
 		WinKill
 		Sleep 2000
 	}
 	
-	IfWinExist, ADE - Default, , Developer Tools
+	IfWinExist, %WIN_ADE%, , %WIN_DEV%
 	{
-		MsgBox, , ArboScraper, Cannot close ADE!
+		DebugPrint("TestADEcrash", "Cannot close ADE!", false)
 		Stop()
 	}
 	
@@ -2463,7 +2447,7 @@ Pause::
 pauseState := !pauseState
 	;on remet le curseur là où il était si on repend
 if (!pauseState) {
-	ControlFocus, , ADE - Default, , Developer Tools
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	Sleep, 500
 	MouseMove, pauseX, pauseY, 5
 	Sleep 1000
@@ -2474,7 +2458,7 @@ if (!pauseState) {
 	logFile := FileOpen(P_log, "a")
 	
 	If !IsObject(out) {
-		MsgBox, , % "Cannot append to " . P_out . "!"
+		MsgBox, , % "Cannot append to " . P_out . "!", 2
 		Stop()
 	}
 	If !IsObject(logFile) {

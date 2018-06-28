@@ -1,9 +1,12 @@
 import json
 import hashlib
 import datetime
+from pathlib import Path
 from traceback import format_exc
 import os
 import sys
+
+WORKING_DIR = Path("C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/")
 
 PATH_FILE = "path.txt"
 EXPORTS_FOLDER = "EdTOut"
@@ -293,6 +296,9 @@ def main():
 
 
 if __name__ == '__main__':
+    if Path(os.getcwd()) != WORKING_DIR:
+        os.chdir(WORKING_DIR)
+
     with open("log.txt", "a") as logFile:
         try:
             main()

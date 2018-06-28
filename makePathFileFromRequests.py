@@ -1,4 +1,6 @@
+import os
 import sys
+from pathlib import Path
 from traceback import format_exc
 from datetime import datetime
 
@@ -22,7 +24,9 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
         ex: 'Beaulieu/Etudiants/SPM/L2-S4/GrPhysique/Gr2~~~Beaulieu/Etudiants/SPM/L2-S4/GrPhysique/Gr1'
     """
     requests = requests.split(REQUEST_SEPARATOR)
-
+    
+    log("Requests: \n\t" + str(requests))
+    
     requestsList = []
     for i, request in enumerate(requests):
         # on supprimme le / du début si il y en a un
@@ -58,7 +62,7 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
 
     if len(requestsList) == 0:
         log("Unable to parse requests. All were invalid.", "ERROR")
-        return
+        raise Exception() # TODO : Pour que le serveur sache qu'il y a eu une erreur
 
     if len(requests) != len(requestsList):
         # il y a eu des doublons, on corrige 'requests' pour le log
@@ -264,5 +268,10 @@ def main():
 
 
 
+
+
 if __name__ == '__main__':
+    if Path(os.getcwd()) != WORKING_DIR:
+        os.chdir(WORKING_DIR)
+
     main()

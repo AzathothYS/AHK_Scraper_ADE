@@ -7,6 +7,8 @@ from datetime import datetime
 import json
 from pathlib import Path
 
+WORKING_DIR = Path("C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/")
+
 ARBORESCENCE_FILE = "arborescence.txt"
 SUMMARY_FILE = "summary.txt"
 UPDATE_FILE = "updateLog.txt"
@@ -490,6 +492,7 @@ def parseArgs():
 
         else:
             log("ParseArgs", "Invalid parameter: '" + arg + "'", True)
+            raise Exception("Invalid parameter.")
 
 
 
@@ -503,14 +506,14 @@ def test():
 
 
 if __name__ == '__main__':
+    if Path(os.getcwd()) != WORKING_DIR:
+        os.chdir(WORKING_DIR)
+
     with open("log.txt", "a") as logFile:
         try:
             log("main", "Started.")
 
-            if True:
-                test()
-            else:
-                parseArgs()
+            parseArgs()
 
             log("main", "Finished.")
 
