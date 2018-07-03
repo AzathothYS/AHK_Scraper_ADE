@@ -86,135 +86,1875 @@
 2018-05-26-16:18:47	SCRAPER 	INFO_ReadThroughThePath: Successfully reached the end of the path.
 2018-05-26-16:18:47	SCRAPER 	INFO_Stop: INFO_time=103  - from 20180526161704
 
-2018-05-26 21:03:44.277733	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
 
-2018-05-31 15:52:37.316814	- icsToJson:	main:	INFO  - Started.
-2018-05-31 15:52:37.317814	- icsToJson:	icsToJson:	INFO  - Processing 13.ics
-2018-05-31 15:52:37.317814	- icsToJson:	addInfo:	INFO  - First event: 
-{'titre': 'Cplt - TD MÃ©canique 2 (Gr2)', 'salle': 'B32A-Salle 5', 'desc': '\\n\\nCplt MÃ©ca2 (Gr2)\\nBLANCHARD LAURENT\\n(ExportÃ© le:26/05/2018 16:17)\\n', 'jour': '20180314', 'hour': (17, 15, 19, 15), 'siImportant': False}
-2018-05-31 15:52:37.332819	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/13.json
-2018-05-31 15:52:37.357814	- icsToJson:	icsToJson:	INFO  - Processing 16.ics
-2018-05-31 15:52:37.358816	- icsToJson:	addInfo:	INFO  - First event: 
-{'titre': 'Cplt - TP Programmation et calcul scientifique 2', 'salle': 'B6-Salle 927 info-physique', 'desc': '\\n\\nCplt PCS (Gr1)\\nDUNSEATH-TERAO MARIKO\\n(ExportÃ© le:26/05/2018 16:17)\\n', 'jour': '20180319', 'hour': (17, 15, 19, 15), 'siImportant': True}
-2018-05-31 15:52:37.360814	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/16.json
-2018-05-31 15:52:37.388814	- icsToJson:	icsToJson:	INFO  - Processing 22.ics
-2018-05-31 15:52:37.392813	- icsToJson:	addInfo:	INFO  - First event: 
-{'titre': 'Ondes\\, ElectromagnÃ©tisme (CM)', 'salle': 'B28-Amphi H', 'desc': '\\n\\nGr Physique\\nFADE JULIEN\\n(ExportÃ© le:26/05/2018 16:18)\\n', 'jour': '20180123', 'hour': (15, 0, 16, 30), 'siImportant': False}
-2018-05-31 15:52:37.400814	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/22.json
-2018-05-31 15:52:37.522811	- icsToJson:	icsToJson:	INFO  - Processing 40.ics
-2018-05-31 15:52:37.529812	- icsToJson:	addInfo:	INFO  - First event: 
-{'titre': 'CC ATOM (soit BÃ¢t 27\\, soit bÃ¢t 8\\, soit bÃ¢t 2-voir rÃ©partition sur moodle)', 'salle': "B2A-Salle 12\\,B2A-Salle 13\\,B27-Salle d'examens", 'desc': '\\n\\nGr 01 (SI)\\nGr 08\\nGr 02 (LV2)\\nGr 03 (LV2)\\nGr 04 (LV2)\\nGr 05\\nGr 06\\nGr 07\\nGr 09\\nGr 10\\nGr 11\\nGr 12\\nGr 13\\nGr 14\\nGr 15\\nGr 16\\nAtomistique et chimie des solutions\\n(ExportÃ© le:26/05/2018 16:18)\\n', 'jour': '20171120', 'hour': (9, 30, 10, 30), 'siImportant': True}
-2018-05-31 15:52:37.548828	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/40.json
-2018-05-31 15:52:37.728809	- icsToJson:	main:	INFO  - Finished.
-2018-06-09 13:23	- database:	main:	INFO  - Finished.
-2018-06-09 13:25	- database:	main:	INFO  - Started.
-2018-06-09 13:25	- database:	main:	INFO  - TEST MODE
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Requests: [' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Complï¿½ments'
-2018-06-09 13:25	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)' of true name: __Cplt Mï¿½ca2 (Gr2)
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)'
-2018-06-09 13:25	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)' of true name: __Cplt PCS (Gr1)
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)'
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Gr Physique'
-2018-06-09 13:25	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)' of true name: __Gr.p1 CMI (6)
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)'
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Created 'Database\Salles\Beaulieu\Apparitrices\1er CYCLE---00R---Zone nord\BAT 27'
-2018-06-09 13:25	- database:	updateSummary:	INFO  - Updated 'Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens' of true name: __B27-Salle d'examens
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Updated 'Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens'
-2018-06-09 13:25	- database:	updateDatabase:	INFO  - Done.
-2018-06-09 13:25	- database:	saveUpdateLog:	INFO  - Saved update log.
-2018-06-09 13:25	- database:	saveSummary:	INFO  - Sucessfully saved new summary
-2018-06-09 13:25	- database:	main:	INFO  - Finished.
-2018-06-18 12:10	- database:	main:	INFO  - Started.
-2018-06-18 12:10	- database:	main:	INFO  - TEST MODE
-2018-06-18 12:10	- database:	updateDatabase:	INFO  - Requests: [' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-18 12:10	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Complï¿½ments'
-2018-06-18 12:10	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt Mï¿½ca2 (Gr2)' of true name: __Cplt Mï¿½ca2 (Gr2)
-2018-06-18 12:10	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Complï¿½ments/Cplt PCS (Gr1)' of true name: __Cplt PCS (Gr1)
-2018-06-18 12:10	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Gr Physique'
-2018-06-18 12:10	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)' of true name: __Gr.p1 CMI (6)
-2018-06-18 12:10	- database:	updateDatabase:	INFO  - Created 'Database\Salles\Beaulieu\Apparitrices\1er CYCLE---00R---Zone nord\BAT 27'
-2018-06-18 12:10	- database:	updateSummary:	INFO  - Updated 'Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens' of true name: __B27-Salle d'examens
-2018-06-18 12:10	- database:	updateDatabase:	INFO  - Done.
-2018-06-18 12:10	- database:	saveUpdateLog:	INFO  - Saved update log.
-2018-06-18 12:10	- database:	saveSummary:	INFO  - Sucessfully saved new summary
-2018-06-18 12:10	- database:	main:	INFO  - Finished.
-
-
-
-
-
-
-
-2018-06-28 11:44	- database:	main:	INFO  - Started.
-2018-06-28 11:44	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
-2018-06-28 11:44	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-28 11:44	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-28 11:44	- database:	main:	INFO  - Finished.
-2018-06-28 11:44:37.280419	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-28 11:44:37.284419	- makePathFileFromRequests:	INFO:	Requests: 
+2018-07-01 13:28	- database:	main:	INFO  - Started.
+2018-07-01 13:28	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:28	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-01 13:28	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:28	- database:	main:	INFO  - Finished.
+2018-07-01 13:28:08.190861	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:28:08.193860	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens", ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-01 13:28:08.196860	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:28:08.200860	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:28:08.202860	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:28:08.205860	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:28	- database:	main:	INFO  - Started.
+2018-07-01 13:28	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:28	- database:	getUpdates:	INFO  - Got 0 files to update.
+2018-07-01 13:28	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:28	- database:	main:	INFO  - Finished.
+2018-07-01 13:28:51.056986	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:28:51.059988	- makePathFileFromRequests:	INFO:	Requests: 
 	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-28 11:44:37.341418	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-28 11:44:37.343419	- makePathFileFromRequests:	INFO:	None2018-06-28-11:44:37	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+2018-07-01 13:28:51.111986	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 13:28:51.113985	- makePathFileFromRequests:	INFO:	None2018-07-01-13:28:51	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-28-11:44:37	SCRAPER 	INFO_: Starting the script in normal mode and startup mode
-2018-06-28-11:44:50	SCRAPER 	INFO_Stop: Escaped!
-2018-06-28-11:44:50	SCRAPER 	INFO_Stop: Errors occured
-2018-06-28-11:44:50	SCRAPER 	INFO_Stop: run time: 13297 ms
+2018-07-01-13:28:51	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-01-13:29:23	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-01-13:29:27	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-01-13:29:28	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:29:30	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:29:31	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-01-13:29:33	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-01-13:29:35	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:29:37	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:29:49	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:29:49	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:30:01	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-01-13:30:01	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:30:05	SCRAPER 	ERROR_ReadPathForEdT: Failed to UP: new selection is not a folder
+2018-07-01-13:30:05	SCRAPER 	ERROR_ReadPathForEdT: Unable to reach parent folder: restarting to current position
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (<1)1 : 0
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)2 :  Etudiants
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 2 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)3 : Beaulieu
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 3 : 8
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)4 : SPM
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 4 : 3
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)5 : L2 - PCGS - S4
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 5 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)6 : ComplÃ©ments
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 6 : 5
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)7 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)8 : __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added to 8 : 2
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (order)9 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)10 : __Cplt PCS (Gr1)
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)11 : Gr Physique
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)12 : 2
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)13 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)14 : __Gr.p1 CMI (6)
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)15 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)16 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)17 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)18 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)19 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)20 : 2
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)21 : Salles
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)22 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)23 : Beaulieu
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)24 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)25 : Apparitrices
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)26 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)27 : 1er CYCLE/Zone nord
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)28 : 5
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)29 : BAT 27
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)30 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)31 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Added at (end)32 : __B27-Salle d'examens
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°1 : 0
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°2 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°3 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°4 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°5 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°6 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°7 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°8 : 
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°9 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°10 : __Cplt PCS (Gr1)
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°11 : Gr Physique
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°12 : 2
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°13 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°14 : __Gr.p1 CMI (6)
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°15 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°16 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°17 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°18 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°19 : UP
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°20 : 2
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°21 : Salles
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°22 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°23 : Beaulieu
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°24 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°25 : Apparitrices
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°26 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°27 : 1er CYCLE/Zone nord
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°28 : 5
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°29 : BAT 27
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°30 : 1
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°31 : GET_EDT
+2018-07-01-13:30:16	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°32 : __B27-Salle d'examens
+2018-07-01-13:30:16	SCRAPER 	ERROR_ReadPathForEdT: Restarting...
+2018-07-01-13:30:16	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:30:17	SCRAPER 	ERROR_ReadPathForEdT: folder name '' doesn't match the found name: ' Etudiants'
+2018-07-01-13:30:18	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-01-13:30:18	SCRAPER 	INFO_Stop: Errors occured
+2018-07-01-13:30:18	SCRAPER 	INFO_Stop: run time: 86391 ms
 
-2018-06-28 11:51	- database:	main:	INFO  - Started.
-2018-06-28 11:51	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
-2018-06-28 11:51	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-28 11:51	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-28 11:51	- database:	main:	INFO  - Finished.
-2018-06-28 11:51:14.676030	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-28 11:51:14.676030	- makePathFileFromRequests:	INFO:	Requests: 
+2018-07-01 13:32	- database:	main:	INFO  - Started.
+2018-07-01 13:32	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:32	- database:	getUpdates:	INFO  - Got 0 files to update.
+2018-07-01 13:32	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:32	- database:	main:	INFO  - Finished.
+2018-07-01 13:32:07.982812	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:32:07.985811	- makePathFileFromRequests:	INFO:	Requests: 
 	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-28 11:51:14.722854	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-28 11:51:14.722854	- makePathFileFromRequests:	INFO:	None2018-06-28-11:51:16	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+2018-07-01 13:32:08.032812	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 13:32:08.035812	- makePathFileFromRequests:	INFO:	None2018-07-01-13:32:09	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-28-11:51:16	SCRAPER 	INFO_: Starting the script in normal mode and startup mode
-2018-06-28-11:51:59	SCRAPER 	INFO_Stop: Errors occured
-2018-06-28-11:51:59	SCRAPER 	INFO_Stop: run time: 41969 ms
+2018-07-01-13:32:09	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-01-13:32:42	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-01-13:32:45	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-01-13:32:46	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:32:48	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:32:50	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-01-13:32:52	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-01-13:32:54	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:32:55	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:33:07	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:33:07	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:33:19	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-01-13:33:19	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:33:23	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:33:24	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:33:26	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:33:37	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°22 soit __Gr.p1 CMI (6)
+2018-07-01-13:33:37	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:33:41	SCRAPER 	ERROR_ReadPathForEdT: Failed to UP: new selection is not a folder
+2018-07-01-13:33:41	SCRAPER 	ERROR_ReadPathForEdT: Unable to reach parent folder: restarting to current position
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (<1)1 : 0
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)2 :  Etudiants
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (2) :  Etudiants
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 2 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)3 : Beaulieu
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (3) : Beaulieu
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 3 : 8
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)4 : SPM
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (4) : SPM
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 4 : 3
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)5 : L2 - PCGS - S4
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (5) : L2 - PCGS - S4
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 5 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)6 : ComplÃ©ments
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (6) : ComplÃ©ments
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 6 : 5
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)7 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)8 : __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (8) : __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 8 : 2
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)9 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)10 : __Cplt PCS (Gr1)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (10) : __Cplt PCS (Gr1)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 10 : 5
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)11 : Gr Physique
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Last object  (11) : Gr Physique
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added to 11 : 2
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (order)12 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)13 : __Gr.p1 CMI (6)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)14 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)15 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)16 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)17 : 2
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)18 : Salles
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)19 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)20 : Beaulieu
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)21 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)22 : Apparitrices
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)23 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)24 : 1er CYCLE/Zone nord
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)25 : 5
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)26 : BAT 27
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)27 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)28 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Added at (end)29 : __B27-Salle d'examens
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°1 : 0
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°2 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°3 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°4 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°5 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°6 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°7 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°8 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°9 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°10 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°11 : 
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°12 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°13 : __Gr.p1 CMI (6)
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°14 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°15 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°16 : UP
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°17 : 2
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°18 : Salles
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°19 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°20 : Beaulieu
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°21 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°22 : Apparitrices
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°23 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°24 : 1er CYCLE/Zone nord
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°25 : 5
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°26 : BAT 27
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°27 : 1
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°28 : GET_EDT
+2018-07-01-13:33:52	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°29 : __B27-Salle d'examens
+2018-07-01-13:33:52	SCRAPER 	ERROR_ReadPathForEdT: Restarting...
+2018-07-01-13:33:52	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:33:53	SCRAPER 	ERROR_ReadPathForEdT: folder name '' doesn't match the found name: ' Etudiants'
+2018-07-01-13:33:54	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-01-13:33:54	SCRAPER 	INFO_Stop: Errors occured
+2018-07-01-13:33:54	SCRAPER 	INFO_Stop: run time: 103578 ms
 
-2018-06-28 14:36	- database:	main:	INFO  - Started.
-2018-06-28 14:36	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
-2018-06-28 14:36	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-28 14:36	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-28 14:36	- database:	main:	INFO  - Finished.
-2018-06-28 14:36:57.858656	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-28 14:36:57.860656	- makePathFileFromRequests:	INFO:	Requests: 
+2018-07-01 13:36	- database:	main:	INFO  - Started.
+2018-07-01 13:36	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:36	- database:	getUpdates:	INFO  - Got 0 files to update.
+2018-07-01 13:36	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:36	- database:	main:	INFO  - Finished.
+2018-07-01 13:36:51.334129	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:36:51.336129	- makePathFileFromRequests:	INFO:	Requests: 
 	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-28 14:36:57.919655	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-28 14:36:57.921655	- makePathFileFromRequests:	INFO:	None
-2018-06-28 14:40	- database:	main:	INFO  - Started.
-2018-06-28 14:40	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
-2018-06-28 14:40	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-28 14:40	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-28 14:40	- database:	main:	INFO  - Finished.
-2018-06-28 14:40:56.460787	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-28 14:40:56.461782	- makePathFileFromRequests:	INFO:	Requests: 
+2018-07-01 13:36:51.411128	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 13:36:51.415128	- makePathFileFromRequests:	INFO:	None2018-07-01-13:36:53	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-01-13:36:53	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-01-13:37:26	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-01-13:37:29	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-01-13:37:30	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:37:32	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:37:33	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-01-13:37:34	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-01-13:37:37	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-01-13:37:39	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:37:40	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:37:53	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:37:53	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:38:05	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-01-13:38:05	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:10	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:11	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:38:12	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:38:25	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°22 soit __Gr.p1 CMI (6)
+2018-07-01-13:38:25	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:29	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:30	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:34	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:34	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:38	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:38	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:41	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:41	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:38:45	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:38:45	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:38:47	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:38:48	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-01-13:38:50	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:38:51	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:38:53	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:38:54	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-01-13:38:57	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:39:09	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°40 soit __B27-Salle d'examens
+2018-07-01-13:39:09	SCRAPER 	INFO_ReadPathForEdT: Successfully reached the end of the path.
+2018-07-01-13:39:09	SCRAPER 	INFO_: Done.
+2018-07-01-13:39:10	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-01-13:39:10	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-01-13:39:10	SCRAPER 	INFO_Stop: run time: 136032 ms
+
+2018-07-01 13:39:10.796592	- icsToJson:	main:	INFO  - Started.
+2018-07-01 13:39:10.798591	- icsToJson:	icsToJson:	INFO  - Processing 13.ics
+2018-07-01 13:39:10.838591	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/13.json
+2018-07-01 13:39:10.841592	- icsToJson:	icsToJson:	INFO  - Json is valid for 13.json
+2018-07-01 13:39:10.874592	- icsToJson:	icsToJson:	INFO  - Processing 16.ics
+2018-07-01 13:39:10.879591	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/16.json
+2018-07-01 13:39:10.886590	- icsToJson:	icsToJson:	INFO  - Json is valid for 16.json
+2018-07-01 13:39:10.922589	- icsToJson:	icsToJson:	INFO  - Processing 22.ics
+2018-07-01 13:39:10.941589	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/22.json
+2018-07-01 13:39:10.950590	- icsToJson:	icsToJson:	INFO  - Json is valid for 22.json
+2018-07-01 13:39:11.109587	- icsToJson:	icsToJson:	INFO  - Processing 40.ics
+2018-07-01 13:39:11.138587	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/40.json
+2018-07-01 13:39:11.146587	- icsToJson:	icsToJson:	INFO  - Json is valid for 40.json
+2018-07-01 13:39:11.316584	- icsToJson:	main:	INFO  - Finished.
+
+2018-07-01 13:39	- database:	main:	INFO  - Started.
+2018-07-01 13:39	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-update']
+2018-07-01 13:39	- database:	updateDatabase:	INFO  - Requests: [' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-01 13:39	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Compléments'
+2018-07-01 13:39	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)' of true name: __Cplt Méca2 (Gr2)
+2018-07-01 13:39	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)' of true name: __Cplt PCS (Gr1)
+2018-07-01 13:39	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Gr Physique'
+2018-07-01 13:39	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)' of true name: __Gr.p1 CMI (6)
+2018-07-01 13:39	- database:	updateDatabase:	INFO  - Created 'Database\Salles\Beaulieu\Apparitrices\1er CYCLE---00R---Zone nord\BAT 27'
+2018-07-01 13:39	- database:	updateSummary:	INFO  - Updated 'Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens' of true name: __B27-Salle d'examens
+2018-07-01 13:39	- database:	updateDatabase:	INFO  - Done.
+2018-07-01 13:39	- database:	saveUpdateLog:	INFO  - Saved update log.
+2018-07-01 13:39	- database:	saveSummary:	INFO  - Sucessfully saved new summary
+2018-07-01 13:39	- database:	removeIcsFiles:	INFO  - Removed ics files.
+2018-07-01 13:39	- database:	verifyDatabase:	INFO  - Aucune erreur trouvée.
+2018-07-01 13:39	- database:	main:	INFO  - Finished.
+2018-07-01 13:42	- database:	main:	INFO  - Started.
+2018-07-01 13:42	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:42	- database:	getUpdates:	INFO  - Got 0 files to update.
+2018-07-01 13:42	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:42	- database:	main:	INFO  - Finished.
+2018-07-01 13:42:34.078524	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:42:34.080524	- makePathFileFromRequests:	INFO:	Requests: 
 	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-28 14:40:56.519781	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-28 14:40:56.521781	- makePathFileFromRequests:	INFO:	None2018-06-28-14:40:56	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+2018-07-01 13:42:34.129523	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 13:42:34.131556	- makePathFileFromRequests:	INFO:	None2018-07-01-13:42:34	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
 
-2018-06-28-14:40:56	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
-2018-06-28-14:41:17	SCRAPER 	ERROR_Startup: Unable to open or find DevTools! active window :DevTools - planning.univ-rennes1.fr/direct/myplanning.jsp?ticket=ST-50987-k0ihAx19yKjq0SePku0j-sso-cas.univ-rennes1.fr
-2018-06-28-14:41:17	SCRAPER 	INFO_Stop: Errors occured
-2018-06-28-14:41:17	SCRAPER 	INFO_Stop: run time: 20438 ms
+2018-07-01-13:42:34	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-01-13:43:06	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-01-13:43:09	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-01-13:43:10	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:43:12	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:43:14	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-01-13:43:16	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-01-13:43:18	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:43:19	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:43:31	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:43:32	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:43:43	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-01-13:43:44	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:43:48	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:43:48	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:43:50	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:44:02	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°22 soit __Gr.p1 CMI (6)
+2018-07-01-13:44:02	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:44:07	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:44:07	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:44:12	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:44:12	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:44:15	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:44:16	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:44:19	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:44:19	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:44:22	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:44:23	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:44:25	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:44:26	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:44:28	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:44:29	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:44:31	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:44:43	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°40 soit __B27-Salle d'examens
+2018-07-01-13:44:43	SCRAPER 	INFO_ReadPathForEdT: Successfully reached the end of the path.
+2018-07-01-13:44:43	SCRAPER 	INFO_: Done.
+2018-07-01-13:44:44	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-01-13:44:44	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-01-13:44:44	SCRAPER 	INFO_Stop: run time: 129609 ms
 
-2018-06-28 14:44	- database:	main:	INFO  - Started.
-2018-06-28 14:44	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
-2018-06-28 14:44	- database:	getUpdates:	INFO  - Got 4 files to update.
-2018-06-28 14:44	- database:	getUpdates:	INFO  - Outputted to requests.txt
-2018-06-28 14:44	- database:	main:	INFO  - Finished.
-2018-06-28 14:44:25.835096	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
-2018-06-28 14:44:25.837095	- makePathFileFromRequests:	INFO:	Requests: 
+2018-07-01 13:44:45.265615	- icsToJson:	main:	INFO  - Started.
+2018-07-01 13:44:45.267615	- icsToJson:	icsToJson:	INFO  - Processing 13.ics
+2018-07-01 13:44:45.295614	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/13.json
+2018-07-01 13:44:45.298614	- icsToJson:	icsToJson:	INFO  - Json is valid for 13.json
+2018-07-01 13:44:45.346613	- icsToJson:	icsToJson:	INFO  - Processing 16.ics
+2018-07-01 13:44:45.354613	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/16.json
+2018-07-01 13:44:45.358612	- icsToJson:	icsToJson:	INFO  - Json is valid for 16.json
+2018-07-01 13:44:45.391612	- icsToJson:	icsToJson:	INFO  - Processing 22.ics
+2018-07-01 13:44:45.409613	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/22.json
+2018-07-01 13:44:45.418613	- icsToJson:	icsToJson:	INFO  - Json is valid for 22.json
+2018-07-01 13:44:45.562611	- icsToJson:	icsToJson:	INFO  - Processing 40.ics
+2018-07-01 13:44:45.589615	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/40.json
+2018-07-01 13:44:45.596609	- icsToJson:	icsToJson:	INFO  - Json is valid for 40.json
+2018-07-01 13:44:45.764608	- icsToJson:	main:	INFO  - Finished.
+
+2018-07-01 13:44	- database:	main:	INFO  - Started.
+2018-07-01 13:44	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-update']
+2018-07-01 13:44	- database:	updateDatabase:	INFO  - Requests: [' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-01 13:44	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Compléments'
+2018-07-01 13:44	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)' of true name: __Cplt Méca2 (Gr2)
+2018-07-01 13:44	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)' of true name: __Cplt PCS (Gr1)
+2018-07-01 13:44	- database:	updateDatabase:	INFO  - Created 'Database\ Etudiants\Beaulieu\SPM\L2 - PCGS - S4\Gr Physique'
+2018-07-01 13:44	- database:	updateSummary:	INFO  - Updated ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)' of true name: __Gr.p1 CMI (6)
+2018-07-01 13:44	- database:	updateDatabase:	INFO  - Created 'Database\Salles\Beaulieu\Apparitrices\1er CYCLE---00R---Zone nord\BAT 27'
+2018-07-01 13:44	- database:	updateSummary:	INFO  - Updated 'Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens' of true name: __B27-Salle d'examens
+2018-07-01 13:44	- database:	updateDatabase:	INFO  - Done.
+2018-07-01 13:44	- database:	saveUpdateLog:	INFO  - Saved update log.
+2018-07-01 13:44	- database:	saveSummary:	INFO  - Sucessfully saved new summary
+2018-07-01 13:44	- database:	removeIcsFiles:	INFO  - Removed ics files.
+2018-07-01 13:44	- database:	verifyDatabase:	INFO  - Aucune erreur trouvée.
+2018-07-01 13:44	- database:	main:	INFO  - Finished.
+2018-07-01 13:48	- database:	main:	INFO  - Started.
+2018-07-01 13:48	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-01 13:48	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-01 13:48	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-01 13:48	- database:	main:	INFO  - Finished.
+2018-07-01 13:48:19.171359	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 13:48:19.173292	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens", ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-01 13:48:19.174291	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:48:19.176312	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:48:19.178284	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:48:19.179284	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-01 13:48:19.227285	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 13:48:19.229283	- makePathFileFromRequests:	INFO:	None2018-07-01-13:48:19	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-01-13:48:19	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-01-13:48:51	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-01-13:48:54	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-01-13:48:55	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-01-13:48:57	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:48:58	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-01-13:48:59	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-01-13:49:02	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-01-13:49:03	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:49:05	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:49:17	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-01-13:49:17	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:49:29	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-01-13:49:30	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:49:34	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:49:35	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:49:37	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:49:47	SCRAPER 	ERROR_CloseDownloadBar: Failed to close the download bar, try nÂ°5, missed found cross at 943 - 1069
+2018-07-01-13:49:50	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°22 soit __Gr.p1 CMI (6)
+2018-07-01-13:49:50	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:49:55	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:49:55	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:49:59	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:49:59	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:50:03	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:50:03	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:50:06	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:50:06	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-01-13:50:10	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-01-13:50:10	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-01-13:50:12	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:50:13	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:50:15	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:50:16	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-01-13:50:18	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-01-13:50:30	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°40 soit __B27-Salle d'examens
+2018-07-01-13:50:30	SCRAPER 	INFO_ReadPathForEdT: Successfully reached the end of the path.
+2018-07-01-13:50:30	SCRAPER 	INFO_: Done.
+2018-07-01-13:50:31	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-01-13:50:31	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-01-13:50:31	SCRAPER 	INFO_Stop: run time: 131078 ms
+
+2018-07-01 13:50:31.750814	- icsToJson:	main:	INFO  - Started.
+2018-07-01 13:50:31.752814	- icsToJson:	icsToJson:	INFO  - Processing 13.ics
+2018-07-01 13:50:31.774813	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/13.json
+2018-07-01 13:50:31.777813	- icsToJson:	icsToJson:	INFO  - Json is valid for 13.json
+2018-07-01 13:50:31.802813	- icsToJson:	icsToJson:	INFO  - Processing 16.ics
+2018-07-01 13:50:31.807814	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/16.json
+2018-07-01 13:50:31.811812	- icsToJson:	icsToJson:	INFO  - Json is valid for 16.json
+2018-07-01 13:50:31.949811	- icsToJson:	icsToJson:	INFO  - Processing 22.ics
+2018-07-01 13:50:31.971810	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/22.json
+2018-07-01 13:50:31.978810	- icsToJson:	icsToJson:	INFO  - Json is valid for 22.json
+2018-07-01 13:50:32.098810	- icsToJson:	icsToJson:	INFO  - Processing 40.ics
+2018-07-01 13:50:32.119808	- icsToJson:	icsToJson:	INFO  - Done. Writing output file to EdTOut/40.json
+2018-07-01 13:50:32.126815	- icsToJson:	icsToJson:	INFO  - Json is valid for 40.json
+2018-07-01 13:50:32.245775	- icsToJson:	main:	INFO  - Finished.
+
+2018-07-01 13:50	- database:	main:	INFO  - Started.
+2018-07-01 13:50	- database:	ParseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-update']
+2018-07-01 13:50	- database:	updateDatabase:	INFO  - Requests: [' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr---01R---p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE---00R---Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-01 13:50	- database:	main:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 518, in <module>
+    parseArgs()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 468, in parseArgs
+    updateDatabase()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 123, in updateDatabase
+    updateSummary(request, checksum=edt_info["file_sum"], trueName=edt_info["source_file"])
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 402, in updateSummary
+    recursive_update(summary, update)
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 409, in recursive_update
+    recursive_update(d[key], item)
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 409, in recursive_update
+    recursive_update(d[key], item)
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 409, in recursive_update
+    recursive_update(d[key], item)
+  [Previous line repeated 3 more times]
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 407, in recursive_update
+    for key, item in update.items():
+AttributeError: 'str' object has no attribute 'items'
+
+database failed!
+2018-07-01 22:23:24	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:23:24	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-01 22:24:47	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:24:47	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-01 22:24:50	- SERVER:	checkIfUpdateNeeded:	INFO  - yea
+2018-07-01 22:29:38	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:34:46	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:34:46	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-01 22:34:49	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-01 22:34:49	- SERVER:	main:	INFO  - Server Done.
+2018-07-01 22:34:49	- SERVER:	root:	ERROR - exec error: {
+  "killed": false,
+  "code": 1,
+  "signal": null,
+  "cmd": "python \"C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database\" -makeRandomRequests 4"
+}
+2018-07-01 22:34:50	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5630639185096379918
+2018-07-01 22:34:51	- SERVER:	root:	INFO  - Getting requests...
+2018-07-01 22:34:51	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-01 22:34:51	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-01 22:38:43	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:38:43	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-01 22:38:48	- SERVER:	main:	INFO  - Server Done.
+2018-07-01 22:38:50	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8090739939600093698
+2018-07-01 22:38:50	- SERVER:	root:	INFO  - Getting requests...
+2018-07-01 22:38:50	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-01 22:38:50	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-01 22:38:50	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+
+2018-07-01 22:38:50	- database:	<module>:	INFO  - Started.
+2018-07-01 22:38:50	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-01 22:38:50	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Santé/Odonto/__CHOGON Solène
+2018-07-01 22:38:50	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Malo/Permanents/GIM/__COSTE VALERIE
+2018-07-01 22:38:50	- database:	makeRandRequests:	INFO  - New request:  Enseignants/  A-Divers etablissements/ISTIC/ELECTRONIQUE/ATER, DOCTORANTS/__FROGERAIS PAUL
+2018-07-01 22:38:51	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Beaulieu/SVE/Autres formations/__Diplôme européen d'études supérieures en sciences et éducation en environnement
+2018-07-01 22:38:51	- database:	<module>:	INFO  - Finished.2018-07-01 22:38:51	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+
+2018-07-01 22:38:51.374052	- makePathFileFromRequests:	INFO:	 Enseignants/Santé/Odonto/__CHOGON Solène~~~ Enseignants/IUT Saint-Malo/Permanents/GIM/__COSTE VALERIE~~~ Enseignants/  A-Divers etablissements/ISTIC/ELECTRONIQUE/ATER, DOCTORANTS/__FROGERAIS PAUL~~~ Etudiants/Beaulieu/SVE/Autres formations/__Diplôme européen d'études supérieures en sciences et éducation en environnement
+2018-07-01 22:38:51.376052	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Enseignants/Santé/Odonto/__CHOGON Solène', ' Enseignants/IUT Saint-Malo/Permanents/GIM/__COSTE VALERIE', ' Enseignants/  A-Divers etablissements/ISTIC/ELECTRONIQUE/ATER, DOCTORANTS/__FROGERAIS PAUL', " Etudiants/Beaulieu/SVE/Autres formations/__Diplôme européen d'études supérieures en sciences et éducation en environnement"]
+2018-07-01 22:38:51.410051	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/Santé/Odonto/__CHOGON Solène
+	at folder : ____CHOGON Solène
+	Ignoring this request...
+2018-07-01 22:38:51.443051	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/IUT Saint-Malo/Permanents/GIM/__COSTE VALERIE
+	at folder : ____COSTE VALERIE
+	Ignoring this request...
+2018-07-01 22:38:51.489051	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/  A-Divers etablissements/ISTIC/ELECTRONIQUE/ATER, DOCTORANTS/__FROGERAIS PAUL
+	at folder : ____FROGERAIS PAUL
+	Ignoring this request...
+2018-07-01 22:38:51.525050	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Etudiants/Beaulieu/SVE/Autres formations/__Diplôme européen d'études supérieures en sciences et éducation en environnement
+	at folder : ____Diplôme européen d'études supérieures en sciences et éducation en environnement
+	Ignoring this request...
+2018-07-01 22:38:51.526050	- makePathFileFromRequests:	ERROR:	2018-07-01 22:38:51	- SERVER:	root:	ERROR - makePathFileFromRequests failed!
+2018-07-01 22:38:52	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8437690898985510565
+2018-07-01 22:45:57	- SERVER:	main:	INFO  - Server Start.
+2018-07-01 22:45:57	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-01 22:46:00	- SERVER:	main:	INFO  - Server Done.
+2018-07-01 22:46:01	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6536003884006423789
+2018-07-01 22:46:02	- SERVER:	root:	INFO  - Getting requests...
+2018-07-01 22:46:02	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-01 22:46:02	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-01 22:46:02	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-01 22:46:02	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+
+2018-07-01 22:46:02.439538	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-01 22:46:02.441534	- makePathFileFromRequests:	INFO:	Requests: 
 	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
-2018-06-28 14:44:25.901094	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
-2018-06-28 14:44:25.904096	- makePathFileFromRequests:	INFO:	None2018-06-28-14:44:27	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+2018-07-01 22:46:02.489533	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-01 22:46:02.491533	- makePathFileFromRequests:	INFO:	None2018-07-01 22:46:02	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-01 22:46:02	- SERVER:	runScraper:	INFO  - Running the scraper script...
 
-2018-06-28-14:44:27	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
-2018-06-28-14:44:43	SCRAPER 	ERROR_Startup: Couldn't find devToolsElements.png!
-2018-06-28-14:44:44	SCRAPER 	INFO_Stop: Errors occured
-2018-06-28-14:44:44	SCRAPER 	INFO_Stop: run time: 15375 ms
+2018-07-01 22:46:02	- database:	<module>:	INFO  - Started.
+2018-07-01 22:46:02	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-01 22:46:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/  A-Divers etablissements/MATH/EXTERIEURS/DIVERS/__GALLIC Ewen
+2018-07-01 22:46:02	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Malo/GIM/Année2 S3---00R---S4/GIM2G1/__GIM2GA
+2018-07-01 22:46:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/DEM/Extérieurs/__TOUPIN-GUYOT C---01R---
+2018-07-01 22:46:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENSSAT/permanents contractuels/__CONGAR A---01R---
+2018-07-01 22:46:02	- database:	<module>:	INFO  - Finished.2018-07-02 12:14:54	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:14:54	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:14:56	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 12:14:58	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5219134926429431643
+2018-07-02 12:14:58	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:14:58	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:14:58	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:14:58	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:27:17	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:27:17	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:27:21	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 12:27:22	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6257932310568481377
+2018-07-02 12:27:22	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:27:22	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:27:22	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:27:22	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:27:22	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:27:22	- SERVER:	root:	INFO  - Server finished!
+
+2018-07-02 12:27:23.136854	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 12:27:23.137854	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 12:27:23.190853	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 12:27:23.191856	- makePathFileFromRequests:	INFO:	None2018-07-02 12:27:23	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 12:27:23	- SERVER:	runScraper:	INFO  - Running the scraper script...
+
+2018-07-02 12:27:23	- database:	<module>:	INFO  - Started.
+2018-07-02 12:27:23	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:27:23	- database:	makeRandRequests:	INFO  - New request: Salles/IUT de Rennes/GEII/Extérieur IUT/__Salle Redon 2
+2018-07-02 12:27:23	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 12:27:23	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__BINARD Alain
+2018-07-02 12:27:23	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENSSAT/permanents contractuels/__FAYET C---01R---
+2018-07-02 12:27:23	- database:	makeRandRequests:	INFO  - New request: Salles/Droit/Rennes/AMPHITHEÂTRES/__A---01R---4 Pierre-Henri Teitgen
+2018-07-02 12:27:23	- database:	<module>:	INFO  - Finished.2018-07-02 12:34:05	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:34:05	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:34:08	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 12:34:09	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8980177859401282555
+2018-07-02 12:34:09	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:34:09	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:34:09	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:34:09	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:34:09	- SERVER:	addRandomRequests:	INFO  - type of resolve and reject: undefinedundefined
+2018-07-02 12:34:09	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:34:09	- SERVER:	root:	INFO  - Server finished!
+
+2018-07-02 12:34:10.265607	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 12:34:10.268606	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 12:34:10.334606	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 12:34:10.336605	- makePathFileFromRequests:	INFO:	None2018-07-02 12:34:10	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 12:34:10	- SERVER:	runScraper:	INFO  - Running the scraper script...
+
+2018-07-02 12:34:10	- database:	root:	INFO  - Started.
+2018-07-02 12:34:10	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:34:10	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 12:34:10	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IGR/Formation Continue/MASTER 2 CCA FC/__M2 CCA FC
+2018-07-02 12:34:10	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Malo/Classe PREPA/__Classe PREPA GIM
+2018-07-02 12:34:10	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT de Rennes/Département Chimie/DUT CHIMIE ANNEE 2 option chimie industrielle/__T2 D1 CIndus
+2018-07-02 12:34:10	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Droit/SOIE Orientation et Insertion/__CARRE Brigitte
+2018-07-02 12:34:10	- database:	root:	INFO  - Finished.2018-07-02 12:36:03	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:36:03	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:36:06	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 12:36:07	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5592901996633718938
+2018-07-02 12:36:07	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:36:07	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:36:07	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:36:07	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:36:07	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:36:07	- SERVER:	root:	INFO  - Server finished!
+
+2018-07-02 12:36:08.029999	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 12:36:08.030999	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 12:36:08.079998	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 12:36:08.081998	- makePathFileFromRequests:	INFO:	None2018-07-02 12:36:08	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 12:36:08	- SERVER:	runScraper:	INFO  - Running the scraper script...
+
+2018-07-02 12:36:08	- database:	root:	INFO  - Started.
+2018-07-02 12:36:08	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:36:08	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Lannion/DUT INFO COM/option COM/COM 1A/__C1-1
+2018-07-02 12:36:08	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT de Rennes/Département GEA/LP CCC/__LP CCC A
+2018-07-02 12:36:08	- database:	makeRandRequests:	INFO  - New request: Salles/IUT Saint-Brieuc/Saint-Brieuc/SAINT BRIEUC IUT/Bâtiment 01/Etage 1/__TP03
+2018-07-02 12:36:08	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/Département GEA/VACATAIRES/__MORIN HELENE
+2018-07-02 12:36:08	- database:	root:	INFO  - Finished.2018-07-02 12:37:10	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:37:10	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:37:13	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:37:13	- SERVER:	main:	INFO  - Server Done.
+
+2018-07-02 12:37:13	- database:	root:	INFO  - Started.
+2018-07-02 12:37:13	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:37:13	- database:	makeRandRequests:	INFO  - New request:  Enseignants/SCELVA/Anglais/__HUYNH BISWAS Debasree
+2018-07-02 12:37:13	- database:	makeRandRequests:	INFO  - New request:  Etudiants/ENSSAT/PHOT1 TS (TC)/__PHOT1 TS (TC)
+2018-07-02 12:37:13	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 12:37:13	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Droit/RENNES/LIC---01R---PRO---01R---METIERS NOTARIAT/__Groupe 3
+2018-07-02 12:37:13	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Droit/RENNES/DU/DU DE DROIT/__DU DROIT
+2018-07-02 12:37:13	- database:	root:	INFO  - Finished.2018-07-02 12:37:14	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/7316016537493046112
+2018-07-02 12:37:14	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:37:14	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:37:14	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:37:14	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:37:14	- SERVER:	root:	INFO  - Server finished!
+
+2018-07-02 12:37:15.126961	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 12:37:15.128961	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 12:37:15.175960	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 12:37:15.176960	- makePathFileFromRequests:	INFO:	None2018-07-02 12:37:15	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 12:37:15	- SERVER:	runScraper:	INFO  - Running the scraper script...
+2018-07-02-12:37:16	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-02-12:37:16	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-12:37:19	SCRAPER 	INFO_Stop: Escaped!
+2018-07-02-12:37:19	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-12:37:19	SCRAPER 	INFO_Stop: run time: 2984 ms
+2018-07-02 12:37:19	- SERVER:	root:	ERROR - stdout of scraper is nothing that I can understand! 
+2018-07-02 12:37:20	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6912588053524998915
+2018-07-02 12:39:16	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:39:16	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:39:19	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:39:34	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:39:34	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:39:37	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:39:37	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:39:37	- SERVER:	main:	INFO  - Server Done.
+
+2018-07-02 12:39:37.635341	- makePathFileFromRequests:	ERROR:	2018-07-02 12:39:37	- SERVER:	root:	ERROR - makePathFileFromRequests failed!
+
+2018-07-02 12:39:37	- database:	root:	INFO  - Started.
+2018-07-02 12:39:37	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:39:37	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 12:39:37	- database:	makeRandRequests:	INFO  - New request: Salles/IUT de Rennes/GEII/Extérieur IUT/__Salle Génie Civil
+2018-07-02 12:39:37	- database:	makeRandRequests:	INFO  - New request: Salles/IGR/3 Salles  Informatique/__Salle Info 215 (19 Postes)
+2018-07-02 12:39:37	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Malo/Permanents/GEA/__LEON ALAIN
+2018-07-02 12:39:37	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/2SEP/Extérieurs/__LE MEUR Loïc
+2018-07-02 12:39:37	- database:	root:	INFO  - Finished.2018-07-02 12:39:38	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/4780602406324018169
+2018-07-02 12:39:38	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5872031263755586878
+2018-07-02 12:39:38	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:39:38	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:39:38	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:39:38	- SERVER:	root:	INFO  - Server finished!
+2018-07-02 12:52:45	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 12:52:45	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 12:52:47	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 12:52:47	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 12:52:47	- SERVER:	main:	INFO  - Server Done.
+
+2018-07-02 12:52:48.115017	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 12:52:48.117015	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 12:52:48.174015	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 12:52:48.175015	- makePathFileFromRequests:	INFO:	None
+2018-07-02 12:52:48	- database:	root:	INFO  - Started.
+2018-07-02 12:52:48	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 12:52:48	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IGR/Intervenants Extérieur/__OLIVEAU DANIEL
+2018-07-02 12:52:48	- database:	makeRandRequests:	INFO  - New request: Salles/IUT de Rennes/GMP/__TD11
+2018-07-02 12:52:48	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Lannion/GEN/__Gen
+2018-07-02 12:52:48	- database:	makeRandRequests:	INFO  - New request: Salles/IUT de Rennes/Carrières sociales/TD - TP/__5 L---01R--- Michel
+2018-07-02 12:52:48	- database:	root:	INFO  - Finished.2018-07-02 12:52:48	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 12:52:49	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6326975196817634599
+2018-07-02 12:52:49	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 12:52:49	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 12:52:49	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 12:52:49	- SERVER:	root:	INFO  - Server finished!
+2018-07-02 13:05:57	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:05:57	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 13:05:59	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 13:05:59	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 13:05:59	- SERVER:	main:	INFO  - Server Done.
+
+2018-07-02 13:06:00.193913	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 13:06:00.195912	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 13:06:00.256911	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 13:06:00.258911	- makePathFileFromRequests:	INFO:	None
+2018-07-02 13:06:00	- database:	root:	INFO  - Started.
+2018-07-02 13:06:00	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:06:00	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Santé/Odonto/__THOR Seng
+2018-07-02 13:06:00	- database:	makeRandRequests:	INFO  - New request: Salles/IGR/1 Salle de Réunion/__Espace Recherche
+2018-07-02 13:06:00	- database:	makeRandRequests:	INFO  - New request: Salles/Droit/Rennes/EXTERIEURS/EHESP-/__EHESP C1
+2018-07-02 13:06:00	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__DRONIOU Gilles
+2018-07-02 13:06:00	- database:	root:	INFO  - Finished.2018-07-02 13:10:57	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:10:57	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 13:11:02	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 13:11:02	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 13:11:02	- SERVER:	main:	INFO  - Server Done.
+
+2018-07-02 13:11:02.496574	- makePathFileFromRequests:	INFO:	 Enseignants/Santé/Odonto/__THOR Seng~~~Salles/IGR/1 Salle de Réunion/__Espace Recherche~~~Salles/Droit/Rennes/EXTERIEURS/EHESP-/__EHESP C1~~~ Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__DRONIOU Gilles
+2018-07-02 13:11:02.498574	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Enseignants/Santé/Odonto/__THOR Seng', 'Salles/IGR/1 Salle de Réunion/__Espace Recherche', 'Salles/Droit/Rennes/EXTERIEURS/EHESP-/__EHESP C1', ' Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__DRONIOU Gilles']
+2018-07-02 13:11:02.574573	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/Santé/Odonto/__THOR Seng
+	at folder : ____THOR Seng
+	Ignoring this request...
+2018-07-02 13:11:02.617573	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	Salles/IGR/1 Salle de Réunion/__Espace Recherche
+	at folder : ____Espace Recherche
+	Ignoring this request...
+2018-07-02 13:11:02.665572	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	Salles/Droit/Rennes/EXTERIEURS/EHESP-/__EHESP C1
+	at folder : ____EHESP C1
+	Ignoring this request...
+2018-07-02 13:11:02.728572	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__DRONIOU Gilles
+	at folder : ____DRONIOU Gilles
+	Ignoring this request...
+2018-07-02 13:11:02.730571	- makePathFileFromRequests:	ERROR:	2018-07-02 13:11:02	- SERVER:	root:	ERROR - makePathFileFromRequests failed!
+
+2018-07-02 13:11:02	- database:	root:	INFO  - Started.
+2018-07-02 13:11:02	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:11:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/Langues/__Millonet, Mary
+2018-07-02 13:11:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/SCELVA/Allemand/__A preciser Allemand
+2018-07-02 13:11:02	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Droit/RENNES/CAPACITE 1/__Capa1
+2018-07-02 13:11:02	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Droit/SOIE Orientation et Insertion/__ONGHENA Claire
+2018-07-02 13:11:02	- database:	root:	INFO  - Finished.2018-07-02 13:12:27	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:12:27	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 13:12:29	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 13:12:30	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 13:12:30	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 13:12:30	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 13:12:31	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/4703829826237047306
+2018-07-02 13:13:42	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:13:42	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 13:13:45	- SERVER:	main:	INFO  - Server Done.
+2018-07-02 13:13:46	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/7128805172984512427
+2018-07-02 13:13:46	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 13:13:46	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 13:13:46	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 13:14:33	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:14:33	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 13:14:37	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8794621673346491541
+2018-07-02 13:14:37	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 13:14:37	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 13:14:37	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 13:14:37	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 13:15:17	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:15:17	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+
+2018-07-02 13:15:18	- database:	root:	INFO  - Started.
+2018-07-02 13:15:18	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:15:18	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 13:15:18	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/Carrière Sociales/PERMANENTS/__SAMMER Christine
+2018-07-02 13:15:18	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 13:15:18	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Brieuc/Génie biologique/LP MIPSA/__MIPSA A
+2018-07-02 13:15:18	- database:	makeRandRequests:	INFO  - New request: Salles/Droit/Rennes/SALLES INFORMATIQUES/__S 922
+2018-07-02 13:15:18	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 13:15:18	- database:	makeRandRequests:	INFO  - New request: Salles/Rennes/BEAULIEU/Bâtiment 26/Etage 2/__B26 - Salle TD 201
+2018-07-02 13:15:18	- database:	root:	INFO  - Finished.2018-07-02 13:15:18	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 13:15:18	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 13:15:18	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/4817457609657810652
+
+2018-07-02 13:19:41	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:19:41	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 13:19:41	- database:	root:	INFO  - Started.
+2018-07-02 13:19:41	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:19:41	- database:	makeRandRequests:	INFO  - New request: Salles/IUT Saint-Malo/R&T/__TD6
+2018-07-02 13:19:41	- database:	makeRandRequests:	INFO  - New request: Salles/Beaulieu/__Bât 8 salle 70
+2018-07-02 13:19:41	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 13:19:41	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Droit/RENNES/MASTERS 2 PRO/MAST 2 DT PR---01R--- DT---01R---NOTARIAL/__M2 Dt notarial
+2018-07-02 13:19:42	- database:	makeRandRequests:	INFO  - New request:  Enseignants/  A-Divers etablissements/MATH/EXTERIEURS/DIVERS/__SCOTT Rob
+2018-07-02 13:19:42	- database:	root:	INFO  - Finished.
+2018-07-02 13:19:42	- SERVER:	root:	INFO  - makeRandomRequests exited with code: 0 and signal: null
+2018-07-02 13:19:42	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 13:19:42	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 13:19:42	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/4692783797747054468
+2018-07-02 13:21:48	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:21:48	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 13:21:49	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6806828729406768118
+2018-07-02 13:21:49	- database:	root:	INFO  - Started.
+2018-07-02 13:21:49	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:21:50	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/DEM/Extérieurs/__GRASSI Olivier
+2018-07-02 13:21:50	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IGR/IGR - Rennes 1/__MARQUET FABIEN
+2018-07-02 13:21:50	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Malo/GEA/Année1 S1---00R---S2/G3/__G3-A
+2018-07-02 13:21:50	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Droit/RENNES/CAPACITE 2/__Capa2
+2018-07-02 13:21:50	- database:	root:	INFO  - Finished.
+2018-07-02 13:21:50	- SERVER:	root:	INFO  - makeRandomRequests exited with code: 0 and signal: null
+2018-07-02 13:21:50	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 13:21:50	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 13:23:39	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 13:23:39	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 13:23:40	- database:	root:	INFO  - Started.
+2018-07-02 13:23:40	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 13:23:40	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENSSAT/Vacataires/__ANDRIEUX B---01R---
+2018-07-02 13:23:40	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/Département GEA/LP CCC/__O---01R--- HERVELIN
+2018-07-02 13:23:40	- database:	makeRandRequests:	INFO  - New request: Salles/ENS Rennes/Salles informatique/__ENS info TP3
+2018-07-02 13:23:40	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/Math/__BEAUCHARD Karine
+2018-07-02 13:23:40	- database:	root:	INFO  - Finished.
+2018-07-02 13:23:40	- SERVER:	root:	INFO  - makeRandomRequests stdout: OK
+2018-07-02 13:23:40	- SERVER:	root:	INFO  - makeRandomRequests exited with code: 0 and signal: null
+2018-07-02 13:23:40	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 13:23:40	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 13:23:40	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/9106218810477641880
+2018-07-02 14:08:20	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:08:20	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:08:21	- database:	root:	INFO  - Started.
+2018-07-02 14:08:21	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:08:21	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IGR/IGR - Rennes 1/__VIGOUROUX CHRISTIAN
+2018-07-02 14:08:21	- database:	makeRandRequests:	INFO  - New request:  Etudiants/Beaulieu/OSUR/M1 ED/__S7 ED (19)
+2018-07-02 14:08:21	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 14:08:21	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Malo/Permanents/GEA/__KLAOUSEN PATRICK
+2018-07-02 14:08:21	- database:	makeRandRequests:	INFO  - New request:  Enseignants/ENS Rennes/DEM/Extérieurs/__BUSSON VILLA Florence
+2018-07-02 14:08:21	- database:	root:	INFO  - Finished.
+2018-07-02 14:08:21	- SERVER:	root:	INFO  - makeRandomRequests stdout: OK
+2018-07-02 14:08:21	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:08:21	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 14:08:22	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5335536189302508552
+2018-07-02 14:12:10	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:12:10	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 14:12:13	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:12:14	- database:	root:	INFO  - Started.
+2018-07-02 14:12:14	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:12:14	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 14:12:14	- database:	makeRandRequests:	INFO  - New request: Salles/Beaulieu/INSA/__INSA Salle 111 BAT 2
+2018-07-02 14:12:14	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 14:12:14	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Lannion/DUT MP/MP 2A/option MCPC/M2/__M2A
+2018-07-02 14:12:14	- database:	makeRandRequests:	INFO  - New request: Salles/Rennes/BEAULIEU/Bâtiment 36/Etage 1/__Salle de réunion
+2018-07-02 14:12:14	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 14:12:14	- database:	makeRandRequests:	INFO  - New request: Salles/IUT Saint-Brieuc/Science et Génie des Matériaux/__2 131 Info 1
+2018-07-02 14:12:14	- database:	root:	INFO  - Finished.
+2018-07-02 14:12:14	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:12:15	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6210605153708493177
+2018-07-02 14:12:15	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 14:12:15	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 14:12:15	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 14:12:15	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 14:12:53	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:12:53	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 14:12:55	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:12:56	- database:	root:	INFO  - Started.
+2018-07-02 14:12:56	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:12:56	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IGR/Réservation de Salles/__Réservation MRF et FRSC
+2018-07-02 14:12:56	- database:	makeRandRequests:	INFO  - New request: Salles/IUT Lannion/R&T/__G017
+2018-07-02 14:12:56	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Droit/VACATAIRES (CV)/__YSNEL David
+2018-07-02 14:12:56	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Lannion/Permanents/MP/__KILLIAN Cedric
+2018-07-02 14:12:56	- database:	root:	INFO  - Finished.
+2018-07-02 14:12:56	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:12:56	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6853109949992349448
+2018-07-02 14:12:57	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 14:12:57	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 14:12:57	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 14:12:57	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 14:13:37	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:13:37	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 14:13:40	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8585033186589899055
+2018-07-02 14:13:41	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 14:13:41	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 14:13:41	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 14:13:41	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:13:41	- database:	root:	INFO  - Started.
+2018-07-02 14:13:41	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:13:41	- database:	makeRandRequests:	INFO  - New request: Salles/Beaulieu/Philosophie/Faculté de Droit - Campus centre/__Faculté de Droit - campus centre - Amphi I
+2018-07-02 14:13:41	- database:	makeRandRequests:	INFO  - New request:  Enseignants/SCELVA/Allemand/__A preciser Allemand
+2018-07-02 14:13:41	- database:	makeRandRequests:	INFO  - New request: Salles/ENSSAT/Salles Langues tous les jours/__108H
+2018-07-02 14:13:41	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IGR/Alternance/M2  Mention Comptabilité Contrôle Audit Appr---01R--- Promo K - Bungalow 2/__M2 Mention C---01R---C---01R---A---01R--- Appr---01R--- Promo K
+2018-07-02 14:13:41	- database:	root:	INFO  - Finished.
+2018-07-02 14:13:41	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:13:41	- SERVER:	root:	INFO  - Server Done.
+2018-07-02 14:51:18	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:51:18	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 14:51:24	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8932920779572198356
+2018-07-02 14:51:25	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 14:51:25	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 14:51:25	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 14:51:25	- SERVER:	addUpdateRequestsFromDatabase:	INFO  - Running database to get updates...
+2018-07-02 14:51:25	- database:	root:	INFO  - Started.
+2018-07-02 14:51:25	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-02 14:51:25	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-02 14:51:25	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-02 14:51:25	- database:	root:	INFO  - Finished.
+2018-07-02 14:51:25	- SERVER:	root:	INFO  - Got updates from requests.
+2018-07-02 14:51:25	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:51:25	- database:	root:	INFO  - Started.
+2018-07-02 14:51:25	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:51:26	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IGR/Alternance/M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---/__M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---
+2018-07-02 14:51:26	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Malo/Permanents/CJ/__DEVELAY MATTHIEU
+2018-07-02 14:51:26	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 14:51:26	- database:	makeRandRequests:	INFO  - New request: Salles/IUT Lannion/Exterieur IUT/__Lycée FLD
+2018-07-02 14:51:26	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Malo/GEA/Année1 S1---00R---S2/G2/__G2-A
+2018-07-02 14:51:26	- database:	root:	INFO  - Finished.
+2018-07-02 14:51:26	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:51:26	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 14:51:26.708008	- makePathFileFromRequests:	INFO:	 Etudiants/IGR/Alternance/M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---/__M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---~~~ Enseignants/IUT Saint-Malo/Permanents/CJ/__DEVELAY MATTHIEU~~~Salles/IUT Lannion/Exterieur IUT/__Lycée FLD~~~ Etudiants/IUT Saint-Malo/GEA/Année1 S1---00R---S2/G2/__G2-A
+2018-07-02 14:51:26.710008	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/IGR/Alternance/M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---/__M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---', ' Enseignants/IUT Saint-Malo/Permanents/CJ/__DEVELAY MATTHIEU', 'Salles/IUT Lannion/Exterieur IUT/__Lycée FLD', ' Etudiants/IUT Saint-Malo/GEA/Année1 S1---00R---S2/G2/__G2-A']
+2018-07-02 14:51:26.755007	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Etudiants/IGR/Alternance/M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---/__M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---
+	at folder : M2 mention Finance Parcours Audit et Gestion Des Risques - Contrat de pro---01R---
+	Ignoring this request...
+2018-07-02 14:51:26.788012	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/IUT Saint-Malo/Permanents/CJ/__DEVELAY MATTHIEU
+	at folder : ____DEVELAY MATTHIEU
+	Ignoring this request...
+2018-07-02 14:51:26.824011	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	Salles/IUT Lannion/Exterieur IUT/__Lycée FLD
+	at folder : ____Lycée FLD
+	Ignoring this request...
+2018-07-02 14:51:26.861006	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Etudiants/IUT Saint-Malo/GEA/Année1 S1---00R---S2/G2/__G2-A
+	at folder : Année1 S1---00R---S2
+	Ignoring this request...
+2018-07-02 14:51:26.865006	- makePathFileFromRequests:	ERROR:	
+2018-07-02 14:51:26	- SERVER:	root:	ERROR - makePathFileFromRequests failed!
+2018-07-02 14:51:26	- SERVER:	root:	ERROR - Server failed!
+2018-07-02 14:51:27	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8716773307682638937
+2018-07-02 14:58:51	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 14:58:51	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 14:58:55	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8629071566765426109
+2018-07-02 14:58:56	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 14:58:56	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 14:58:56	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 14:58:56	- SERVER:	addUpdateRequestsFromDatabase:	INFO  - Running database to get updates...
+2018-07-02 14:58:56	- database:	root:	INFO  - Started.
+2018-07-02 14:58:56	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-02 14:58:56	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-02 14:58:56	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-02 14:58:56	- database:	root:	INFO  - Finished.
+2018-07-02 14:58:56	- SERVER:	root:	INFO  - Got updates from requests.
+2018-07-02 14:58:56	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 14:58:56	- database:	root:	INFO  - Started.
+2018-07-02 14:58:56	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 14:58:56	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Saint-Malo/Licences Pro/CPCLG/CPCLG FA/__G1 - All
+2018-07-02 14:58:56	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Santé/Odonto/__PERARD Matthieu
+2018-07-02 14:58:56	- database:	makeRandRequests:	INFO  - New request:  Etudiants/ENS Rennes/DEM/__DEM 1
+2018-07-02 14:58:57	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT de Rennes/GEII/Vacataires GEII/__MIRANTE-PETIT Sarah
+2018-07-02 14:58:57	- database:	root:	INFO  - Finished.
+2018-07-02 14:58:57	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 14:58:57	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 14:58:57.284693	- makePathFileFromRequests:	INFO:	 Etudiants/IUT Saint-Malo/Licences Pro/CPCLG/CPCLG FA/__G1 - All~~~ Enseignants/Santé/Odonto/__PERARD Matthieu~~~ Etudiants/ENS Rennes/DEM/__DEM 1~~~ Enseignants/IUT de Rennes/GEII/Vacataires GEII/__MIRANTE-PETIT Sarah
+2018-07-02 14:58:57.286694	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/IUT Saint-Malo/Licences Pro/CPCLG/CPCLG FA/__G1 - All', ' Enseignants/Santé/Odonto/__PERARD Matthieu', ' Etudiants/ENS Rennes/DEM/__DEM 1', ' Enseignants/IUT de Rennes/GEII/Vacataires GEII/__MIRANTE-PETIT Sarah']
+2018-07-02 14:58:57.323693	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Etudiants/IUT Saint-Malo/Licences Pro/CPCLG/CPCLG FA/__G1 - All
+	at folder : ____G1 - All
+	Ignoring this request...
+2018-07-02 14:58:57.355692	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/Santé/Odonto/__PERARD Matthieu
+	at folder : ____PERARD Matthieu
+	Ignoring this request...
+2018-07-02 14:58:57.388692	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Etudiants/ENS Rennes/DEM/__DEM 1
+	at folder : ____DEM 1
+	Ignoring this request...
+2018-07-02 14:58:57.418697	- makePathFileFromRequests:	ERROR:	reached EOF when parsing request: 
+	 Enseignants/IUT de Rennes/GEII/Vacataires GEII/__MIRANTE-PETIT Sarah
+	at folder : ____MIRANTE-PETIT Sarah
+	Ignoring this request...
+2018-07-02 14:58:57.420698	- makePathFileFromRequests:	ERROR:	
+2018-07-02 14:58:57	- SERVER:	root:	ERROR - makePathFileFromRequests failed!
+2018-07-02 14:58:57	- SERVER:	root:	ERROR - Server failed!
+2018-07-02 14:58:57	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/9194091525456135673
+2018-07-02 14:58:57	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8967648036653128797
+2018-07-02 15:04:07	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 15:04:07	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 15:04:12	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5676723619358559720
+2018-07-02 15:04:13	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 15:04:13	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 15:04:13	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 15:04:13	- SERVER:	addUpdateRequestsFromDatabase:	INFO  - Running database to get updates...
+2018-07-02 15:04:13	- database:	root:	INFO  - Started.
+2018-07-02 15:04:13	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-02 15:04:13	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-02 15:04:13	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-02 15:04:13	- database:	root:	INFO  - Finished.
+2018-07-02 15:04:13	- SERVER:	root:	INFO  - Got updates from requests.
+2018-07-02 15:04:13	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 15:04:14.020541	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 15:04:14.022540	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens", ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 15:04:14.024541	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:04:14.026541	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:04:14.027541	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:04:14.029541	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:04:14.081540	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 15:04:14.083540	- makePathFileFromRequests:	INFO:	None
+2018-07-02 15:04:14	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 15:04:14	- SERVER:	runScraper:	INFO  - Running the scraper script...
+2018-07-02 15:04:14	- SERVER:	processEdTs:	INFO  - Processing EdTs...2018-07-02-15:04:14	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-02-15:04:14	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-15:04:51	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-02-15:04:55	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-02-15:04:56	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-02-15:04:58	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-02-15:05:00	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-02-15:05:02	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-02-15:05:04	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-02-15:05:05	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-02-15:05:18	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-02-15:05:18	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-02-15:05:20	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-02-15:05:20	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 1
+2018-07-02-15:05:20	SCRAPER 	ERROR_isPixelBlue: couldn't make the text blue!
+2018-07-02-15:05:34	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-02-15:05:34	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-02-15:05:39	SCRAPER 	INFO_ReadPathForEdT: Successfully UPped.
+2018-07-02-15:05:39	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-02-15:05:41	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-02-15:05:53	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°22 soit __Gr.p1 CMI (6)
+2018-07-02-15:05:54	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-02-15:05:57	SCRAPER 	ERROR_ReadPathForEdT: Failed to UP: new selection is not a folder
+2018-07-02-15:05:57	SCRAPER 	ERROR_ReadPathForEdT: Unable to reach parent folder: restarting to current position
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (<1)1 : 0
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)2 :  Etudiants
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0| Etudiants| - want 2
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 2 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)3 : Beaulieu
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||Beaulieu| - want 3
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 3 : 8
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)4 : SPM
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0|||SPM| - want 4
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 4 : 3
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)5 : L2 - PCGS - S4
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||L2 - PCGS - S4| - want 5
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 5 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)6 : ComplÃ©ments
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0|||||ComplÃ©ments| - want 6
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 6 : 5
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)7 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)8 : __Cplt MÃ©ca2 (Gr2)
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||||GET_EDT|__Cplt MÃ©ca2 (Gr2)| - want 8
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 8 : 2
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)9 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)10 : __Cplt PCS (Gr1)
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||||GET_EDT||GET_EDT|__Cplt PCS (Gr1)| - want 10
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 10 : 5
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)11 : Gr Physique
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||||GET_EDT||GET_EDT||Gr Physique| - want 11
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added to 11 : 2
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)12 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)13 : __Gr.p1 CMI (6)
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)14 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)15 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)16 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)17 : 2
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)18 : Salles
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)19 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)20 : Beaulieu
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)21 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)22 : Apparitrices
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)23 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)24 : 1er CYCLE/Zone nord
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)25 : 5
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)26 : BAT 27
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)27 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)28 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)29 : __B27-Salle d'examens
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°1 : 0
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°2 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°3 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°4 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°5 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°6 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°7 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°8 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°9 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°10 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°11 : 
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°12 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°13 : __Gr.p1 CMI (6)
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°14 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°15 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°16 : UP
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°17 : 2
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°18 : Salles
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°19 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°20 : Beaulieu
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°21 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°22 : Apparitrices
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°23 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°24 : 1er CYCLE/Zone nord
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°25 : 5
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°26 : BAT 27
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°27 : 1
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°28 : GET_EDT
+2018-07-02-15:06:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°29 : __B27-Salle d'examens
+2018-07-02-15:06:08	SCRAPER 	ERROR_ReadPathForEdT: Restarting...
+2018-07-02-15:06:08	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-02-15:06:09	SCRAPER 	ERROR_ReadPathForEdT: folder name '' doesn't match the found name: ' Etudiants'
+2018-07-02-15:06:10	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-15:06:10	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-15:06:10	SCRAPER 	INFO_Stop: run time: 115344 ms
+
+2018-07-02 15:06:11	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/8608303369165239162
+2018-07-02 15:14:33	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 15:14:33	- SERVER:	checkIfUpdateNeeded:	INFO  - Checking if updates are needed...
+2018-07-02 15:14:38	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/4901012684051479088
+2018-07-02 15:14:38	- SERVER:	root:	INFO  - Getting requests...
+2018-07-02 15:14:38	- SERVER:	root:	INFO  - Wrote requests of firebase to 'requests.txt' : 
+2018-07-02 15:14:38	- SERVER:	root:	INFO  -  Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt MÃ©ca2 (Gr2)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/ComplÃ©ments/Cplt PCS (Gr1)
+ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)
+Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+
+2018-07-02 15:14:38	- SERVER:	addUpdateRequestsFromDatabase:	INFO  - Running database to get updates...
+2018-07-02 15:14:39	- database:	root:	INFO  - Started.
+2018-07-02 15:14:39	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-07-02 15:14:39	- database:	getUpdates:	INFO  - Got 4 files to update.
+2018-07-02 15:14:39	- database:	getUpdates:	INFO  - Outputted to requests.txt
+2018-07-02 15:14:39	- database:	root:	INFO  - Finished.
+2018-07-02 15:14:39	- SERVER:	root:	INFO  - Got updates from requests.
+2018-07-02 15:14:39	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 15:14:39.387632	- makePathFileFromRequests:	INFO:	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)~~~ Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)~~~Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens
+2018-07-02 15:14:39.389628	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens", ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt Méca2 (Gr2)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)', ' Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Gr Physique/Gr.p1 CMI (6)', "Salles/Beaulieu/Apparitrices/1er CYCLE$%$Zone nord/BAT 27/B27-Salle d'examens"]
+2018-07-02 15:14:39.391636	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:14:39.393628	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:14:39.394628	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:14:39.396628	- makePathFileFromRequests:	ERROR:	duplicate request found: 
+	 Etudiants/Beaulieu/SPM/L2 - PCGS - S4/Compléments/Cplt PCS (Gr1)
+	Ignoring the duplicate...
+2018-07-02 15:14:39.445627	- makePathFileFromRequests:	INFO:	Done. Length of path: 40
+2018-07-02 15:14:39.447628	- makePathFileFromRequests:	INFO:	None
+2018-07-02 15:14:39	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 15:14:39	- SERVER:	runScraper:	INFO  - Running the scraper script...2018-07-02-15:14:39	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-02-15:14:39	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-15:15:11	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-02-15:15:15	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-02-15:15:16	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-02-15:15:18	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-02-15:15:19	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-02-15:15:21	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-02-15:15:22	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-02-15:15:24	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-02-15:15:25	SCRAPER 	INFO_ReadPathForEdT: 5
+2018-07-02-15:15:37	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°13 soit __Cplt MÃ©ca2 (Gr2)
+2018-07-02-15:15:38	SCRAPER 	INFO_ReadPathForEdT: 2
+2018-07-02-15:15:39	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 2
+2018-07-02-15:15:39	SCRAPER 	ERROR_isPixelBlue: text wasn't blue :( -> 1
+2018-07-02-15:15:40	SCRAPER 	ERROR_isPixelBlue: couldn't make the text blue!
+2018-07-02-15:15:51	SCRAPER 	ERROR_CloseDownloadBar: Failed to close the download bar, try nÂ°5, missed found cross at 943 - 1065
+2018-07-02-15:15:54	SCRAPER 	INFO_ReadPathForEdT: DL OK pour le fichier nÂ°16 soit __Cplt PCS (Gr1)
+2018-07-02-15:15:54	SCRAPER 	INFO_ReadPathForEdT: UP
+2018-07-02-15:15:57	SCRAPER 	ERROR_ReadPathForEdT: Failed to UP: new selection is not a folder
+2018-07-02-15:15:57	SCRAPER 	ERROR_ReadPathForEdT: Unable to reach parent folder: restarting to current position
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (<1)1 : 0
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)2 :  Etudiants
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0| Etudiants| - want 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 2 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)3 : Beaulieu
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||Beaulieu| - want 3
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 3 : 8
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)4 : SPM
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0|||SPM| - want 4
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 4 : 3
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)5 : L2 - PCGS - S4
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||L2 - PCGS - S4| - want 5
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 5 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)6 : ComplÃ©ments
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0|||||ComplÃ©ments| - want 6
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 6 : 5
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)7 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)8 : __Cplt MÃ©ca2 (Gr2)
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: newPath: 0||||||GET_EDT|__Cplt MÃ©ca2 (Gr2)| - want 8
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added to 8 : 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (order)9 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (edt)10 : __Cplt PCS (Gr1)
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)11 : Gr Physique
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)12 : 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)13 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)14 : __Gr.p1 CMI (6)
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)15 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)16 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)17 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)18 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)19 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)20 : 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)21 : Salles
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)22 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)23 : Beaulieu
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)24 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)25 : Apparitrices
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)26 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)27 : 1er CYCLE/Zone nord
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)28 : 5
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)29 : BAT 27
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)30 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)31 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Added at (end)32 : __B27-Salle d'examens
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°1 : 0
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°2 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°3 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°4 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°5 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°6 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°7 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°8 : 
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°9 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°10 : __Cplt PCS (Gr1)
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°11 : Gr Physique
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°12 : 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°13 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°14 : __Gr.p1 CMI (6)
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°15 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°16 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°17 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°18 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°19 : UP
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°20 : 2
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°21 : Salles
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°22 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°23 : Beaulieu
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°24 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°25 : Apparitrices
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°26 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°27 : 1er CYCLE/Zone nord
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°28 : 5
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°29 : BAT 27
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°30 : 1
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°31 : GET_EDT
+2018-07-02-15:16:08	SCRAPER 	INFO_RestartPathFromPos: Order nÂ°32 : __B27-Salle d'examens
+2018-07-02-15:16:08	SCRAPER 	ERROR_ReadPathForEdT: Restarting...
+2018-07-02-15:16:09	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-02-15:16:10	SCRAPER 	ERROR_ReadPathForEdT: folder name '' doesn't match the found name: ' Etudiants'
+2018-07-02-15:16:10	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-15:16:10	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-15:16:10	SCRAPER 	INFO_Stop: run time: 90485 ms
+
+2018-07-02 15:16:11	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6588299481137106822
+2018-07-02 15:16:11	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6834921533131218061
+2018-07-02 15:32:57	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 15:32:57	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 15:32:58	- database:	root:	INFO  - Started.
+2018-07-02 15:32:58	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 15:32:58	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Droit/TITULAIRES$%$PERMANENTS/TURGIS Sandrine
+2018-07-02 15:32:58	- database:	makeRandRequests:	ERROR - Trouvé un dossier vide. On recommence...
+2018-07-02 15:32:58	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT de Rennes/GEII/DUTAIE
+2018-07-02 15:32:58	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Lannion/DUT INFO/INFO 1A/G/G1
+2018-07-02 15:32:58	- database:	makeRandRequests:	INFO  - New request:  Etudiants/IUT Lannion/LP ISVD/g1 ISVD
+2018-07-02 15:32:58	- database:	root:	INFO  - Finished.
+2018-07-02 15:32:58	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 15:32:58	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 15:32:58	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5715308786533655757
+2018-07-02 15:32:58.785819	- makePathFileFromRequests:	INFO:	 Enseignants/Droit/TITULAIRES$%$PERMANENTS/TURGIS Sandrine~~~ Etudiants/IUT de Rennes/GEII/DUTAIE~~~ Etudiants/IUT Lannion/DUT INFO/INFO 1A/G/G1~~~ Etudiants/IUT Lannion/LP ISVD/g1 ISVD
+2018-07-02 15:32:58.787818	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Enseignants/Droit/TITULAIRES$%$PERMANENTS/TURGIS Sandrine', ' Etudiants/IUT de Rennes/GEII/DUTAIE', ' Etudiants/IUT Lannion/DUT INFO/INFO 1A/G/G1', ' Etudiants/IUT Lannion/LP ISVD/g1 ISVD']
+2018-07-02 15:32:58.841818	- makePathFileFromRequests:	INFO:	Done. Length of path: 42
+2018-07-02 15:32:58.842817	- makePathFileFromRequests:	INFO:	None
+2018-07-02 15:32:58	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 15:32:58	- SERVER:	runScraper:	INFO  - Running the scraper script...2018-07-02-15:32:59	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-02-15:32:59	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-15:33:30	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-02-15:33:33	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-02-15:33:34	SCRAPER 	INFO_ReadPathForEdT: 0
+2018-07-02-15:33:36	SCRAPER 	INFO_ReadPathForEdT: 6
+2018-07-02-15:33:38	SCRAPER 	ERROR_ReadPathForEdT: folder name 'IUT Lannion' doesn't match the found name: 'IPAG'
+2018-07-02-15:33:38	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-15:33:38	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-15:33:38	SCRAPER 	INFO_Stop: run time: 39094 ms
+
+2018-07-02 15:33:39	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6712829008647087687
+2018-07-02 15:33:39	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/75407548529762431802018-07-02-16:53:34	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt
+
+2018-07-02-16:55:34	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt --startup
+
+2018-07-02-16:55:34	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-16:56:06	SCRAPER 	INFO_: Starting in arbo scraping mode...
+2018-07-02-16:56:06	SCRAPER 	ERROR_ReadThePath: the path read from pathUpdate.txt is wrong because of 0 isn't a string.
+2018-07-02-16:56:07	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-16:56:07	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-16:56:07	SCRAPER 	INFO_Stop: run time: 32000 ms
+2018-07-02-16:57:23	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt
+
+2018-07-02-16:57:25	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-16:57:25	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-16:57:25	SCRAPER 	INFO_Stop: run time: 1719 ms
+2018-07-02-16:57:29	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt --startup
+
+2018-07-02-16:57:29	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-16:58:00	SCRAPER 	INFO_: Starting in arbo scraping mode...
+2018-07-02-16:58:00	SCRAPER 	INFO_ReadThePath: the path in pathUpdate.txt is valid! Success!
+2018-07-02-16:58:03	SCRAPER 	ERROR_PreciseLine: 5
+2018-07-02-16:58:03	SCRAPER 	ERROR_PreciseLine: 6
+2018-07-02-16:58:05	SCRAPER 	INFO_ReadThroughThePath: finished
+2018-07-02-16:58:05	SCRAPER 	INFO_Main_Arbo: indent : '' soit 0 indentations.
+2018-07-02-16:58:05	SCRAPER 	INFO_Main_Arbo: indent final : 1 pour un path de 1 de longueur.
+2018-07-02-16:58:12	SCRAPER 	INFO_Main_Arbo: Reached end of folder at the end of the supplied path!
+2018-07-02-16:58:12	SCRAPER 	INFO_Main_Arbo: nbLignes=7
+2018-07-02-16:58:12	SCRAPER 	INFO_: Done.
+2018-07-02-16:58:13	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-02-16:58:13	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-02-16:58:13	SCRAPER 	INFO_Stop: run time: 43797 ms
+2018-07-02-17:21:21	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt --startup
+
+2018-07-02-17:21:21	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-17:21:53	SCRAPER 	INFO_: Starting in arbo scraping mode...
+2018-07-02-17:21:53	SCRAPER 	INFO_ReadThePath: the path in pathUpdate.txt is valid! Success!
+2018-07-02-17:21:56	SCRAPER 	ERROR_PreciseLine: 5
+2018-07-02-17:21:56	SCRAPER 	ERROR_PreciseLine: 6
+2018-07-02-17:21:58	SCRAPER 	INFO_ReadThroughThePath: finished
+2018-07-02-17:21:58	SCRAPER 	INFO_Main_Arbo: indent : '' soit 0 indentations.
+2018-07-02-17:21:58	SCRAPER 	INFO_Main_Arbo: indent final : 1 pour un path de 1 de longueur.
+2018-07-02-17:22:05	SCRAPER 	INFO_Main_Arbo: Reached end of folder at the end of the supplied path!
+2018-07-02-17:22:05	SCRAPER 	INFO_Main_Arbo: nbLignes=7
+2018-07-02-17:22:05	SCRAPER 	INFO_: Done.
+2018-07-02-17:22:06	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-02-17:22:06	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-02-17:22:06	SCRAPER 	INFO_Stop: run time: 44922 ms
+2018-07-02-17:40:28	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt --log log.txt --startup
+
+2018-07-02-17:40:28	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-17:41:00	SCRAPER 	INFO_: Starting in arbo scraping mode...
+2018-07-02-17:41:00	SCRAPER 	INFO_ReadThePath: the path in pathUpdate.txt is valid! Success!
+2018-07-02-17:41:03	SCRAPER 	ERROR_PreciseLine: 5
+2018-07-02-17:41:03	SCRAPER 	ERROR_PreciseLine: 6
+2018-07-02-17:41:05	SCRAPER 	INFO_ReadThroughThePath: finished
+2018-07-02-17:41:05	SCRAPER 	INFO_Main_Arbo: indent : '' soit 0 indentations.
+2018-07-02-17:41:05	SCRAPER 	INFO_Main_Arbo: indent final : 1 pour un path de 1 de longueur.
+2018-07-02-17:41:12	SCRAPER 	INFO_Main_Arbo: Reached end of folder at the end of the supplied path!
+2018-07-02-17:41:12	SCRAPER 	INFO_Main_Arbo: nbLignes=7
+2018-07-02-17:41:12	SCRAPER 	INFO_: Done.
+2018-07-02-17:41:13	SCRAPER 	INFO_FinishScript: Wrote to stdout 'OK'
+2018-07-02-17:41:13	SCRAPER 	INFO_Stop: Ended without errors
+2018-07-02-17:41:13	SCRAPER 	INFO_Stop: run time: 43875 ms
+
+2018-07-02 18:12:09	- database:	root:	INFO  - Started.
+2018-07-02 18:12:09	- database:	root:	INFO  - Finished.
+2018-07-02 18:12:30	- database:	root:	INFO  - Started.
+2018-07-02 18:12:30	- database:	root:	INFO  - Finished.
+2018-07-02 18:12:44	- database:	root:	INFO  - Started.
+2018-07-02 18:12:44	- database:	root:	INFO  - Finished.
+2018-07-02 18:12:54	- database:	root:	INFO  - Started.
+2018-07-02 18:12:54	- database:	root:	INFO  - Finished.
+2018-07-02 19:02:45	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 19:02:45	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 19:02:45	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 127, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 95, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 31, in patchArborescence
+    for i in range(0, increment):
+TypeError: 'str' object cannot be interpreted as an integer
+
+arborescenceUpdate Failed!
+
+2018-07-02 19:03:59	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 19:03:59	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 19:03:59	- arborescenceUpdate:	patchArborescence:	ERROR - Could not get to the end of the path: 'ï»¿ Etudiants' is not ' Etudiants'
+2018-07-02 19:03:59	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 130, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 98, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 49, in patchArborescence
+    raise Exception("Invalid path.")
+Exception: Invalid path.
+
+arborescenceUpdate Failed!
+
+2018-07-02 19:05:37	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 19:05:37	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 19:05:37	- arborescenceUpdate:	patchArborescence:	INFO  - Applied patch at 203
+2018-07-02 19:05:37	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 19:41:06	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 19:41:06	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 19:41:11	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 19:41:11	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 19:41:11	- arborescenceUpdate:	patchArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-02 19:41:11	- arborescenceUpdate:	patchArborescence:	INFO  - Patch successful.
+2018-07-02 19:41:11	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 20:27:51	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 20:27:51	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 20:27:52	- arborescenceUpdate:	patchArborescence:	ERROR - Could not get to the end of the path: 'udiants' is not ' Etudiants'
+2018-07-02 20:27:52	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 159, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 127, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 69, in patchArborescence
+    raise Exception("Invalid path.")
+Exception: Invalid path.
+
+arborescenceUpdate Failed!
+
+2018-07-02 21:02:34	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 21:02:34	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 21:02:34	- arborescenceUpdate:	patchArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-02 21:02:34	- arborescenceUpdate:	patchArborescence:	INFO  - Patch successful.
+2018-07-02 21:02:34	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 21:19:44	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 21:19:44	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 161, in <module>
+    patchArborescence("")
+TypeError: patchArborescence() missing 2 required positional arguments: 'arboFilePath' and 'pathFilePath'
+
+arborescenceUpdate Failed!
+
+2018-07-02 21:31:26	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 21:31:26	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 21:31:26	- arborescenceUpdate:	patchArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-02 21:31:26	- arborescenceUpdate:	patchArborescence:	INFO  - Patch successful.
+2018-07-02 21:31:26	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 22:23:23	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 22:23:23	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 22:23:23	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 172, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 140, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 36, in patchArborescence
+    temp.write(b"\xEF\xBB\xBF") # marque UTF-8 de dÃ©but de fichier
+TypeError: write() argument must be str, not bytes
+
+arborescenceUpdate Failed!
+
+2018-07-02 22:28:54	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 22:28:54	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 22:28:54	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 172, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 140, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 31, in patchArborescence
+    with open(TEMP_FILE, mode="wb", encoding="UTF-8") as temp:
+ValueError: binary mode doesn't take an encoding argument
+
+arborescenceUpdate Failed!
+
+2018-07-02 22:29:07	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 22:29:07	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 22:29:07	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 172, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 140, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 77, in patchArborescence
+    line = arboFile.readline()
+  File "D:\Python\Python36\lib\codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbb in position 0: invalid start byte
+
+arborescenceUpdate Failed!
+
+2018-07-02 22:30:52	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 22:30:52	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 22:30:52	- arborescenceUpdate:	patchArborescence:	ERROR - Could not get to the end of the path: 'DUT INFO
+' is not ' Etudiants'
+2018-07-02 22:30:52	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 172, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 140, in parseArgs
+    patchArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 82, in patchArborescence
+    raise Exception("Invalid path.")
+Exception: Invalid path.
+
+arborescenceUpdate Failed!
+
+2018-07-02 22:32:56	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-02 22:32:56	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' following 'pathUpdate.txt'...
+2018-07-02 22:32:56	- arborescenceUpdate:	patchArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-02 22:32:56	- arborescenceUpdate:	patchArborescence:	INFO  - Patch successful.
+2018-07-02 22:32:56	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-02 23:06:13	- SERVER:	main:	INFO  - Server Start.
+2018-07-02 23:06:14	- SERVER:	addRandomRequests:	INFO  - Adding random requests...
+2018-07-02 23:06:14	- database:	root:	INFO  - Started.
+2018-07-02 23:06:14	- database:	parseArgs:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-makeRandomRequests', '4']
+2018-07-02 23:06:14	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Malo/Permanents/GEA/KLAOUSEN PATRICK
+2018-07-02 23:06:14	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Santé/Odonto/JEANNE Sylvie
+2018-07-02 23:06:14	- database:	makeRandRequests:	INFO  - New request:  Enseignants/Santé/Odonto/Monsieur X
+2018-07-02 23:06:14	- database:	makeRandRequests:	INFO  - New request:  Enseignants/IUT Saint-Brieuc/Science et Génie des Matériaux/Vacataires/LE GOUX Florence
+2018-07-02 23:06:14	- database:	root:	INFO  - Finished.
+2018-07-02 23:06:14	- SERVER:	root:	INFO  - Made random requests.
+2018-07-02 23:06:14	- SERVER:	fullfillRequests:	INFO  - Running the path maker script...
+2018-07-02 23:06:15	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/7687224039836802345
+2018-07-02 23:06:15.214444	- makePathFileFromRequests:	INFO:	 Enseignants/IUT Saint-Malo/Permanents/GEA/KLAOUSEN PATRICK~~~ Enseignants/Santé/Odonto/JEANNE Sylvie~~~ Enseignants/Santé/Odonto/Monsieur X~~~ Enseignants/IUT Saint-Brieuc/Science et Génie des Matériaux/Vacataires/LE GOUX Florence
+2018-07-02 23:06:15.216444	- makePathFileFromRequests:	INFO:	Requests: 
+	[' Enseignants/IUT Saint-Malo/Permanents/GEA/KLAOUSEN PATRICK', ' Enseignants/Santé/Odonto/JEANNE Sylvie', ' Enseignants/Santé/Odonto/Monsieur X', ' Enseignants/IUT Saint-Brieuc/Science et Génie des Matériaux/Vacataires/LE GOUX Florence']
+2018-07-02 23:06:15.322443	- makePathFileFromRequests:	INFO:	Done. Length of path: 36
+2018-07-02 23:06:15.325443	- makePathFileFromRequests:	INFO:	None
+2018-07-02 23:06:15	- SERVER:	root:	INFO  - Done fullfilling requests.
+2018-07-02 23:06:15	- SERVER:	runScraper:	INFO  - Running the scraper script...2018-07-02-23:06:15	SCRAPER 	INFO_: Script started with parameters:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ArboScraper.exe -path --startup --path path.txt --log log.txt
+
+2018-07-02-23:06:15	SCRAPER 	INFO_main: Starting the script in normal mode and startup mode
+2018-07-02-23:06:49	SCRAPER 	INFO_: Starting in EdT scraping mode...
+2018-07-02-23:06:52	SCRAPER 	INFO_Vars: 
+	ADE_Height: 1087
+	ADE_Width: 974
+	arboX: 39
+	arboY: 417
+	arboFinX: 496
+	arboFinY: 971
+	lineHeight: 23
+	lineWidth: 18
+	devToolsX: 800
+	devToolsY: 256
+	coinScrollX: 519
+	coinScrollY: 993
+	exportButtonX: 76
+	exportButtonY: 1048
+	dateChoiceX1: 429
+	dateChoiceX2: 629
+	dateChoiceY: 489
+	okButtonX: 381
+	okButtonY: 721
+	
+2018-07-02-23:06:53	SCRAPER 	INFO_ReadPathForEdT: 1
+2018-07-02-23:06:55	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-02-23:06:57	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-02-23:06:59	SCRAPER 	INFO_ReadPathForEdT: 3
+2018-07-02-23:07:01	SCRAPER 	INFO_ReadPathForEdT: 8
+2018-07-02-23:07:02	SCRAPER 	ERROR_ReadPathForEdT: edt file name '__LE GOUX Florence' doesn't match the found name: '__LAVENANT Dominique'
+2018-07-02-23:07:03	SCRAPER 	INFO_FinishScript: Wrote to stdout 'ERROR'
+2018-07-02-23:07:03	SCRAPER 	INFO_Stop: Errors occured
+2018-07-02-23:07:03	SCRAPER 	INFO_Stop: run time: 47203 ms
+
+2018-07-02 23:07:04	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/6440941554243561668
+2018-07-02 23:07:04	- SERVER:	root:	INFO  - Successfully sent message: projects/univ-edt-ade/messages/5657946937569065249
+2018-07-03 14:59:50	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-03 14:59:50	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' at the folder of 'pathUpdate.txt'...
+2018-07-03 14:59:50	- arborescenceUpdate:	patchFolderOfArborescence:	ERROR - Could not get to the end of the path: 'Beaulieu
+' is not ' Enseignants'
+2018-07-03 14:59:50	- arborescenceUpdate:	root:	ERROR - Traceback (most recent call last):
+  File "arborescenceUpdate.py", line 295, in <module>
+    parseArgs()
+  File "arborescenceUpdate.py", line 263, in parseArgs
+    patchFolderOfArborescence(patchFile, arboFile, pathFile)
+  File "arborescenceUpdate.py", line 171, in patchFolderOfArborescence
+    raise Exception("Invalid path.")
+Exception: Invalid path.
+
+arborescenceUpdate Failed!
+
+2018-07-03 15:29:27	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-03 15:29:27	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' at the folder of 'pathUpdate.txt'...
+2018-07-03 15:29:27	- arborescenceUpdate:	patchFolderOfArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-03 15:29:27	- arborescenceUpdate:	patchFolderOfArborescence:	INFO  - Patch successful.
+2018-07-03 15:29:27	- arborescenceUpdate:	root:	INFO  - Finished.
+2018-07-03 15:32:47	- arborescenceUpdate:	root:	INFO  - Started.
+2018-07-03 15:32:47	- arborescenceUpdate:	parseArgs:	INFO  - Patching 'arboADE_corrected.txt' with 'arboUpdate.txt' at the folder of 'pathUpdate.txt'...
+2018-07-03 15:32:47	- arborescenceUpdate:	patchFolderOfArborescence:	INFO  - Applied patch. Moving temp file to 'arboADE_corrected.txt'
+2018-07-03 15:32:47	- arborescenceUpdate:	patchFolderOfArborescence:	INFO  - Patch successful.
+2018-07-03 15:32:47	- arborescenceUpdate:	root:	INFO  - Finished.

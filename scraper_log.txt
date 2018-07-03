@@ -1,0 +1,4 @@
+﻿2018-07-02-16:51:17	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt
+
+2018-07-02-16:52:05	SCRAPER 	INFO_: Script started with parameters:  -arbo --path pathUpdate.txt --out arboUpdate.txt
+

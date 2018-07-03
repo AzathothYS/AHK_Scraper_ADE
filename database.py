@@ -52,7 +52,8 @@ def updateDatabase():
     with open(REQUESTS_FILE, "r") as requestsFile:
         requests = requestsFile.readlines()
 
-    requests = [req[1:-1] for req in requests]  # suppression des fins de lignes '\n' et du '/' au début de chaque requête
+    # suppression des fins de lignes '\n' et du '/' au début de chaque requête
+    requests = [req[(1 if req.startswith('/') else 0):(-1 if req.endswith('\n') else len(req))] for req in requests]
 
     # ordonnation des requêtes pour quelles correpondent à l'ordre de 'edtList'
     requests = orderRequests(requests)
@@ -71,7 +72,7 @@ def updateDatabase():
         raise IndexError()
 
     for edtFile, request in zip(edtList, requests):
-        req_folder, sep, req_file = request.rpartition('/')
+        req_folder, _, req_file = request.rpartition('/')
         req_path = DATABASE_DIR / req_folder
         req_file_path = req_path / (req_file + ".json")
 
@@ -166,7 +167,7 @@ def verifyDatabase():
                 line = gotoNextFolder(arbo, level)
                 if not line:
                     # on a atteint la fin de l'arborescence ou un dossier plus haut
-                    log("verifyDatabase", "Impossible de trouver '{}' dans l'arborescence!".format(entry), True)
+                    log("verifyDatabase", "Impossible de trouver '{} ({})' dans l'arborescence!".format(entryInArbo, entry), True)
                     arbo_errors += 1
                     break
 
@@ -189,6 +190,7 @@ def verifyDatabase():
             log("verifyDatabase", "La database et le summary ne coïncident pas! Voulu: '{}' eu '{}'"
                 .format(entry_summary, entry_database), True)
             database_errors += 1
+
     try:
         if database_errors == 0 and (gen_summary.__next__() != None or gen_database.__next__() != None):
             log("verifyDatabase", "La taille de la database et du summary ne correspondent pas!")
@@ -239,11 +241,90 @@ def getUpdates():
 
     log("getUpdates", "Got {} files to update.".format(len(toUpdate)))
 
-    with open(REQUESTS_FILE, mode="w", encoding="UTF-8") as requests:
+    with open(REQUESTS_FILE, mode="a", encoding="UTF-8") as requests:
         for request in toUpdate:
             requests.write(request + "\n")
 
     log("getUpdates", "Outputted to " + REQUESTS_FILE)
+
+
+
+def makeRandRequests(nb:int):
+    from random import randint
+
+    with open(REQUESTS_FILE, mode="w", encoding="UTF-8") as requestFile, open(DATABASE_DIR / ARBORESCENCE_FILE, mode="r", encoding="UTF-8", buffering=1) as arbo:
+
+        while nb > 0:
+            nb -= 1
+
+            arbo.seek(3)
+
+            req_str = ""
+
+            indent = 0
+            pos = 0
+            while True:
+                nbOfLinesInFolder = 0
+
+                for line in arbo:
+                    currentIndent = getIndentOfLine(line)
+                    if currentIndent == indent:
+                        nbOfLinesInFolder += 1
+                    elif currentIndent < indent:
+                        break # on est sortis du dossier
+
+                if nbOfLinesInFolder - 1 <= 0:
+                    choice = 0
+                else:
+                    choice = randint(0, nbOfLinesInFolder -1)
+
+                arbo.seek(pos if pos >= 3 else 3)
+
+                line = arbo.readline()
+                while line: # on change de structure pour pouvoir utiliser 'tell'
+                    currentIndent = getIndentOfLine(line)
+                    if currentIndent == indent:
+                        choice -= 1
+                        if choice < 0:
+                            pos = arbo.tell()
+
+                            if not line.__contains__("__"): # comme c'est un dossier on vérifie qu'il n'est pas vide
+                                nextLine = arbo.readline()
+                                if getIndentOfLine(nextLine) <= indent:
+                                    # le dossier sélectionné est vide
+                                    log("makeRandRequests", "Trouvé un dossier vide. On recommence...", error=True)
+                                    line = ''
+
+                            indent += 1
+                            break
+
+                    elif currentIndent < indent:
+                        # nous sommes sortis du dossier
+                        log("makeRandRequests", "Impossible de trouver la cible dans le dossier.", error=True)
+                        line = ''
+                        break
+
+                    line = arbo.readline()
+
+                if not line:
+                    if choice < 0:
+                        nb += 1 # pour compenser et bien obtenir à la fin le nombre voulu de requests
+                        break
+                    else:
+                        raise EOFError("Reached EOF while parsing " + ARBORESCENCE_FILE + " - Folder : " + req_str + " - indent: " + str(indent) + " - nbOfLinesInFolder: " + str(nbOfLinesInFolder) + " - choice: " + str(choice) + " - prevChoice" + str(prevChoice))
+
+
+                line = line[getIndentOfLine(line) * 4:-1] # on supprimme la fin de ligne en plus de l'indentation
+
+                if line.startswith("__"):
+                    req_str += line[2:].replace('/', "$%$") # suppression du '__' au début et des éventuels '/'
+                    requestFile.write(req_str + '\n')
+                    log("makeRandRequests", "New request: " + req_str)
+                    break
+                else:
+                    req_str += line.replace('/', "$%$") # replacement des '/' par '$%$'
+                    req_str += '/'
+
 
 
 # ------------------------------------------------
@@ -272,14 +353,14 @@ def nameToStorageName(name : str, isPathLike = True) -> str:
 def storageNameToName(storageName : str, isPathLike = True) -> str:
     name = storageName
 
-    if REPLACEMENTS['/'] in storageName:
-        name = name.replace(REPLACEMENTS['/'], '$%$')
+    if '/' in storageName:
+        name = name.replace('/', '$%$')
 
     for keyChar, replacementChars in REPLACEMENTS.items():
-        if replacementChars in storageName:
+        if replacementChars in name:
             name = name.replace(replacementChars, keyChar)
 
-    if isPathLike and "$%$" in name:
+    if isPathLike and "$%$" in name: # TOTRY
         name = name.replace("$%$", "/") # pour gérer les path complets du type: 'grg/rgr/grgr/rgrg/grg'
 
     return name
@@ -429,10 +510,14 @@ def saveSummary():
 
 
 def getTime() -> str:
-    return datetime.now().strftime("%Y-%m-%d %H:%M")
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def log(tag: str, text: str, error=False):
+    tag:str = sys._getframe(1).f_code.co_name # TODO : supprimmer toutes les 'tags' si ça focntionne
+    if tag == "<module>":
+        tag = "root"
+
     if error:
         logFile.write("\n{}\t- database:\t{}:\tERROR - {}".format(getTime(), tag, text))
     else:
@@ -446,10 +531,11 @@ def parseArgs():
     if len(sys.argv) == 1:
         # affichage de l'aide dans le terminal
         print("Outil d'édition de la database des Emplois du temps d'ADE :\n" +
-              "\t-update\t\t\tmet à jour la database avec les fichiers NN.json stockés dans 'EdTOut/',\n\t\t\t\tliste toutes les mises à jour dans '" + UPDATE_FILE + "'\n" +
+              "\t-update\t\t\tmet à jour la database avec les fichiers NN.json stockés dans 'EdTOut/',\n\t\t\t\t\tliste toutes les mises à jour dans '" + UPDATE_FILE + "'\n" +
               "\t-clean\t\t\tnettoie la database des fichiers trop anciens ou pas utilisés\n" +
-              "\t-verify\t\t\tvérifie la correspondance entre les dossiers de la database et le dernier\n\t\t\t\tfichier de l'arborescence d'ADE stocké\n" +
-              "\t-getUpdates\t\t\técrit dans 'requests.txt' la liste des emplois du temps présents dans\n\t\t\t\tla database à metre à jour\n")
+              "\t-verify\t\t\tvérifie la correspondance entre les dossiers de la database et le dernier\n\t\t\t\t\tfichier de l'arborescence d'ADE stocké\n" +
+              "\t-getUpdates\t\técrit dans 'requests.txt' la liste des emplois du temps présents dans\n\t\t\t\t\tla database à metre à jour\n" +
+              "\t-makeRandomRequests n\técrit dans 'requests.txt' n requêtes aléatoires\n")
         return
 
     log("ParseArgs", "Started with params: " + str(sys.argv))
@@ -489,6 +575,19 @@ def parseArgs():
 
         elif arg == "-getUpdates":
             getUpdates()
+
+        elif arg == "-makeRandomRequests":
+            try:
+                n: str = args_it.__next__()
+                assert n.isdigit()
+            except StopIteration:
+                print("Not enough parameters! Expected a number.")
+                raise Exception("Not enough parameters.")
+            except AssertionError:
+                print("'{}' is not a number!".format(n))
+                raise Exception("'{}' is not a number!".format(n))
+
+            makeRandRequests(int(n))
 
         else:
             log("ParseArgs", "Invalid parameter: '" + arg + "'", True)

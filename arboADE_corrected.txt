@@ -4529,6 +4529,14 @@
             __Martolod
             __Move and Share
             __Ressources Plus
+    IPAG
+        __Autorisation d'absence
+        __IPAG
+        __LAP Licence d'administration publique
+        __M1 MFTAP
+        __M2 DG3S
+        __M2 MFTAP
+        __PC Préparation concours
     IUT Lannion
         DUT INFO
             INFO 1A
@@ -10689,6 +10697,7 @@
                 __FROGER Philippe
                 __GLOAGEN Philippe
                 __HERY Joël
+                __HIROU Géraldine
                 __LAVENANT Dominique
                 __LE GOUX Florence
                 __LE PAVEN Patrice

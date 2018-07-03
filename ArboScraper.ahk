@@ -12,7 +12,7 @@ CoordMode, Mouse, Relative
 
 global startTime := A_TickCount
 
-global P_debug := false, P_path := "", P_out := "", P_log = "", P_startup := false, P_append := false
+global P_debug := false, P_path := "", P_out := "", P_log = "", P_startup := false, P_append := false, P_skipInit := false
 
 global P_mode := -1 ; -1 : undefined, 0 : arborescence, 1 : get EdT via path
 
@@ -120,6 +120,7 @@ Loop %0% {
 		
 	} else if (param == "-h" or param == "-?" or param == "-help") {
 		PrintHelp()
+		
 	} else if (param == "--SWAGG") {
 		; SUPER SECRET LAZY STARTUP DEBUG MODE
 		P_debug := true
@@ -129,6 +130,7 @@ Loop %0% {
 		P_log := "log.txt"
 		
 		TEST_MODE := true
+		P_skipInit := true
 	}
 }
 
@@ -145,7 +147,7 @@ If (P_mode == -1) {
 	ExitApp
 }
 
- ; on initialise les fichiers pour pouvoir logger dès que possible
+; on initialise les fichiers pour pouvoir logger dès que possible
 global logFile := "", out := "", pathFile := ""
 InitFiles()
 
@@ -158,7 +160,7 @@ global WIN_ADE := "ADE - ahk_class Chrome_WidgetWin_1", WIN_DEV := "DevTools ahk
 
 If (P_mode == 1) {
 	; initialisation des variables pour l'EdT scraping
-	global exportButtonX := "", exportButtonY := "", dateChoiceX1 := "", dateChoiceX2 := "", dateChoiceY := "", okButtonX := "", okButtonY := ""
+	global exportButtonX := "", exportButtonY := "", dateChoiceX1 := "", dateChoiceX2 := "", dateChoiceY := "", okButtonX := "", okButtonY := ""	
 }
 
 global pauseState := false, pauseX := 0, pauseY := 0
@@ -170,6 +172,10 @@ If (TEST_MODE) {
 If (P_startup) {
 	DebugPrint("main", "Starting the script in normal mode and startup mode", true)
 	Startup()
+	
+} else if (P_skipInit) {
+	DebugPrint("main", "Skipping initialisation...", true)
+	SkipInit()
 }
 
 If WinActive(WIN_ADE, , WIN_DEV) {
@@ -189,6 +195,7 @@ If WinActive(WIN_ADE, , WIN_DEV) {
 	} else {
 		DebugPrint("", "Starting in EdT scraping mode...", true)
 		InitPathVars()
+		DebugPrintVars()
 		Main_Path()
 	}
 	
@@ -343,15 +350,19 @@ Startup() {
 	SendInput, {F12 down}
 	Sleep 50
 	SendInput, {F12 up}
-	Sleep 1000
+	Sleep 3000
 	
 	;waiting for DevTools
 	Loop {
 		Sleep 100
 		WinGetActiveTitle, title
 		
-		If(InStr(title, "DevTools")) {
+		If(InStr(title, "DevTools - ")) { ; le ' - ' est nécesaire pour ne pas match le titre de chargement de DevTools
 			Break
+		} else {
+			; try to focus DevTools
+			ControlFocus, , %WIN_DEV%
+			Sleep 50
 		}
 		
 		If (A_Index > 50) {
@@ -362,7 +373,7 @@ Startup() {
 	
 	Sleep 100
 	WinMove, %WIN_DEV%, , 10, 10, 800, 256
-	Sleep 250
+	Sleep 500
 	
 	;on s'assure que l'onglet 'Elements' est actif
 	ImageSearch, elementsX, elementsY, 0, 0, 800, 256, Images\devToolsElements.png
@@ -437,6 +448,11 @@ Startup() {
 
 
 Init() {
+	If (P_skipInit) {
+		return
+	}
+	
+	
 	; init des dimensions de la fenêtre d'ADE
 	WinGetPos, , , ADE_Width, ADE_Height, %WIN_ADE%, , %WIN_DEV%
 	
@@ -497,6 +513,31 @@ Init() {
 	coinScrollX += 3
 	coinScrollY += 3
 }
+
+
+SkipInit() {
+	; fonction debug utilisée pour mettre toutes les variables globales à leur valeur habituelle
+	ADE_Height := 1087
+	ADE_Width := 974
+	arboX := 39
+	arboY := 417 
+	arboFinX := 496
+	arboFinY := 971
+	lineHeight := 23
+	lineWidth := 18
+	devToolsX := 800
+	devToolsY := 256
+	coinScrollX := 519
+	coinScrollY := 993
+	exportButtonX := 76
+	exportButtonY := 1048
+	dateChoiceX1 := 429
+	dateChoiceX2 := 629
+	dateChoiceY := 489
+	okButtonX := 381
+	okButtonY := 721
+}
+
 
 FindStartingPosOfArbo_OLD() {
 	; on commence par l'axe Y
@@ -610,6 +651,10 @@ FindStartingPosOfArbo() {
 }
 
 SetLineDims() {
+	If (P_skipInit) {
+		return
+	}
+	
 	MouseMove, 25, -25, 0, R
 	Sleep 50
 	
@@ -664,6 +709,9 @@ SetLineDims() {
 
 
 SetDevToolsWinSize() {
+	If (P_skipInit) {
+		return
+	}
 	
 	SendInput {F12}
 	Sleep 500
@@ -691,6 +739,8 @@ Main_Arbo() {
 	
 	Sleep 500
 	
+	minIndent := -1
+	
 	If (P_path != "") {
 		UpdateIndent(0)
 		
@@ -709,7 +759,9 @@ Main_Arbo() {
 			UpdateIndent(x)
 		}
 		
-		DebugPrint("Main_Arbo", "indent final : " . countIndents(indent) . " pour un path de " . pathLength . " de longueur.", true)
+		minIndent := countIndents(indent)
+		
+		DebugPrint("Main_Arbo", "indent final : " . minIndent . " pour un path de " . pathLength . " de longueur.", true)
 		
 	} else {
 		y := GetFirstLine(5)
@@ -739,6 +791,12 @@ Main_Arbo() {
 			UpdateIndent(x)
 			
 			currentLine := GetName(5, isFolder)
+			
+			If (countIndents(indent . currentLine) <= minIndent) {
+				DebugPrint("Main_Arbo", "Reached end of folder at the end of the supplied path!", true)
+				Break
+			}
+			
 			out.WriteLine(indent . currentLine)		;get the name of the file and append it with the correct indent to arbo_out
 		}
 		
@@ -816,7 +874,6 @@ Main_Arbo() {
 		siDossierJusteAvant := isFolder
 	}
 	DebugPrint("Main_Arbo", "nbLignes=" . nbLignes, true)
-	out.WriteLine("END")
 }
 
 
@@ -1040,12 +1097,8 @@ GetName(errNb, isFolder) {
 		Stop()
 	}
 	
-	WinGetActiveTitle, title
-	If (InStr(title, "ADE - Default") == 0) {
-		;wrong window!
-		DebugPrint("GetName", "wrong window! : " . title, false)
-		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
-	}
+	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
+	Sleep 50
 	
 	; clipboard reset
 	Clipboard =
@@ -1083,7 +1136,7 @@ GetName(errNb, isFolder) {
 	Click				;to get the element in dev tools (+ inspect off)
 	Sleep 50
 	
-	If (WinActive("ahk_exe chrome.exe", , "ADE - Default")) {
+	If (WinActive(WIN_DEV, , WIN_ADE)) {
 		;dev tools is the active window
 		
 		while (true) {
@@ -1488,6 +1541,21 @@ ReadThroughThePath(path) {
 	
 	DebugPrint("ReadThroughThePath", "finished", true)
 	
+	If (P_path != "" and P_out != "") {
+		; le path suivi est un path de début, on veut rajouter au début de 'out' le nom du dossier cible avec la bonne indentation
+		
+		pathLength := Floor(path.Length() / 2) - 1
+		
+		startIndent := ""
+		Loop, %pathLength%
+			startIndent .= "    "
+		
+		out.WriteLine(startIndent . folderName)		
+		
+		; reset pour ne pas rejouter une ligne en trop si jamais on repasse par ici
+		P_path :=
+	}
+	
 	return y
 }
 
@@ -1696,6 +1764,9 @@ StartAtPath(ByRef pathLength) {
 
 
 InitPathVars() {
+	If (P_skipInit) {
+		return
+	}
 	
 	; sélection du dossier 'Étudiants' pour pouvoir accéder à la fenêtre d'exportation
 	y := GetFirstLine(5)
@@ -1851,7 +1922,7 @@ ReadPathForEdT() {
 				If (y - arboY > (arboFinY - arboY) * 0.9) {
 					;need to scroll
 					If (!ScrollDown()) {
-						DebugPrint("ReadThroughThePath", "no more scrolling possible", true)
+						DebugPrint("ReadPathForEdT", "no more scrolling possible", true)
 					} else {
 						MouseMove, 0, - lineHeight * 3, 0, R
 						y -= lineHeight * 3
@@ -1883,7 +1954,7 @@ ReadPathForEdT() {
 				pathEnum.Next(order_number, order) ; la ligne suivante est le nom du fichier
 				
 				If (name != order) {
-					DebugPrint("ReadThroughThePath", "edt file name '" . order . "' doesn't match the found name: '" . name . "'", false)
+					DebugPrint("ReadPathForEdT", "edt file name '" . order . "' doesn't match the found name: '" . name . "'", false)
 					Stop()
 				}
 				
@@ -1891,7 +1962,7 @@ ReadPathForEdT() {
 				ifEmptyEdT := ExportEdT()
 				
 				If (ifEmptyEdT) {
-					DebugPrint("ReadThroughThePath", "L'emploi du temps à " . name . " est vide.", false)
+					DebugPrint("ReadPathForEdT", "L'emploi du temps à " . name . " est vide.", false)
 					CreateEmptyEdT(order_number)
 					Sleep 1000
 					Break
@@ -1903,13 +1974,13 @@ ReadPathForEdT() {
 				; transfert du fichier downloadé dans le dossier EDT_OUT + renommage
 				If !(FileExist(DownLoads_Folder . "\ADECal.ics")) {
 					; erreur, le fichier n'a pas été téléchargé
-					DebugPrint("ReadThroughThePath", "L'EdT " . name . " n'a pas pu être téléchargé", false)
+					DebugPrint("ReadPathForEdT", "L'EdT " . name . " n'a pas pu être téléchargé", false)
 					Stop()
 				}
 				; on overwrite n'importe quel fichier ayant le même nom
 				FileMove, %DownLoads_Folder%\ADECal.ics, %EdT_Out_Folder%\%order_number%.ics, 1
 				
-				DebugPrint("ReadThroughThePath", "DL OK pour le fichier n°" . order_number . " soit " . name, true)
+				DebugPrint("ReadPathForEdT", "DL OK pour le fichier n°" . order_number . " soit " . name, true)
 				
 			} else if (order == name) {
 				; c'est un dossier que l'on doit ouvrir
@@ -1921,7 +1992,7 @@ ReadPathForEdT() {
 				
 				; on attend que le dossier s'ouvre
 				If (!WaitFolderLoad(y)) {
-					DebugPrint("ReadThroughThePath", "ERROR: unable to open folder " . name, false)
+					DebugPrint("ReadPathForEdT", "ERROR: unable to open folder " . name, false)
 					Stop()
 				}
 				
@@ -1929,7 +2000,7 @@ ReadPathForEdT() {
 					;si on a un dossier sur la dernière ligne, quand on va l'ouvrir le prochain scroll sera foiré
 					ImageSearch, , , arboX, y + lineHeight, arboX + 5, y + lineHeight + 3, Images\ADEblue.png
 					If (ErrorLevel == 2) {
-						DebugPrint("ReadThroughThePath", "ERROR : Unable to search ADEblue.png", false)
+						DebugPrint("ReadPathForEdT", "ERROR : Unable to search ADEblue.png", false)
 						Stop()
 					} else if (ErrorLevel == 0) {
 						DebugPrint("Main_Arbo", "On a un dossier en fin de liste", true)
@@ -1942,7 +2013,7 @@ ReadPathForEdT() {
 				
 			} else {
 				; il y a une erreur
-				DebugPrint("ReadThroughThePath", "folder name '" . order . "' doesn't match the found name: '" . name . "'", false)
+				DebugPrint("ReadPathForEdT", "folder name '" . order . "' doesn't match the found name: '" . name . "'", false)
 				Stop()
 			}
 			
@@ -1950,82 +2021,66 @@ ReadPathForEdT() {
 			; on doit remonter d'un ou plusieurs crans dans l'arborescence
 			; on utilise le fait que appyer sur la flèche directionnelle gauche 2 fois ferme le dossier dans lequel un élément est séléctionné
 			Sleep 50
-			MouseMove, arboFinX + 10, arboY - 10
-			Sleep 50
 			
-			PixelGetColor, color, arboFinX + 9, arboY - 11, RGB
-			If (color < 0xEB0000 and color != 0xFFFFFF) {
-				; la case est sélectionnée car nous sommes trop haut dans l'arborescence, cela veut aussi dire que l'on peut sélectionner l'arborescence en cliquannt sur la ligne qui est certainement visible
-				PixelSearch, , y, arboFinX - 50, arboY, arboFinX - 49, arboFinY, 0xFEDFB7, , Fast RGB
-				If (y) {
-					MouseMove, arboFinX - 50, y
-					Sleep 25
-					Click ; resélection de la ligne déjà sélectionnée pour s'assurer du focus de l'arborescence
-					
-				} else {
-					; la case n'est pas visible: impossible?
-					DebugPrint("ReadPathForEdT", "Couldn't find selected line at top of arborescence.", false)
-					Stop()
-				}
-				
-			} else {
-				Click ; il se peut que la partie arborescence d'ADE n'ait pas le focus, en cliquant dans le coin en haut à droite on a le focus sans sélectionner de ligne
+			PixelSearch, , yBefore, arboFinX - 50, arboY, arboFinX - 49, arboFinY, 0xFEDFB7, , Fast RGB
+			If (not yBefore) {
+				DebugPrint("ReadPathForEdT", "Couldn't find current selected line before UP", false)
+				Stop()
 			}
 			
-			Sleep 500
-			SendInput, {Left} ; sélection du dossier parent
-			WaitForADE()
-			SendInput, {Left} ; fermeture du dossier parent
-			WaitForADE()
+			y := GoToParentFolder()
 			
-			; on met à jour la position du curseur : le dossier parent est maintenant séléctionné, on cherche donc une ligne sélectionnée
-			; de plus le dossier sélectionné n'est peut-être pas visible, donc on scroll en haut jusqu'a trouver la ligne souhaitée
-			PROTEC := 0
-			while (true) {
-				; on a trouvé la ligne
-				PixelSearch, , y, arboFinX - 50, arboY, arboFinX - 49, arboFinY, 0xFEDFB7, , Fast RGB
-				If (y) {
-					y := PreciseLine(y - 12, 5) ; -12 car la zone de cette couleur s'étend sur 24 pixels 
-					Break
-				}
+			If (y < 0) {
+				; problème : on ferme tous les dossiers et on reprend depuis là où on était
+				DebugPrint("ReadPathForEdT", "Unable to reach parent folder: restarting to current position", false)
+				Sleep 250
+				closeAllTheFolders()
+				Sleep 250
+				pathEnum := RestartPathFromPos(path, order_number)
+				DebugPrint("ReadPathForEdT", "Restarting...", false)
 				
-				; on scroll vers le haut, le dossier est peut-être plus haut
-				If !(ScrollUp()) {
-					; on ne peut plus remonter l'arborescence, on n'a donc pas réussi à trouver le dossier sélectionné
-					DebugPrint("ReadThroughThePath", "Unable to find selected folder: start of arborescence reached.", false)
-					Stop()
-				}
-				Sleep 25
-				ScrollUp() ; encore une fois, pour le swagg et pour accélérer le processus; mais surtout pour le swagg
-				Sleep 25
+				x := arboX
+				y := GetFirstLine(5)
 				
-				PROTEC++
-				If (PROTEC > 50) {
-					DebugPrint("ReadPathForEdT", "Failed to find the selected line!", false)
-					Stop()
-				}
+				MouseMove, x + 3, y + 10
+				
+				continue
 			}
 			
 			x := arboFinX - 50
 			
 			isFolder := IsFolderAt(y, x, 5) ; mise à jour de x
 			If !(isFolder) {
-				DebugPrint("ReadThroughThePath", "Failed to UP: new selection is not a folder", false)
-				Stop()
+				DebugPrint("ReadPathForEdT", "Failed to UP: new selection is not a folder", false)
+				
+				; problème : on ferme tous les dossiers et on reprend depuis là où on était
+				DebugPrint("ReadPathForEdT", "Unable to reach parent folder: restarting to current position", false)
+				Sleep 250
+				closeAllTheFolders()
+				Sleep 250
+				pathEnum := RestartPathFromPos(path, order_number)
+				DebugPrint("ReadPathForEdT", "Restarting...", false)
+				
+				x := arboX
+				y := GetFirstLine(5)
+				
+				MouseMove, x + 3, y + 10
+				
+				continue
 			}
 			
-			DebugPrint("ReadThroughThePath", "Successfully UPped.", true)
+			DebugPrint("ReadPathForEdT", "Successfully UPped.", true)
 			
 		} else if (order == "RESTART") {
-			DebugPrint("ReadThroughThePath", "'" . order . "' is RESTART", true)
+			DebugPrint("ReadPathForEdT", "'" . order . "' is RESTART", true)
 		} else {
 			; ERREUR
-			DebugPrint("ReadThroughThePath", "ERROR: Order doesn't match anything: '" . order . "' at pos " . order_number . " in path " . P_path, false)
+			DebugPrint("ReadPathForEdT", "ERROR: Order doesn't match anything: '" . order . "' at pos " . order_number . " in path " . P_path, false)
 			Stop()
 		}
 	}
 	
-	DebugPrint("ReadThroughThePath", "Successfully reached the end of the path.", true)
+	DebugPrint("ReadPathForEdT", "Successfully reached the end of the path.", true)
 }
 
 
@@ -2133,6 +2188,152 @@ CloseDownloadBar(errNb := 5) {
 	Sleep 1500
 }
 
+GoToParentFolder() {
+	
+	Sleep 50
+	MouseMove, arboFinX + 10, arboY - 10
+	Sleep 50
+	
+	PixelGetColor, color, arboFinX + 9, arboY - 11, RGB
+	If (color < 0xEB0000 and color != 0xFFFFFF) {
+		; la case est sélectionnée car nous sommes trop haut dans l'arborescence, cela veut aussi dire que l'on peut sélectionner l'arborescence en cliquannt sur la ligne qui est certainement visible
+		PixelSearch, , y, arboFinX - 50, arboY, arboFinX - 49, arboFinY, 0xFEDFB7, , Fast RGB
+		If (y) {
+			MouseMove, arboFinX - 50, y
+			Sleep 25
+			Click ; resélection de la ligne déjà sélectionnée pour s'assurer du focus de l'arborescence
+			
+		} else {
+			; la case n'est pas visible: impossible?
+			DebugPrint("GoToParentFolder", "Couldn't find selected line at top of arborescence.", false)
+			Stop()
+		}
+		
+	} else {
+		Click ; il se peut que la partie arborescence d'ADE n'ait pas le focus, en cliquant dans le coin en haut à droite on a le focus sans sélectionner de ligne
+	}
+	
+	Sleep 500
+	SendInput, {Left} ; sélection du dossier parent
+	WaitForADE()
+	Sleep 500
+	SendInput, {Left} ; fermeture du dossier parent
+	WaitForADE()
+	
+	; on met à jour la position du curseur : le dossier parent est maintenant séléctionné, on cherche donc une ligne sélectionnée
+	; de plus le dossier sélectionné n'est peut-être pas visible, donc on scroll en haut jusqu'a trouver la ligne souhaitée
+	PROTEC := 0
+	while (true) {
+		; on a trouvé la ligne
+		PixelSearch, , y, arboFinX - 50, arboY, arboFinX - 49, arboFinY, 0xFEDFB7, , Fast RGB
+		If (y) {			
+			y := PreciseLine(y - 12, 5) ; -12 car la zone de cette couleur s'étend sur 24 pixels 
+			Break
+		}
+		
+		; on scroll vers le haut, le dossier est peut-être plus haut
+		If !(ScrollUp()) {
+			; on ne peut plus remonter l'arborescence, on n'a donc pas réussi à trouver le dossier sélectionné
+			DebugPrint("GoToParentFolder", "Unable to find selected folder: start of arborescence reached.", false)
+			Stop()
+		}
+		Sleep 25
+		ScrollUp() ; encore une fois, pour le swagg et pour accélérer le processus; mais surtout pour le swagg
+		Sleep 25
+		
+		PROTEC++
+		If (PROTEC > 50) {
+			DebugPrint("GoToParentFolder", "Failed to find the selected line!", false)
+			return -1 ; restart path
+		}
+	}
+	
+	Sleep 50
+	return y
+}
+
+
+
+RestartPathFromPos(path, pos) {
+	; TO FIX !!!!!
+	
+	newPath := Object()
+	
+	lastFolderPos := -1
+	
+	pathEnum := path._NewEnum()
+	While pathEnum[order_number, order]
+	{
+		If (order_number > pos) {
+			; on ajoute tout le reste
+			While pathEnum[order_number, order]
+			{
+				newPath.Insert(order)
+				DebugPrint("RestartPathFromPos", "Added at (end)" . newPath.MaxIndex() . " : " . order, true)
+			}
+			Break
+		}
+		
+		If order is digit
+		{
+			If (order_number > 1) {
+				If newPath[newPath.MaxIndex()] is digit
+				{
+					; on a supprimé le dossier suivant le dernier incrément de newPath, on ajoute le nouveau au précédent
+					strPath := ""
+					For i, line in newPath
+					{
+						strPath .= line . "|"
+					}
+					DebugPrint("RestartPathFromPos", "newPath: " . strPath . " - want " . newPath.MaxIndex(), true)
+					newPath[newPath.MaxIndex()] += order
+					DebugPrint("RestartPathFromPos", "Added to " . newPath.MaxIndex() . " : " . order, true)
+					
+				} else {
+					newPath.Insert(order)
+					DebugPrint("RestartPathFromPos", "Added at (>1)" . newPath.MaxIndex() . " : " . order, true)
+				}
+				
+			} else {
+				newPath.Insert(order)
+				DebugPrint("RestartPathFromPos", "Added at (<1)" . newPath.MaxIndex() . " : " . order, true)
+			}
+			
+			
+			pathEnum.Next(order_number, order)
+			newPath.Insert(order)
+			DebugPrint("RestartPathFromPos", "Added at (order)" . newPath.MaxIndex() . " : " . order, true)
+			
+			If (order == "GET_EDT") {
+				pathEnum.Next(order_number, order)
+				newPath.Insert(order)
+				DebugPrint("RestartPathFromPos", "Added at (edt)" . newPath.MaxIndex() . " : " . order, true)
+			} else {
+				lastFolderPos := order_number
+			}
+			
+		} else if (order == "UP") {
+			; on supprime toutes les lignes jusqu'au dernier dossier inclu, car on les a déjà parcourues
+			
+			nbToRemove := newPath.Length() - (lastFolderPos + 1)
+			
+			Loop % nbToRemove
+			{
+				rem := newPath.RemoveAt(newPath.MaxIndex())
+				DebugPrint("RestartPathFromPos", "Removed at " . (newPath.MaxIndex() + 1) . " : " . rem, true)
+			}
+		}
+	}
+	
+	For i, order in newPath
+	{
+		DebugPrint("RestartPathFromPos", "Order n°" . i . " : " . order, true)
+	}
+	
+	MouseMove, -10, -50, 0, R
+	return newPath._NewEnum()
+}
+
 
 
 CreateEmptyEdT(name) {
@@ -2151,7 +2352,7 @@ CreateEmptyEdT(name) {
 
 
 ScrollUp() {
-	; même chose que pour ScrollDown
+		; même chose que pour ScrollDown
 	
 	ImageSearch, , , arboFinX, arboY, arboFinX + 20, arboY + 20, Images\scrollHautOn.png
 	If (ErrorLevel == 2) {
@@ -2227,21 +2428,23 @@ OpenExportWindow(errNb := 5) {
 WaitForADE() {
 	LED_switch()
 	
+	Sleep 500
+	
 	PROTEC := 0
 	loading := 0
 	while(true) {
-		ImageSearch, , , ADE_Width - 20, ADE_Height - 100, ADE_Width, ADE_Height + 5, Images\ADEwait.png
+		ImageSearch, , , ADE_Width - 20, ADE_Height - 250, ADE_Width, ADE_Height, Images\ADEwait.png
 		If (ErrorLevel == 2) {
 			DebugPrint("WaitForADE", "Unable to search for ADEwait.png", false)
 			Stop()
 		} else if (ErrorLevel == 1) {
-			; le chargement est fini ?
+		; le chargement est fini ?
 			If (loading == 0) {
-				; on attend avant d'être sûr
+			; on attend avant d'être sûr
 				loading := 1
 			} else {
-				; maintenant on est sûr
-				Sleep 100
+			; maintenant on est sûr
+				Sleep 250
 				LED_switch()
 				return
 			}
@@ -2283,15 +2486,15 @@ FinishScript(error := false) {
 		Sleep 250	
 	}
 	
-	stdout := FileOpen("**", "w")
-	stdout.WriteLine("END")
-	stdout.Close()
-	
+	stdout := FileOpen("*", "w")
 	If (error) {
-		stderr := FileOpen("***","w")
-		stderr.WriteLine("ERRORS OCCURED")
-		stderr.Close()
+		DebugPrint("FinishScript", "Wrote to stdout 'ERROR'", true)
+		stdout.Write("ERROR")
+	} else {
+		DebugPrint("FinishScript", "Wrote to stdout 'OK'", true)
+		stdout.Write("OK")
 	}
+	stdout.Close()
 	
 	IfWinExist, ahk_exe cmd.exe
 	{
@@ -2303,7 +2506,7 @@ FinishScript(error := false) {
 		stdout := FileOpen("**", "w")
 		
 		If (error)
-			stdout.WriteLine("Errors occured")
+			stdout.WriteLine("ERROR")
 		
 		stdout.WriteLine("END - " . (A_TickCount - startTime) . " ms")
 		
@@ -2319,7 +2522,7 @@ FinishScript(error := false) {
 Stop(escaped := false, error := true) {
 	runTime := A_TickCount - startTime
 	
-	If (!P_debug)
+	If (!P_debug and !escaped)
 		FinishScript(error)
 	
 	If (escaped)
@@ -2401,6 +2604,31 @@ GetTime() {
 }
 
 
+DebugPrintVars() {
+	str := "`n" . A_Tab
+	str .= "ADE_Height: " . ADE_Height . "`n" . A_Tab
+	str .= "ADE_Width: " . ADE_Width . "`n" . A_Tab
+	str .= "arboX: " . arboX . "`n" . A_Tab
+	str .= "arboY: " . arboY . "`n" . A_Tab
+	str .= "arboFinX: " . arboFinX . "`n" . A_Tab
+	str .= "arboFinY: " . arboFinY . "`n" . A_Tab
+	str .= "lineHeight: " . lineHeight . "`n" . A_Tab
+	str .= "lineWidth: " . lineWidth . "`n" . A_Tab
+	str .= "devToolsX: " . devToolsX . "`n" . A_Tab
+	str .= "devToolsY: " . devToolsY . "`n" . A_Tab
+	str .= "coinScrollX: " . coinScrollX . "`n" . A_Tab
+	str .= "coinScrollY: " . coinScrollY . "`n" . A_Tab
+	str .= "exportButtonX: " . exportButtonX . "`n" . A_Tab
+	str .= "exportButtonY: " . exportButtonY . "`n" . A_Tab
+	str .= "dateChoiceX1: " . dateChoiceX1 . "`n" . A_Tab
+	str .= "dateChoiceX2: " . dateChoiceX2 . "`n" . A_Tab
+	str .= "dateChoiceY: " . dateChoiceY . "`n" . A_Tab
+	str .= "okButtonX: " . okButtonX . "`n" . A_Tab
+	str .= "okButtonY: " . okButtonY . "`n" . A_Tab
+	
+	DebugPrint("Vars", str, true)
+}
+
 
 PrintHelp() {
 	; envoie tout dans stdout
@@ -2410,7 +2638,7 @@ PrintHelp() {
 		DllCall("AttachConsole", "UInt", -1)
 	}
 	
-	stdout := FileOpen("**", "w", "UTF-8")
+	stdout := FileOpen("*", "w", "UTF-8")
 	
 	stdout.WriteLine("`n`n----------------------- ArboScraper HELP -----------------------")
 	stdout.WriteLine("Script made by Luc Briand, who can automatically export ADE timetables or it's complete arborescence")
@@ -2445,7 +2673,7 @@ PrintHelp() {
 
 Pause::
 pauseState := !pauseState
-	;on remet le curseur là où il était si on repend
+;on remet le curseur là où il était si on repend
 if (!pauseState) {
 	ControlFocus, , %WIN_ADE%, , %WIN_DEV%
 	Sleep, 500
@@ -2453,7 +2681,7 @@ if (!pauseState) {
 	Sleep 1000
 	Pause off
 	
-	; re-open the files
+; re-open the files
 	out := FileOpen(P_out, "a")	
 	logFile := FileOpen(P_log, "a")
 	

@@ -93,7 +93,6 @@ def addInfo():
             newEventsList.append({"day": event["jour"], "hours": 0, "important": 0, "events": []})
 
         newEventsList[day]["events"].append(event)
-        #newEventsList[day]["hours"] +=
 
     eventsList.clear()
     eventsList.append(newEventsList[0])
@@ -299,7 +298,7 @@ if __name__ == '__main__':
     if Path(os.getcwd()) != WORKING_DIR:
         os.chdir(WORKING_DIR)
 
-    with open("log.txt", "a") as logFile:
+    with open("log.txt", "a", encoding="UTF-8") as logFile:
         try:
             main()
         except Exception:

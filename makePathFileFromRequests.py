@@ -254,6 +254,11 @@ def main():
         if strFile.endswith(REQUEST_SEPARATOR):
             strFile = strFile[:-len(REQUEST_SEPARATOR)]
 
+        if len(strFile) == 0:
+            log("Requests are empty!")
+            sys.stdout.write("EMPTY")
+            exit()
+
         log(strFile)
 
         makePathFromRequests(strFile)
@@ -265,8 +270,6 @@ def main():
     else:
         log("Path made with params:\n\t" + strFile if len(sys.argv) > 1 else "None")
         sys.stdout.write("OK")
-
-
 
 
 

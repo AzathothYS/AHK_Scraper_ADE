@@ -1,40 +1,36 @@
-0
- Etudiants
 1
-Beaulieu
+ Enseignants
 8
-SPM
+IUT Saint-Brieuc
 3
-L2 - PCGS - S4
-1
-Compléments
-5
+Science et Génie des Matériaux
+3
+Vacataires
+8
 GET_EDT
-__Cplt Méca2 (Gr2)
+__LE GOUX Florence
+UP
+UP
+UP
+1
+IUT Saint-Malo
+1
+Permanents
 2
+GEA
+3
 GET_EDT
-__Cplt PCS (Gr1)
+__KLAOUSEN PATRICK
 UP
-5
-Gr Physique
-2
+UP
+UP
+4
+Santé
+1
+Odonto
+44
 GET_EDT
-__Gr.p1 CMI (6)
-UP
-UP
-UP
-UP
-UP
-2
-Salles
-1
-Beaulieu
-1
-Apparitrices
-1
-1er CYCLE/Zone nord
-5
-BAT 27
-1
+__JEANNE Sylvie
+24
 GET_EDT
-__B27-Salle d'examens
+__Monsieur X
