@@ -130,7 +130,7 @@ Loop %0% {
 		P_log := "log.txt"
 		
 		TEST_MODE := true
-		P_skipInit := true
+		P_skipInit := true	
 	}
 }
 
@@ -166,7 +166,37 @@ If (P_mode == 1) {
 global pauseState := false, pauseX := 0, pauseY := 0
 
 If (TEST_MODE) {
-	Sleep 2000
+	; DEBUG
+	;Sleep 2000
+	
+	path := Object()
+	
+	while (!pathFile.AtEOF()) {
+		path.Push(pathFile.ReadLine())
+	}
+	
+	pathFile.close()
+	
+	;cleaning the path
+	toRemove := Object()
+	for i, thing in path {
+		If (thing == "") {
+			toRemove.Push(A_Index)
+		}
+		;removes all new line characters
+		path[i] := StrReplace(thing, "`n")
+		path[i] := StrReplace(path[i], "`r")
+	}
+	
+	for i, thing in toRemove {
+		DebugPrint("ReadPathForEdT", "removed item n°" . i . " in path", true)
+		path.RemoveAt(thing)
+	}
+	
+	a := 0
+	RestartPathFromPos(path, 12, a)
+	
+	Stop(false, false, false)
 }
 
 If (P_startup) {
@@ -200,7 +230,7 @@ If WinActive(WIN_ADE, , WIN_DEV) {
 	}
 	
 	DebugPrint("", "Done.", true)
-	Stop(false, false)
+	Stop(false, false, false)
 	
 } else {
 	MsgBox, 4, ArboScraper, Wrong window! Launch ADE ?
@@ -1902,6 +1932,8 @@ ReadPathForEdT() {
 	
 	MouseMove, x + 3, y + 10
 	
+	globalPathOffset := 0
+	
 	pathEnum := path._NewEnum()
 	While pathEnum[order_number, order] {
 		Sleep, 250
@@ -1955,7 +1987,7 @@ ReadPathForEdT() {
 				
 				If (name != order) {
 					DebugPrint("ReadPathForEdT", "edt file name '" . order . "' doesn't match the found name: '" . name . "'", false)
-					Stop()
+					CreatePathErrorFile(path, order_number, order, name)
 				}
 				
 				; exportation
@@ -1978,7 +2010,10 @@ ReadPathForEdT() {
 					Stop()
 				}
 				; on overwrite n'importe quel fichier ayant le même nom
-				FileMove, %DownLoads_Folder%\ADECal.ics, %EdT_Out_Folder%\%order_number%.ics, 1
+				
+				fileName := order_number + globalPathOffset ; pour prendre en compte le fait que le path a peut-être été réécrit par 'RestartPathFromPos'
+				
+				FileMove, %DownLoads_Folder%\ADECal.ics, %EdT_Out_Folder%\%fileName%.ics, 1
 				
 				DebugPrint("ReadPathForEdT", "DL OK pour le fichier n°" . order_number . " soit " . name, true)
 				
@@ -2012,9 +2047,9 @@ ReadPathForEdT() {
 				MouseMove, arboX, y, 0
 				
 			} else {
-				; il y a une erreur
+				; il y a une erreur, on écrit le path pour arriver à l'erreur dans un fichier, pour ensuite permettre à l'admin de savoir si c'est une erreur ou une arborescence incorrecte
 				DebugPrint("ReadPathForEdT", "folder name '" . order . "' doesn't match the found name: '" . name . "'", false)
-				Stop()
+				CreatePathErrorFile(path, order_number, order, name)
 			}
 			
 		} else if (order == "UP") {
@@ -2036,7 +2071,10 @@ ReadPathForEdT() {
 				Sleep 250
 				closeAllTheFolders()
 				Sleep 250
-				pathEnum := RestartPathFromPos(path, order_number)
+				
+				path := RestartPathFromPos(path, order_number, globalPathOffset)
+				pathEnum := path._NewEnum()
+				
 				DebugPrint("ReadPathForEdT", "Restarting...", false)
 				
 				x := arboX
@@ -2058,7 +2096,10 @@ ReadPathForEdT() {
 				Sleep 250
 				closeAllTheFolders()
 				Sleep 250
-				pathEnum := RestartPathFromPos(path, order_number)
+				
+				path := RestartPathFromPos(path, order_number, globalPathOffset)
+				pathEnum := path._NewEnum()
+				
 				DebugPrint("ReadPathForEdT", "Restarting...", false)
 				
 				x := arboX
@@ -2254,8 +2295,9 @@ GoToParentFolder() {
 
 
 
-RestartPathFromPos(path, pos) {
-	; TO FIX !!!!!
+RestartPathFromPos(path, pos, ByRef globalPathIndex) {
+	; édite le path pour que tous les 'GET_EDT' après 'pos' soient accédés sans 'UP' inutiles avant
+	; tous les 'GET_EDT' avant 'pos' sont supprimés
 	
 	newPath := Object()
 	
@@ -2264,63 +2306,58 @@ RestartPathFromPos(path, pos) {
 	pathEnum := path._NewEnum()
 	While pathEnum[order_number, order]
 	{
-		If (order_number > pos) {
-			; on ajoute tout le reste
-			While pathEnum[order_number, order]
-			{
-				newPath.Insert(order)
-				DebugPrint("RestartPathFromPos", "Added at (end)" . newPath.MaxIndex() . " : " . order, true)
-			}
-			Break
-		}
-		
 		If order is digit
 		{
 			If (order_number > 1) {
-				If newPath[newPath.MaxIndex()] is digit
+				item := newPath[newPath.MaxIndex()]
+				If item is digit 
 				{
-					; on a supprimé le dossier suivant le dernier incrément de newPath, on ajoute le nouveau au précédent
-					strPath := ""
-					For i, line in newPath
-					{
-						strPath .= line . "|"
-					}
-					DebugPrint("RestartPathFromPos", "newPath: " . strPath . " - want " . newPath.MaxIndex(), true)
 					newPath[newPath.MaxIndex()] += order
-					DebugPrint("RestartPathFromPos", "Added to " . newPath.MaxIndex() . " : " . order, true)
 					
 				} else {
-					newPath.Insert(order)
-					DebugPrint("RestartPathFromPos", "Added at (>1)" . newPath.MaxIndex() . " : " . order, true)
+					newPath.Push(order)
+					DebugPrint("RestartPathFromPos", "Added at (>1) " . newPath.MaxIndex() . " : " . order, true)
 				}
 				
 			} else {
-				newPath.Insert(order)
-				DebugPrint("RestartPathFromPos", "Added at (<1)" . newPath.MaxIndex() . " : " . order, true)
+				newPath.Push(order)
+				DebugPrint("RestartPathFromPos", "Added at (<1) " . newPath.MaxIndex() . " : " . order, true)
 			}
 			
+			DebugPrint("RestartPathFromPos", "Result (1) of '" . order . "' : " . newPath[newPath.MaxIndex()], true)
 			
 			pathEnum.Next(order_number, order)
-			newPath.Insert(order)
-			DebugPrint("RestartPathFromPos", "Added at (order)" . newPath.MaxIndex() . " : " . order, true)
+			newPath.Push(order)
+			DebugPrint("RestartPathFromPos", "Added at (order) " . newPath.MaxIndex() . " : " . order, true)
+			
+			DebugPrint("RestartPathFromPos", "Result (2) of '" . order . "' : " . newPath[newPath.MaxIndex()], true)
 			
 			If (order == "GET_EDT") {
 				pathEnum.Next(order_number, order)
-				newPath.Insert(order)
-				DebugPrint("RestartPathFromPos", "Added at (edt)" . newPath.MaxIndex() . " : " . order, true)
-			} else {
-				lastFolderPos := order_number
+				newPath.Push(order)
+				
+				If (order_number > pos) {
+					; on ajoute tout le reste
+					While pathEnum[order_number, order]
+					{
+						newPath.Push(order)
+						DebugPrint("RestartPathFromPos", "Added at (end)" . newPath.MaxIndex() . " : " . order, true)
+					}
+					Break
+				}
 			}
 			
 		} else if (order == "UP") {
 			; on supprime toutes les lignes jusqu'au dernier dossier inclu, car on les a déjà parcourues
-			
-			nbToRemove := newPath.Length() - (lastFolderPos + 1)
-			
-			Loop % nbToRemove
-			{
-				rem := newPath.RemoveAt(newPath.MaxIndex())
-				DebugPrint("RestartPathFromPos", "Removed at " . (newPath.MaxIndex() + 1) . " : " . rem, true)
+			While (true) {
+				line := newPath.RemoveAt(newPath.MaxIndex())
+				DebugPrint("RestartPathFromPos", "Removed at " . (newPath.MaxIndex() + 1) . " : " . line, true)
+				If line is not digit
+				{
+					If (line != "GET_EDT" and RegExMatch(line, "^(?!__).*$")) { ; si la ligne n'est pas 'GET_EDT' ni ne commence par '__' -> un dossier
+						Break
+					}
+				}
 			}
 		}
 	}
@@ -2330,21 +2367,49 @@ RestartPathFromPos(path, pos) {
 		DebugPrint("RestartPathFromPos", "Order n°" . i . " : " . order, true)
 	}
 	
+	globalPathIndex := path.Length() - newPath.Length()
+	
 	MouseMove, -10, -50, 0, R
-	return newPath._NewEnum()
+	return newPath
 }
 
 
+CreatePathErrorFile(path, pos, expected, got) {
+	errorOutput := FileOpen("path_error.txt", "w")
+	
+	If !IsObject(errorOutput) {
+		DebugPrint("ReadPathForEdT", "Can't open path_error.txt !", false)
+		Stop()
+	}
+	
+	a := 1
+	path := RestartPathFromPos(path, pos, a)
+	
+	For n, line in path
+	{
+		errorOutput.WriteLine(line)
+		If (line == expected) {
+			errorOutput.WriteLine("|error:|" . got)
+		}
+	}
+	
+	errorOutput.Close()
+	
+	DebugPrint("ReadPathForEdT", "Wrote the error path to 'path_error.txt'.", true)
+	
+	Stop(false, true, true)
+}
+
 
 CreateEmptyEdT(name) {
-	emptyEdT := FileOpen(name . ".ics", "w")
+	emptyEdT := FileOpen(EdT_Out_Folder . "/" . name . ".ics", "w")
 	
 	If !IsObject(emptyEdT) {
 		DebugPrint("CreateEmptyEdT", "Failed to create a new empty EdT named '" . name . ".ics'", false)
 		Stop()
 	}
 	
-	emptyEdT.Write("YesThisIsEmptyEdT")
+	emptyEdT.Write("Empty!")
 	emptyEdT.Close()
 	
 	DebugPrint("CreateEmptyEdT", "Created empty EdT file for " . name, true)
@@ -2475,7 +2540,7 @@ PauseScript() {
 }
 
 
-FinishScript(error := false) {
+FinishScript(error := false, arboError := false) {
 	IfWinExist, %WIN_ADE%, , %WIN_DEV%
 	{
 		ControlFocus, , %WIN_ADE%, , %WIN_DEV%
@@ -2488,8 +2553,13 @@ FinishScript(error := false) {
 	
 	stdout := FileOpen("*", "w")
 	If (error) {
-		DebugPrint("FinishScript", "Wrote to stdout 'ERROR'", true)
-		stdout.Write("ERROR")
+		If (arboError) {
+			DebugPrint("FinishScript", "Wrote to stdout 'ARBO ERROR'", true)
+			stdout.Write("ARBO ERROR")
+		} else {
+			DebugPrint("FinishScript", "Wrote to stdout 'ERROR'", true)
+			stdout.Write("ERROR")
+		}
 	} else {
 		DebugPrint("FinishScript", "Wrote to stdout 'OK'", true)
 		stdout.Write("OK")
@@ -2519,11 +2589,11 @@ FinishScript(error := false) {
 }
 
 
-Stop(escaped := false, error := true) {
+Stop(escaped := false, error := true, arboError := false) {
 	runTime := A_TickCount - startTime
 	
 	If (!P_debug and !escaped)
-		FinishScript(error)
+		FinishScript(error, arboError)
 	
 	If (escaped)
 		DebugPrint("Stop", "Escaped!", true)
@@ -2537,7 +2607,7 @@ Stop(escaped := false, error := true) {
 		out.Close()
 	}
 	If IsObject(pathFile) {
-		pathFile.close()
+		pathFile.Close()
 	}
 	If IsObject(logFile) {
 		logFile.Close()
@@ -2697,5 +2767,5 @@ if (!pauseState) {
 return
 
 Escape::
-Stop(true)
+Stop(true, false, false)
 return

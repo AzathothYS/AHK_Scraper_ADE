@@ -70,11 +70,10 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
 
 
     # stockage des requests formattées, utilisées plus tard pour updater la database
-    with open(REQUEST_FILE, "w") as requestsFile:
+    with open(REQUEST_FILE, "w", encoding="UTF-8") as requestsFile:
         requestsFile.writelines(req + '\n' for req in requests)
 
 
-    error = False
     paths = [] # Les paths de chaque requête
     with open(WORKING_DIR + arborescence, 'r', encoding='UTF-8') as arbo:
         for request in requestsList:
@@ -96,20 +95,12 @@ def makePathFromRequests(requests, path_out="path.txt", arborescence="arboADE_co
                         # on a atteint la fin de l'arborescence, il y a une erreur
                         log("reached EOF when parsing request: \n\t"
                             + requests[requestsList.index(request)]
-                            + "\n\tat folder : " + folder
-                            + "\n\tIgnoring this request...", "ERROR")
-                        error = True
-                        break
-                if error:
-                    break
+                            + "\n\tat folder : " + folder, "ERROR")
+                        raise EOFError()
 
                 path.append((n, folder))
 
                 tabLen += 1
-
-            if error:
-                error = False
-                continue
 
             paths.append(path)
 
@@ -244,6 +235,7 @@ def test():
 
 
 def main():
+    log("Making path from requests...")
     try:
         with open(REQUEST_FILE, "r", buffering=1, encoding="UTF-8") as reqFile:
             strFile = reqFile.read()
@@ -264,11 +256,11 @@ def main():
         makePathFromRequests(strFile)
 
     except Exception:
-        log(format_exc() + ("\n\tWith params: " + str(sys.argv[1:])) if len(sys.argv) > 1 else "", "ERROR")
+        log(format_exc(), "ERROR")
         sys.stdout.write("ERROR")
 
     else:
-        log("Path made with params:\n\t" + strFile if len(sys.argv) > 1 else "None")
+        log("Successfully made path.")
         sys.stdout.write("OK")
 
 

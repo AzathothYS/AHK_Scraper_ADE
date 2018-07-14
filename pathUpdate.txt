@@ -1,8 +1,6 @@
-Vacataires
-3
-Science et Génie des Matériaux
-3
-IUT Saint-Brieuc
-8
- Enseignants
+0
+ Etudiants
 1
+Beaulieu
+2
+ESIR

@@ -1,13 +1,9 @@
-﻿--version:1.0-checksum:lolXDptdrverycheckthesum
+﻿--version:2-VERY
  Etudiants
     Beaulieu
         D.U. Science et Technologies
             __Parcours Chimie
             __Parcours Electronique
-        Droit
-            __L1 étudiants de DROIT- BECO (S2) (25)
-            __L2 étudiants de DROIT (S3-S4)
-            __L3 étudiants de DROIT (S5) (2)
         ESIR
             Cycle préparatoire 1er année
                 __CUPGE 1 Matériaux
@@ -2348,15 +2344,17 @@
             L2 - PCGS - S4
                 Compléments
                     __Cplt Chimie2
-                    __Cplt MADE2
-                    __Cplt Méca2
+                    __Cplt MADE2 (Gr1)
+                    __Cplt MADE2 (Gr2)
+                    __Cplt Méca2 (Gr1)
                     __Cplt Méca2 (Gr2)
                     __Cplt PC2
                     __Cplt PCS (Gr1)
                     __Cplt PCS (Gr2)
                     __Cplt PCS (Gr3)
                     __Cplt Phys2
-                    __Cplt SVE2
+                    __Cplt SVE2 (Gr1)
+                    __Cplt SVE2 (Gr2)
                 Gr Chimie
                     __Gr.c1 (20)
                     __Gr.c1 défi (20)
@@ -4532,6 +4530,14 @@
             __Martolod
             __Move and Share
             __Ressources Plus
+    IPAG
+        __Autorisation d'absence
+        __IPAG
+        __LAP Licence d'administration publique
+        __M1 MFTAP
+        __M2 DG3S
+        __M2 MFTAP
+        __PC Préparation concours
     IUT Lannion
         DUT INFO
             INFO 1A
@@ -10692,6 +10698,7 @@
                 __FROGER Philippe
                 __GLOAGEN Philippe
                 __HERY Joël
+                __HIROU Géraldine
                 __LAVENANT Dominique
                 __LE GOUX Florence
                 __LE PAVEN Patrice

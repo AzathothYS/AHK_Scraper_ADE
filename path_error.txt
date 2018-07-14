@@ -1,12 +1,6 @@
-0
+﻿0
  Etudiants
-6
-IPAG
-5
-GET_EDT
-__M2 MFTAP
-UP
-3
+9
 IUT Saint-Malo
 2
 Classe PREPA

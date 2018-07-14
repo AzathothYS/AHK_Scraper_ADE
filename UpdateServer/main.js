@@ -22,24 +22,24 @@ const LOG_FILE_PATH = WORKING_DIR + "log.txt";
 
 function main() {
     logI("Server Start.");
-    infoMsg("Server started.");
+    //infoMsg("Server started.", "START");
 
     var promise = Promise.resolve()
         //.then(checkIfUpdateNeeded, null)
         //.then(addUpdateRequestsFromDatabase, null)
-        .then(addRandomRequests, null) // DEBUG
-        .then(fullfillRequests, null)
-        .then(() => {return runScraper(SCRAPER_ARGS_PATH);}, null)
-        .then(processEdTs, null)
-        .then(updateLocalDatabase, null)
+        //.then(addRandomRequests, null) // DEBUG
+        //.then(fullfillRequests, null)
+        //.then(() => {return runScraper(SCRAPER_ARGS_PATH);}, null)
+        //.then(processEdTs, null)
+        //.then(updateLocalDatabase, null)
         .then(updateFirebase, null)
         .then(() => {
             logI("Server Done.");
-            infoMsg("Server Done");
+            //infoMsg("Server Done", "STOP");
         }, null)
         .catch(() => {
             logE("Server failed!");
-            errorMsg("Server failed!", "");
+            //errorMsg("Server failed!", ""); // TODO : envoyer ce message pour afficher la notif, les autres doivent aller dans le log
         });
 
     //checkIfArborescenceUpdateNeeded(); // TODO : trouver un moyen d'attendre que updateNeeded a fini (un thread qui attend le changememt d'une valeur?)
@@ -185,7 +185,7 @@ function addRandomRequests() {
     // DEBUG
     logI("Adding random requests...");
 
-    let child_process = exec(`python "${WORKING_DIR}database.py" -makeRandomRequests 4`);
+    let child_process = exec(`python "${WORKING_DIR}database.py" -makeRandomRequests 2`);
     
     return new Promise((resolve, reject) => {
         child_process.addListener("error", (error) => {
@@ -282,9 +282,15 @@ function runScraper(args) {
 
                 reject();
 
+            } else if (data === "ARBO ERROR") {
+                logE("Scraper encountered a path error!");
+                errorMsg("runScraper-3", "ASK_PATCH", "Erreur de chemin, une action est requise.");
+
+                reject(); // TODO : y'a plus que ça à faire
+
             } else {
                 logE("stdout of scraper is nothing that I can understand! ", data);
-                errorMsg("runScraper-3", data);
+                errorMsg("runScraper-4", data);
 
                 reject();
             }
@@ -371,27 +377,45 @@ function updateFirebase() {
     let updateLog = JSON.parse(fs.readFileSync(`${WORKING_DIR}Database/updateLog.txt`, "utf-8"));
 
     logI("Update log: ", updateLog);
+
+    let updatePromise = Promise.resolve();
     
     for (let i = 0; i < updateLog.length; i++) {
         logI(`Updating '${updateLog[i]["path"]}'...`);
 
         let filePath = updateLog[i]["path"];
 
-        let file = fs.readFileSync(WORKING_DIR + "Database/" + filePath + ".json");
+        let file;
 
+        try{
+            file = fs.readFileSync(WORKING_DIR + "Database/" + filePath + ".json", {encoding:"UTF-8"});
+        } catch (error) {
+            if (error.code === "ENOENT") {
+                // No such file or directory
+                logE("no such file or directory: ", WORKING_DIR + "Database/" + filePath + ".json", " - error: ", error);
+            }
+            return Promise.reject("No such file or directory: " + WORKING_DIR + "Database/" + filePath + ".json");
+        }
+        
         let entryName = filePath.substring(filePath.lastIndexOf("/") + 1);
 
-        uploadToFirebase(filePath, entryName, file, updateLog[i]["update"], updateLog[i]["true_name"])
+        updatePromise = updatePromise
+            .then(() => {
+                return uploadToFirebase(filePath, entryName, file, updateLog[i]["checksum"], updateLog[i]["update"], updateLog[i]["true_name"]);
+            }, null)
             .catch((reason) => {
-                logE("Update failed at the ", i, " element of the updateLog: ", updateLog[i]);
-
+                logE("Update failed at the ", i, " element of the updateLog: ", updateLog[i], " - reason: ", reason);
                 return Promise.reject();
+            })
+            .then(() => {
+                return updateIndex(path, updateLog[i]["checksum"], updateLog[i]["update"]);
             });
     }
 
-    logI("Update finihsed.");
-
-    return Promise.resolve();
+    return updatePromise.then(() => {
+            logI("Update finihsed.");
+            return Promise.resolve();
+        });
 }
 
 
@@ -399,14 +423,18 @@ function updateFirebase() {
  * @param {string} path Le path pointant vers l'objet contenant 'entryName'
  * @param {string} entryName Le nom du champ à modifier
  * @param {string} content La nouvelle valeur du champ
+ * @param {string} checksum Le checksum de 'content'
  * @param {string} updateTime Va être converti en Date
  * @param {string} trueName Le nom non modifié du fichier, contenant son chemin vers lui dans l'arborescence
  * @param {boolean} isArbo Si on met à jour l'arborescence
  */
-function uploadToFirebase(path, entryName, content, updateTime, trueName, isArbo = false) {
+function uploadToFirebase(path, entryName, content, checksum, updateTime, trueName, isArbo = false) {
+
+    logI("Starting to update...");
+
     path = "ADE-Arborescence/" + (isArbo ? "Arborescence" : "Emplois Du Temps") + "/" + path;
 
-    let isDoc = path.match(/\//g).length % 2 == 0; // si il y a u nombre pair de '/', alors le path pointe vers un document, sinon une collection
+    let isDoc = path.match(/\//g).length % 2 == 1; // si il y a un nombre impair de '/', alors le path pointe vers un document, sinon une collection
 
     if (!isDoc) {
         path += "/__files"; // l'emplacement du contenu des fichiers dans les collections
@@ -415,15 +443,17 @@ function uploadToFirebase(path, entryName, content, updateTime, trueName, isArbo
     if (isArbo) {
         return new Promise((resolve, reject) => {
             firestore.doc(path).set({
-                "arbo_last_update": new Date(updateTime),
+                "_arbo_last_update": new Date(updateTime),
+                "_checksum": checksum,
                 "arborescence": content
             }).then(() => {
                 logI("Successfully updated the arborescence");
 
                 resolve();
 
-            }, (reason) => {
-                logE("Unable to pudpate the arborescence, beacuse: ", reason);
+            }, null)
+            .catch((reason) => {
+                logE("Unable to udpate the arborescence, beacuse: ", reason);
 
                 reject();
             });
@@ -431,35 +461,103 @@ function uploadToFirebase(path, entryName, content, updateTime, trueName, isArbo
         
 
     } else {
-        return new Promise((resolve, reject) => {
-            firestore.doc(path).update({
-                entryName: {
-                    "last_update": new Date(updateTime),
-                    "true_name": trueName,
+        return Promise.resolve()
+            .then(() => {
+
+                let obj = {};
+                obj[entryName] = {
+                    "_last_update": new Date(updateTime),
+                    "_true_name": trueName,
+                    "_checksum": checksum,
                     "file": content
-                }
-            }).then(() => {
+                };
+
+                return firestore.doc(path).set(obj, {merge: true}); // combiné avec 'set',pour avoir le comportement de 'update' sans avoir à ce soucier de la création de documents/collections
+            })
+            .then(() => {
                 logI(`Successfully updated '${entryName}' in '${path}' of name '${trueName}'`);
-
-                resolve();
-
-            }, (reason) => {
+                return Promise.resolve();
+            })
+            .catch((reason) => {
                 logE(`Unable to update '${entryName}' in '${path}' of name '${trueName}' beacause:\n`, reason);
-
-                reject();
+                return Promise.reject();
             });
-        });
     }
 }
 
 
-function infoMsg(msg) {
-    sendMsgToAdmin("INFO", msg, "", "");
+
+function updateIndex(path, checksum, lastUpdate) {
+    logI("Updating index for file at ", path);
+
+    return Promise.resolve()
+        .then(() => {
+
+            let obj = {};
+            obj[path] = {
+                "checksum": checksum,
+                "lastUpdate": lastUpdate
+            };
+
+            return firestore.doc("ADE-Arborescence/Index").set(obj, {merge: true});
+        })
+        .then(() => {
+            logI("Index update successful for file at ", path);
+            return Promise.resolve();
+        })
+        .catch((reason) => {
+            logE("Unable to update index for file at ", path, " - beacause: ", reason);
+            return Promise.reject();
+        });
 }
 
 
-function errorMsg(from, details) {
-    sendMsgToAdmin("ERREUR", "Le serveur a rencontré un problème.", from, details);
+
+function patchArborescence(args) {
+    logI("Patching arborescence with args: ", args);
+
+    let child_process = exec(`python "${WORKING_DIR}arborescenceUpdate.py" ${args}`);
+
+    return new Promise((resolve, reject) => {
+        child_process.addListener("error", (error) => {
+            logE("exec error: ", error);
+            errorMsg("patchArborescence-1", error);
+
+            reject();
+        });
+
+        child_process.stdout.on("data", (data) => {
+            if (data === "OK") {
+                logI("Successfully patched arborescence.");
+
+                resolve();
+
+            } else if (data === "ERROR") {
+                logE("arborescenceUpdate failed!");
+                errorMsg("patchArborescence-2", "");
+
+                reject();
+
+            } else {
+                logI("stdout of arborescenceUpdate is nothing that I can understand! ", data);
+                errorMsg("patchArborescence-3", data);
+
+                reject();
+            }
+        });
+    });
+}
+
+
+
+
+function infoMsg(msg, details="") {
+    sendMsgToAdmin("INFO", msg, "", details);
+}
+
+
+function errorMsg(from, details, msg="Le serveur a rencontré un problème.") {
+    sendMsgToAdmin("ERREUR", msg, from, details);
 }
 
 
@@ -471,7 +569,7 @@ function sendMsgToAdmin(title, body, from, extra) {
             "data": {
                 "title": title.toString(), // on s'assure que toutes les valeurs sont des str
                 "body": body.toString(),
-                "by": from.toString(), // 'from' est un nom réservé
+                "by": from.toString(),   // 'from' est un nom réservé, d'où 'by'
                 "extra": extra.toString()
             }
         },
@@ -488,4 +586,115 @@ function sendMsgToAdmin(title, body, from, extra) {
 }
 
 
-main();
+
+
+var adminTasks = [];
+
+function processAdditionnalTasks() {
+
+    var tasksToDo = Promise.resolve();
+
+    for (var task of adminTasks) {
+        switch (task["task"]) {
+            case "REQUEST_PATCH":
+
+
+
+                tasksToDo.then( )
+
+                tasksToDo.then(() => {return runScraper(WORKING_DIR + "ArboScraper.exe -arbo --startup --path path.txt --out arboPatch.txt --log log.txt");}, null)
+
+                tasksToDo.then(() => {return patchArborescence("-patch arboPatch.txt arbo");}, null);
+
+                break;
+            
+            case "REQUEST_EDT":
+
+                break;
+        }
+    }
+
+    return tasksToDo;
+}
+
+
+
+
+
+
+
+function processClientMessage(data) {
+
+    let what = data["what"];
+
+    switch (what) {
+        case "REQUEST_PATCH":
+            let request = data["request"];
+
+            adminTasks.push({
+                "task": "REQUEST_PATCH",
+                "request": request
+            });
+
+            logI("Recieved a patch request from ADMIN client: ", request);
+            break;
+        
+        case "REQUEST_EDT":
+            let request = data["request"];
+
+            adminTasks.push({
+                "task": "REQUEST_EDT",
+                "request": request
+            });
+
+            logI("Recieved a edt request from ADMIN client: ", request);
+            break;
+        
+        case "PATCH_OK":
+
+            // TODO
+
+            logI("Recieved ADMIN client says yes for patch request");
+            break;
+
+        default:
+            logI("Recieved unknown task from ADMIN client: ", data);
+            break;
+    }
+}
+
+
+
+
+
+
+
+
+
+// tests FCM Server
+
+const Sender = require("node-xcs").Sender;
+
+let xcs = new Sender("246464569674", "AAAAOWJu4Uo:APA91bHFQViQBgG54yrNv5M5d969eL9V3wv1Q6_74a4NPhbA3v8nxL1GDxBTYRdfjI6__D9A7DBN5QQtbVkk1YnhDoyz-H-bNK4O6hsLkS5LjGDXJchMqC-ouJgTl0Qn4cz09fny-_1p")
+
+xcs.on("message", (msgID, from, data, category) => {
+    console.log("recieved msg.");
+    logI("msg reçu: ID=", msgID, " from=", from, " category=", category, " data=", data);
+
+
+
+
+});
+
+xcs.on("receipt", (msgID, from, data, category) => {
+    console.log("recieved receipt.");
+    logI("receipt reçu: ID=", msgID, " from=", from, " category=", category, " data=", data);
+});
+
+// ----------------------------
+
+//sendMsgToAdmin("INFO", "very", "swagg", "coucou");
+
+//main();
+
+updateIndex(" Etudiants/IPAG/M2 MFTAP", "404ee87040948976e87645a1d5b09e3b", new Date("2018-07-12 17:20:22"));

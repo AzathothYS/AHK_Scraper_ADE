@@ -1,17 +1,2 @@
-﻿            Vacataires
-                __BOIVIN Régis
-                __DESCAMPS David
-                __DION Dominique
-                __FROGER Philippe
-                __GLOAGEN Philippe
-                __HERY Joël
-                __HIROU Géraldine
-                __LAVENANT Dominique
-                __LE GOUX Florence
-                __LE PAVEN Patrice
-                __LE POLOTEC Christine
-                __RIBOURG Sandrine
-                __SALAUN Eric
-                __SAMSON Marc
-                __ZEKRAOUI Sidi
-                __ULTRA SWAGG
+﻿            COUCOU
+                __YOLO SWAGG

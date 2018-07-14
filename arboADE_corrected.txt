@@ -1,8 +1,5 @@
 ﻿ Etudiants
     Beaulieu
-        D.U. Science et Technologies
-            __Parcours Chimie
-            __Parcours Electronique
         ESIR
             Cycle préparatoire 1er année
                 __CUPGE 1 Matériaux
@@ -4531,7 +4528,6 @@
             __Ressources Plus
     IPAG
         __Autorisation d'absence
-        __IPAG
         __LAP Licence d'administration publique
         __M1 MFTAP
         __M2 DG3S
@@ -6044,7 +6040,7 @@
  Enseignants
     Beaulieu
         AUTRES
-		    A-Divers etablissements
+            A-Divers etablissements
                 __ACHAICHIA Pierre
                 __ALEXANDRE Cédric
                 __BAYAT Sahar
@@ -10562,6 +10558,10 @@
         Communs - Service Central
             __VRAUX GREGORY
         Génie Biologique
+            BIATSS
+                __COGREL GUYLAINE
+                __DECOSTA ROBERT
+                __RENARD MARILYNE
             TITULAIRES
                 __CASTILLO Arnaud
                 __CHATEAU Eric

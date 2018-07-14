@@ -6,14 +6,20 @@ from traceback import format_exc
 import os
 import sys
 
+from database import loadRequests
+
 WORKING_DIR = Path("C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/")
 
 PATH_FILE = "path.txt"
-EXPORTS_FOLDER = "EdTOut"
+EXPORTS_FOLDER = Path("EdTOut/")
 
 
 # list of the event, used by every function
 eventsList = []
+
+# if the current procesed file is empty or not
+isFileEmpty = False
+
 
 def icsTimeToTuple(icsTimeStart, icsTimeEnd):
     # ics format : YYYYMMDDTHHMMmillisZ, but in GMT (add 2 to hour)
@@ -22,10 +28,10 @@ def icsTimeToTuple(icsTimeStart, icsTimeEnd):
            (int(icsTimeStart[9:11]) + 2, int(icsTimeStart[11:13]), int(icsTimeEnd[9:11]) + 2, int(icsTimeEnd[11:13]))
 
 LABELS = {"DTSTART": "debut",
-          "DTEND":"fin",
-          "SUMMARY":"titre",
-          "LOCATION":"salle",
-          "DESCRIPTION":"desc"
+          "DTEND": "fin",
+          "SUMMARY": "titre",
+          "LOCATION": "salle",
+          "DESCRIPTION": "desc"
           }
 
 important_detect = ["TP", "CC"]
@@ -40,9 +46,9 @@ def eventToDict(event):
             if name in LABELS:
                 eventAdd[LABELS.get(name)] = value
 
-        except ValueError:
-            log("eventToDict", format_exc() + "  -> "  +  param  + "\nIGNORED", True)
-            pass
+        except ValueError as e:
+            log("eventToDict", format_exc() + "  -> "  +  param  + "\nFAILED", True)
+            raise e
 
     if len(eventAdd) != 5:
         log("eventToDict", "Pas assez de params pour l'event : {}".format(eventAdd), True)
@@ -68,6 +74,12 @@ def eventToDict(event):
 def addInfo():
     # add info about the weeks, days and a checksum for each week and day
     # changes eventsList structure
+
+    if isFileEmpty:
+        hash = hashlib.md5()
+        hash.update(eventsList[0]["empty"].encode())
+        eventsList[0]["_sum"] = hash.hexdigest()
+        return
 
     # checksum for each event
     for event in eventsList:
@@ -135,6 +147,9 @@ def addInfo():
 def addWeeks():
     # add week info and put days into weeks
 
+    if isFileEmpty:
+        return
+
     weekList = [{"week_nb":0, "important":0, "hours":0, "days":[], "_sum":""}]
     date = eventsList[0]["day"]
     weekList[0]["week_nb"] = datetime.date(int(date[:4]), int(date[4:6]), int(date[6:])).strftime("%W")
@@ -184,41 +199,51 @@ def addWeeks():
         eventsList.append(w)
 
 
-def addFileInfo(trueName):
+def addFileInfo(trueName, adress):
     # adds checksum for the entire file + name of the file that have been extracted from ADE
-    eventsList.append({"file_sum":"", "source_file":trueName})
 
-    for week in eventsList[:-1]:
-        eventsList[-1]["file_sum"] += week["_sum"]
+    eventsList.insert(0, {"file_sum":"", "source_file":trueName, "adress":adress})
 
-        eventsList[-1]["file_sum"] = hashlib.md5(eventsList[-1]["file_sum"].encode()).hexdigest()
+    hash = hashlib.md5()
+
+    for week in eventsList[1:]:
+        hash.update(week["_sum"].encode())
+
+    eventsList[0]["file_sum"] = hash.hexdigest()
 
 
 
 # main
-def icsToJson(icsFile, jsonFile, trueName):
+def icsToJson(icsFile, jsonFile, trueName, adress):
 
-    with open(EXPORTS_FOLDER + "/" + icsFile, "r") as calcADE:
+    with open(EXPORTS_FOLDER / icsFile, "r") as calcADE:
         # splits the calc into events, which are recognized by their 'BEGIN' label
         # also replaces end of lines followed by a space, which are simple returns in ics
-        events = calcADE.read().replace("\n ", "").split("BEGIN")
-
         log("icsToJson", "Processing " + icsFile)
 
-        # the first one is blank,  the second one is data about the file, we don't need those
-        events.pop(0)
-        events.pop(0)
+        events = calcADE.read().replace("\n ", "").split("BEGIN")
 
-        for event in events:
-            eventsList.append(eventToDict(event))
+        if len(events) == 1 and events[0].__contains__("Empty!"):  # on ignore le descripteur du fichier en utilisant '__contains__'
+            log("icstoJson", icsFile + " is empty!")
+            global isFileEmpty
+            isFileEmpty = True
+            eventsList.append({"empty": "true"})
+
+        else:
+            # the first one is the file descriptor, the second one is data about the file, we don't need those
+            events.pop(0)
+            events.pop(0)
+
+            for event in events:
+                eventsList.append(eventToDict(event))
 
     addInfo()
     addWeeks()
-    addFileInfo(trueName)
+    addFileInfo(trueName, adress)
 
-    log("icsToJson", "Done. Writing output file to " + EXPORTS_FOLDER + "/" + jsonFile)
+    log("icsToJson", "Done. Writing output file to " + str(EXPORTS_FOLDER.absolute()) + "/" + jsonFile)
 
-    with open(EXPORTS_FOLDER + "/" + jsonFile, "w") as calWrite:
+    with open(EXPORTS_FOLDER / jsonFile, "w") as calWrite:
         #calWrite.writelines(json.dumps(eventsList, ensure_ascii=False, indent="	").replace('\\\\', '\\'))
 
         edt_json = json.dumps(eventsList, ensure_ascii=False).replace('\\\\', '\\').replace(r'\,', ',')
@@ -230,6 +255,7 @@ def icsToJson(icsFile, jsonFile, trueName):
                 json.loads(edt_json)
                 log("icsToJson", "Json is valid for " + jsonFile)
                 break
+
             except json.JSONDecodeError as e:
                 # le json est invalide
                 err_pos = e.pos
@@ -241,11 +267,10 @@ def icsToJson(icsFile, jsonFile, trueName):
                 else:
                     raise Exception("Unknown json formatting problem")
 
-            finally:
                 PROTEC += 1
                 if PROTEC > 100:
                     log("icsToJson", "Failed to generate correct Json for '" + icsFile + "' aka '" + trueName + "'", True)
-                    break
+                    raise Exception("Impossible to generate correct json for '" + icsFile + "' aka '" + trueName + "'")
 
         calWrite.writelines(edt_json)
 
@@ -262,16 +287,21 @@ def log(tag : str, text : str, error=False):
 def main():
     log("main", "Started.")
 
-    with os.scandir(EXPORTS_FOLDER) as dirIt, open(PATH_FILE, "r") as pathFile:
+    requests = loadRequests()
+
+    with open(PATH_FILE, "r") as pathFile:
 
         path = pathFile.readlines()
 
-        for file in dirIt:
-            file:os.DirEntry
+        # on trie les tous les fichiers ics du dossier des exports en fonction du numéro au début de leur nom
+        icsFiles = sorted(EXPORTS_FOLDER.glob("*.ics"), key=lambda item: int(item.stem))
+
+        # on parcourt, dans l'ordre croissant, les fichiers ics du dossier
+        for i, file in enumerate(icsFiles): # type:int, os.DirEntry
             if not file.is_file():
                 continue
 
-            name, dot, ext = file.name.partition(".")
+            name, _, ext = file.name.partition(".")
 
             if ext != "ics":
                 continue
@@ -289,8 +319,12 @@ def main():
                 log("main", "line n°{} in {} should be a file not '{}' : cannot process file {}".format(lineNb, PATH_FILE, trueName, file.name))
                 continue
 
-            icsToJson(file.name, name + ".json", trueName)
-            eventsList.clear() # reset
+            icsToJson(file.name, name + ".json", trueName, requests[i])
+
+            # reset des variables
+            eventsList.clear()
+            global isFileEmpty
+            isFileEmpty = False
 
 
 

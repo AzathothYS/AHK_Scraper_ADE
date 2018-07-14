@@ -2,20 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba66f7e1-93b7-4929-8614-d9c16f0dabf2" name="Default" comment="Project update">
-      <change afterPath="$PROJECT_DIR$/arborescenceUpdate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArboScraper.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/ArboScraper.ahk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArboScraper.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ArboScraper.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/devToolsBlueSelected.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/devToolsBlueSelected.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/devToolsElements.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/devToolsElements.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/downloadCross.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/downloadCross.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/13.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/16.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/22.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/40.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdTOut/40.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UpdateServer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/UpdateServer/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UpdateServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UpdateServer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arboADE.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/arboADE_corrected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/arboADE_corrected.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arboUpdate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/arboUpdate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arbo_ADE[2].txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arborescenceUpdate.py" beforeDir="false" afterPath="$PROJECT_DIR$/arborescenceUpdate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/icsToJson.py" beforeDir="false" afterPath="$PROJECT_DIR$/icsToJson.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/makePathFileFromRequests.py" beforeDir="false" afterPath="$PROJECT_DIR$/makePathFileFromRequests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path.txt" beforeDir="false" afterPath="$PROJECT_DIR$/path.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pathUpdate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pathUpdate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requests.txt" afterDir="false" />
     </list>
     <ignored path="AHK_Scraper_ADE.iws" />
@@ -35,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
-              <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
+            <state relative-caret-position="527">
+              <caret line="448" lean-forward="true" selection-start-line="448" selection-end-line="448" />
               <folding>
                 <element signature="e#16#25#0" expanded="true" />
               </folding>
@@ -47,11 +57,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arborescenceUpdate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="makePathFileFromRequests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arborescenceUpdate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arborescenceUpdate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            <state relative-caret-position="3740">
+              <caret line="224" selection-start-line="224" selection-end-line="224" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -62,19 +84,10 @@
       <file leaf-file-name="icsToJson.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icsToJson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4930">
-              <caret line="296" column="15" selection-start-line="296" selection-start-column="15" selection-end-line="296" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="makePathFileFromRequests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3451">
-              <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
+            <state relative-caret-position="4233">
+              <caret line="257" selection-start-line="257" selection-end-line="257" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,8 +105,8 @@
       <file leaf-file-name="requests.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requests.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="17">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -101,8 +114,8 @@
       <file leaf-file-name="arboADE_corrected.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arboADE_corrected.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -122,6 +135,7 @@
       <find>print</find>
       <find>List</find>
       <find>open</find>
+      <find>icsTo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,17 +158,18 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$PROJECT_DIR$/requests.txt" />
         <option value="$PROJECT_DIR$/log.txt" />
-        <option value="$PROJECT_DIR$/makePathFileFromRequests.py" />
-        <option value="$PROJECT_DIR$/icsToJson.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
-        <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/arborescenceUpdate.py" />
+        <option value="$PROJECT_DIR$/testPythonEncodage.py" />
+        <option value="$PROJECT_DIR$/makePathFileFromRequests.py" />
+        <option value="$PROJECT_DIR$/icsToJson.py" />
+        <option value="$PROJECT_DIR$/database.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="443" />
     <option name="y" value="-8" />
     <option name="width" value="960" />
@@ -210,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.arborescenceUpdate">
+  <component name="RunManager" selected="Python.icsToJson">
     <configuration name="arborescenceUpdate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AHK_Scraper_ADE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -224,24 +239,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/arborescenceUpdate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AHK_Scraper_ADE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,7 +262,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="makePathFileFromRequests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AHK_Scraper_ADE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,11 +270,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/makePathFileFromRequests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -296,6 +293,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="testPythonEncodage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AHK_Scraper_ADE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPythonEncodage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,19 +336,19 @@
       <method />
     </configuration>
     <list>
-      <item itemvalue="Python.database" />
-      <item itemvalue="Python.icsToJson" />
-      <item itemvalue="Python.scratch_3" />
       <item itemvalue="Python.scratch_4" />
       <item itemvalue="Python.arborescenceUpdate" />
+      <item itemvalue="Python.testPythonEncodage" />
+      <item itemvalue="Python.makePathFileFromRequests" />
+      <item itemvalue="Python.icsToJson" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.icsToJson" />
+        <item itemvalue="Python.makePathFileFromRequests" />
+        <item itemvalue="Python.testPythonEncodage" />
         <item itemvalue="Python.arborescenceUpdate" />
         <item itemvalue="Python.scratch_4" />
-        <item itemvalue="Python.database" />
-        <item itemvalue="Python.scratch_3" />
-        <item itemvalue="Python.icsToJson" />
       </list>
     </recent_temporary>
   </component>
@@ -360,10 +375,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19863014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13645943" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32985386" />
@@ -503,20 +517,6 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="105" selection-start-line="59" selection-start-column="105" selection-end-line="59" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="66" lean-forward="true" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
         </state>
@@ -640,13 +640,6 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Python36/Lib/pathlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="1244" column="12" lean-forward="true" selection-start-line="1244" selection-start-column="12" selection-end-line="1244" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Python36/Lib/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -733,20 +726,6 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icsToJson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4930">
-          <caret line="296" column="15" selection-start-line="296" selection-start-column="15" selection-end-line="296" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-645839530/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="3649" lean-forward="true" selection-start-line="3649" selection-end-line="3649" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Python36/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -754,44 +733,7 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requests.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arboADE_corrected.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arbo_ADE[2].txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/arbo_ADE[2].txt" />
     <entry file="file://$PROJECT_DIR$/path.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -803,16 +745,6 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3451">
-          <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,12 +769,85 @@ a = &quot;1er CYCLE---00R---Zone nord&quot;.replace(REPLACEMENTS['/'], &quot;$%$
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arborescenceUpdate.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-645839530/sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="-1212">
+          <caret line="552" selection-start-line="552" selection-end-line="552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testPythonEncodage.py" />
+    <entry file="file://$PROJECT_DIR$/arboADE_corrected.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requests.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makePathFileFromRequests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arborescenceUpdate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3740">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-645839530/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="517" column="4" selection-start-line="517" selection-start-column="4" selection-end-line="517" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icsToJson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Python36/Lib/pathlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="1189" column="8" selection-start-line="1189" selection-start-column="8" selection-end-line="1189" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="448" lean-forward="true" selection-start-line="448" selection-end-line="448" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

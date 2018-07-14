@@ -15,7 +15,7 @@ UPDATE_FILE = "updateLog.txt"
 REQUESTS_FILE = "requests.txt"
 EDT_DIR = Path("EdTOut/")
 DATABASE_DIR = Path("Database/")
-BACKUP_DIR = Path("Database/$Backups") # TODO
+BACKUP_DIR = Path("Database/$Backups")  # TODO
 
 IS_IN_TERMINAL = sys.stdout.isatty()
 
@@ -39,7 +39,7 @@ summary = {}
 
 updates = []
 
-updatesOutput : str
+updatesOutput: str
 
 REMOVE_ICS_FILES = True
 
@@ -48,15 +48,7 @@ REMOVE_ICS_FILES = True
 def updateDatabase():
     # on met à jour la database avec les fichiers **.json dans EdTOut/
 
-    # récupération des requests
-    with open(REQUESTS_FILE, "r") as requestsFile:
-        requests = requestsFile.readlines()
-
-    # suppression des fins de lignes '\n' et du '/' au début de chaque requête
-    requests = [req[(1 if req.startswith('/') else 0):(-1 if req.endswith('\n') else len(req))] for req in requests]
-
-    # ordonnation des requêtes pour quelles correpondent à l'ordre de 'edtList'
-    requests = orderRequests(requests)
+    requests = loadRequests()
 
     # remplacement de tous les caratères interdits pour les dossiers et fichiers
     for i, request in enumerate(requests):
@@ -64,8 +56,10 @@ def updateDatabase():
 
     log("updateDatabase", "Requests: " + str(requests))
 
-    # liste de tous les fichiers à mettre à jour
-    edtList = sorted(EDT_DIR.glob("*.json"))
+    # liste de tous les fichiers à mettre à jour, dans l'ordre croissant de leur nom de fichier (qui est un numéro)
+    edtList = sorted(EDT_DIR.glob("*.json"), key=lambda item: int(item.stem))
+
+    log("updateDatabase", "Files: " + str(list(edtList)))
 
     if len(edtList) != len(requests):
         log("updateDatabase", "Different number of requests and EdT! {} != {}".format(len(requests), len(edtList)), True)
@@ -80,7 +74,7 @@ def updateDatabase():
 
         # ouverture du fichier à déplacer pour obtenir les infos stockées dans le dernier élément de la liste json
         with edtFile.open("r", encoding="UTF-8") as edt:
-            edt_info = json.load(edt)[-1]  # type:dict
+            edt_info = json.load(edt)[0]  # type:dict
 
         if not req_path.exists():
             # création du dossier parent
@@ -118,14 +112,35 @@ def updateDatabase():
 
                 last_update = edt_info_prev["last_update"]
 
+        updateLog(request, last_update, edt_info["file_sum"])
 
-        updateLog(request, last_update)
-        updateSummary(request, checksum=edt_info["file_sum"], trueName=edt_info["source_file"])
+        # on regarde si l'emploi du temps est vide avant de mettre à jour le summary
+        empty = False
+        if (edtFile.stat().st_size) < 1000:
+            # il se peut que se soit un EdT vide, on l'ouvre pour vérifier
+
+            firstWeek: dict = json.loads(edtFile.read_text(encoding="UTF-8"))[1]
+            if "empty" in firstWeek and firstWeek["empty"] == "true":
+                # le fichier est vide
+                empty = True
+
+        updateSummary(request, checksum=edt_info["file_sum"], trueName=edt_info["source_file"], isEmpty=empty)
 
         edtFile.replace(req_file_path)  # déplacement du fichier vers la database
 
     log("updateDatabase", "Done.")
 
+def loadRequests() -> list:
+    # récupération des requests
+    with open(REQUESTS_FILE, "r") as requestsFile:
+        requests = requestsFile.readlines()
+
+    # suppression des fins de lignes '\n' et du '/' au début de chaque requête
+    requests = [req[(1 if req.startswith('/') else 0):(-1 if req.endswith('\n') else len(req))] for req in requests]
+
+    # ordonnation des requêtes pour quelles correpondent à l'ordre de 'edtList'
+    return orderRequests(requests)
+# TODO : fusionner les 2
 def orderRequests(requests: list) -> list:
     req_order = []
     with open("path.txt", "r", encoding="UTF-8") as pathFile:
@@ -142,8 +157,6 @@ def orderRequests(requests: list) -> list:
                 #log("orderRequests", "'{}' matched with '{}'".format(request, target_file))
                 ordered_requests.append(request)
                 break
-
-    #log("orderRequests", "Final ordered requests: " + str(ordered_requests))
 
     return ordered_requests
 
@@ -179,7 +192,7 @@ def verifyDatabase():
     database_errors = 0
     gen_summary = iterateThroughSummary(summary, outputFileInfo=True)
     gen_database = iterateThroughDatabase()
-    for entry_summary, entry_database in zip(gen_summary, gen_database):
+    for entry_summary, entry_database in zip(gen_summary, gen_database): #type:dict, dict
         if type(entry_summary) is dict:
             if entry_database["file_sum"] != entry_summary["file_sum"]:
                 log("verifyDatabase", "Le checksum de la database et du summary sont différents pour '{}' ('{}')"
@@ -252,7 +265,8 @@ def getUpdates():
 def makeRandRequests(nb:int):
     from random import randint
 
-    with open(REQUESTS_FILE, mode="w", encoding="UTF-8") as requestFile, open(DATABASE_DIR / ARBORESCENCE_FILE, mode="r", encoding="UTF-8", buffering=1) as arbo:
+    with open(REQUESTS_FILE, mode="w", encoding="UTF-8") as requestFile,\
+        open(DATABASE_DIR / ARBORESCENCE_FILE, mode="r", encoding="UTF-8", buffering=1) as arbo:
 
         while nb > 0:
             nb -= 1
@@ -311,7 +325,7 @@ def makeRandRequests(nb:int):
                         nb += 1 # pour compenser et bien obtenir à la fin le nombre voulu de requests
                         break
                     else:
-                        raise EOFError("Reached EOF while parsing " + ARBORESCENCE_FILE + " - Folder : " + req_str + " - indent: " + str(indent) + " - nbOfLinesInFolder: " + str(nbOfLinesInFolder) + " - choice: " + str(choice) + " - prevChoice" + str(prevChoice))
+                        raise EOFError("Reached EOF while parsing " + ARBORESCENCE_FILE + " - Folder : " + req_str + " - indent: " + str(indent) + " - nbOfLinesInFolder: " + str(nbOfLinesInFolder) + " - choice: " + str(choice))
 
 
                 line = line[getIndentOfLine(line) * 4:-1] # on supprimme la fin de ligne en plus de l'indentation
@@ -382,7 +396,7 @@ def iterateThroughDatabase(start = DATABASE_DIR) -> str or dict:
             yield str(obj.stem) # juste le nom du fichier, sans l'extension
 
             with open(obj, "r", buffering=1, encoding="UTF-8") as file:
-                yield json.load(file)[-1] # output file info, toujours à la fin du fichier
+                yield json.load(file)[0] # output file info, toujours au début du fichier
 
 def iterateThroughSummary(summaryPart : dict, outputFileInfo = False, outputDeepness = -1) -> str or dict:
     if outputDeepness >= 0:
@@ -424,12 +438,13 @@ def gotoNextFolder(file, indent : int) -> str or bool:
     return line
 
 
-def updateLog(path: str, prev_update: str):
+def updateLog(path: str, prev_update: str, checksum: str):
     entry = {
         "path": path,
         "prev_update": prev_update,
         "update": getTime(),
-        "true_name": storageNameToName(path, True)
+        "true_name": storageNameToName(path[path.rindex('/') + 1:], False),
+        "checksum": checksum
     }
 
     updates.append(entry)
@@ -454,7 +469,7 @@ def getFromSummary(path: str) -> dict:
     return get
 
 
-def updateSummary(path: str, isFile = True, checksum = None, trueName = None):
+def updateSummary(path: str, isFile = True, checksum = None, trueName = None, isEmpty = False):
     folders = path.split('/')
 
     if isFile:
@@ -468,6 +483,7 @@ def updateSummary(path: str, isFile = True, checksum = None, trueName = None):
         update = {folders[-1]: {
             "file_sum": checksum,
             "true_name": trueName,
+            "empty": isEmpty,
             "last_update": getTime()
         }}
 
