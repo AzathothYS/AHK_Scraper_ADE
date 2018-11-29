@@ -7,8 +7,20 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Lancer le programme",
+            "name": "main old",
             "program": "${workspaceFolder}/main.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "main new",
+            "program": "${workspaceFolder}/main_reworked.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "test",
+            "program": "${workspaceFolder}/utils.js"
         }
     ]
 }

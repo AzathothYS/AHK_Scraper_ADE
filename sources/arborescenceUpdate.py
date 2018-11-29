@@ -10,6 +10,7 @@ TEMP_FILE = Path("temp")
 
 IS_IN_TERMINAL = sys.stdout.isatty()
 
+# TODO : revoir
 
 def patchArborescence(patchFilePath:str, arboFilePath:str, pathFilePath:str):
     with open(arboFilePath, mode="r+", buffering=1, encoding="UTF-8") as arboFile:

@@ -5847,3 +5847,535 @@ database failed!
 2018-07-13 22:31:02	- SERVER:	root:	INFO  - Server Done.
 2018-07-14 16:04:08	- SERVER:	updateIndex:	INFO  - Updating index for file at  Etudiants/IPAG/M2 MFTAP
 2018-07-14 16:04:13	- SERVER:	root:	INFO  - Index update successful for file at  Etudiants/IPAG/M2 MFTAP
+2018-11-21 21:32:14	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:32:14	- SERVER:	handleClientsRequests:	INFO - Handling clients requests...
+2018-11-21 21:32:25	- SERVER:	root:	INFO - Getting requests...
+2018-11-21 21:32:25	- SERVER:	root:	INFO - 1 requests to handle.
+2018-11-21 21:32:25	- SERVER:	root:	INFO - Wrote requests from firebase to 'requests.txt'.
+2018-11-21 21:32:25	- SERVER:	root:	INFO - Server Done.
+2018-11-21 21:44:24	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:44:24	- SERVER:	root:	INFO - Server Done.
+2018-11-21 21:44:34	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:44:35	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:45:46	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:45:46	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:46:23	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:46:23	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:49:10	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:49:10	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:49:18	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:49:18	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:49:27	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:49:27	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 21:59:37	- SERVER:	main:	INFO - Server Start.
+2018-11-21 21:59:37	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:00:33	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:00:33	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:00:33	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:00:33	- SERVER:	root:	INFO - non
+2018-11-21 22:01:44	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:01:44	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:01:44	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:01:44	- SERVER:	root:	INFO - yolo
+2018-11-21 22:03:25	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:03:25	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:04:04	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:05:18	- SERVER:	root:	INFO - yolo
+2018-11-21 22:12:06	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:12:06	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:12:13	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:12:14	- SERVER:	root:	INFO - yolo
+2018-11-21 22:14:05	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:14:05	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:14:07	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:14:07	- SERVER:	root:	INFO - yolo
+2018-11-21 22:14:51	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:14:51	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:14:51	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:14:51	- SERVER:	root:	INFO - yolo
+2018-11-21 22:16:38	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:16:38	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:16:38	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:16:38	- SERVER:	root:	INFO - yolo
+2018-11-21 22:23:52	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:23:52	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:23:52	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:23:53	- SERVER:	root:	INFO - yolo
+2018-11-21 22:24:44	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:24:44	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:24:44	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:24:44	- SERVER:	root:	INFO - yolo
+2018-11-21 22:26:46	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:26:46	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:26:46	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:26:46	- SERVER:	root:	INFO - yolo
+2018-11-21 22:29:08	- SERVER:	main:	INFO - Server Start.
+2018-11-21 22:29:09	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-21 22:29:09	- SERVER:	handleDatabaseRequests:	INFO - oui
+2018-11-21 22:29:09	- SERVER:	root:	INFO - yolo
+2018-11-21 22:29:09	- SERVER:	root:	INFO - Got updates from requests.
+2018-11-21 22:29:09	- SERVER:	root:	INFO - Server Done.
+2018-11-21 22:29:09	- SERVER:	root:	INFO - stdout:OK
+2018-11-21 22:29:09	- SERVER:	root:	INFO - stderr:
+2018-11-22 19:00:28	- SERVER:	main:	INFO - Server Start.
+2018-11-22 19:00:28	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-22 19:00:29	- SERVER:	root:	ERROR - exec error: {
+  "killed": false,
+  "code": 1,
+  "signal": null,
+  "cmd": "python \"C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py\" -getUpdates"
+}
+2018-11-22 19:00:29	- SERVER:	root:	ERROR - stdout of makePathFileFromRequests is nothing that I can understand! 
+2018-11-22 19:00:30	- SERVER:	root:	ERROR - Server failed! Error:undefined
+2018-11-22 19:02:35	- SERVER:	main:	INFO - Server Start.
+2018-11-22 19:02:35	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates...
+2018-11-22 19:02:35	- SERVER:	root:	ERROR - exec error: {
+  "killed": false,
+  "code": 1,
+  "signal": null,
+  "cmd": "python \"C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py\" -getUpdates"
+}
+2018-11-22 19:02:35	- SERVER:	root:	ERROR - Server failed! Error:undefined
+2018-11-22 19:06:33	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 19:06:33	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates... 
+2018-11-22 19:06:34	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: python "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py" -getUpdates
+Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 12, in <module>
+    log: function
+NameError: name 'function' is not defined
+' 
+2018-11-22 19:06:34	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 19:13:59	- database:	root:	INFO  - Started.
+2018-11-22 19:13:59	- database:	root:	INFO  - Finished.
+2018-11-22 19:14:16	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 19:14:16	- SERVER:	handleDatabaseRequests:	INFO - Getting database updates... 
+2018-11-22 19:14:17	- database:	root:	INFO  - Started.
+2018-11-22 19:14:17	- database:	parse_args:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-getUpdates']
+2018-11-22 19:14:17	- database:	get_updates:	INFO  - Got 0 files to update.
+2018-11-22 19:14:17	- database:	get_updates:	INFO  - Outputted to requests.txt
+2018-11-22 19:14:17	- database:	root:	INFO  - Finished.
+2018-11-22 19:14:17	- SERVER:	root:	INFO - Got updates from requests. 
+2018-11-22 19:14:17	- SERVER:	root:	INFO - Server Done. 
+2018-11-22 19:59:12	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 19:59:12	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 19:59:12	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: python "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestParser.py" requests.txt
+python: can't open file 'C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestParser.py': [Errno 2] No such file or directory
+' code:  '2' 
+2018-11-22 19:59:12	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 20:00:55	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 20:00:55	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 20:00:55	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: python "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py" requests.txt
+' code:  '5' 
+2018-11-22 20:00:56	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 20:01:35	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 20:01:35	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 20:01:35	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: python "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py" requests.txt
+' code:  '4294967295' 
+2018-11-22 20:01:35	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 20:05:22	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 20:05:22	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 20:05:23	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: python "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py" requests.txt
+' code:  '42' 
+2018-11-22 20:05:23	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 21:46:42	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 21:46:42	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 21:46:42	- SERVER:	root:	ERROR - Unable to parse requests. 
+2018-11-22 21:46:42	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 21:47:42	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 21:47:42	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 21:47:43	- SERVER:	root:	ERROR - Unable to parse requests. 
+2018-11-22 21:47:43	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 21:49:00	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 21:49:00	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 21:49:01	- SERVER:	root:	ERROR - Unable to parse requests. 
+2018-11-22 21:49:01	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-22 21:53:49	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 21:53:49	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 21:53:49	- SERVER:	root:	INFO - Parsed request. 
+2018-11-22 21:53:50	- SERVER:	root:	INFO - Server Done. 
+2018-11-22 22:08:18	- SERVER:	main:	INFO - Server Start. 
+2018-11-22 22:08:19	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-22 22:08:19	- SERVER:	root:	INFO - Parsed request. 
+2018-11-22 22:08:19	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 18:58:55	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 18:58:55	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 18:58:55	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+11/24/2018, 18:58:59 - MAIN: Launching Phantom... 
+11/24/2018, 18:59:00 - MAIN: Waiting for ADE... 
+11/24/2018, 18:59:00 - MAIN: Listening... 
+11/24/2018, 18:59:22 - MAIN: Received: POST / 
+11/24/2018, 18:59:22 - MAIN: |-> Body: {"timestamp":"WdG4DLY","sessionID":"2D27F55631DF5945ECFEA98161E4E637"} 
+11/24/2018, 18:59:23 - MAIN: Timestamp: WdG4DLY - SessionId: 2D27F55631DF5945ECFEA98161E4E637 
+11/24/2018, 18:59:23 - MAIN: ADE ready. 
+11/24/2018, 18:59:23 - MAIN: Getting urls of 2 files, from 2 months before to 2 after. 
+11/24/2018, 18:59:23 - MAIN: Encoding '1535752800000'  to base64... 
+11/24/2018, 18:59:24 - MAIN: '1535752800000'  as base64: WWSAAcA 
+11/24/2018, 18:59:24 - MAIN: Encoding '1546297200000'  to base64... 
+11/24/2018, 18:59:24 - MAIN: '1546297200000'  as base64: WgGfs2A 
+11/24/2018, 18:59:25 - MAIN: Error : 'ReferenceError: fileInfo is not defined' 
+11/24/2018, 18:59:25 - MAIN: Ending the connection... 
+2018-11-24 18:59:25	- SERVER:	root:	INFO - Done scraping. 
+2018-11-24 18:59:25	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 19:07:51	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 19:07:51	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 19:07:51	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 19:07:52	- SERVER:	root:	ERROR - exec error:  'Error: Command failed: node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/ADE_scraper.js" -urls urls_to_get.txt 2 2
+internal/modules/cjs/loader.js:550
+    throw err;
+    ^
+
+Error: Cannot find module 'moment'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:548:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:475:25)
+    at Module.require (internal/modules/cjs/loader.js:598:17)
+    at require (internal/modules/cjs/helpers.js:11:18)
+    at Object.<anonymous> (C:\Users\7\Documents\Travail\Univ\App Univ\AHK_Scraper_ADE\ADE_scraper.js:5:16)
+    at Module._compile (internal/modules/cjs/loader.js:654:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:665:10)
+    at Module.load (internal/modules/cjs/loader.js:566:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:506:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:498:3)
+' 
+2018-11-24 19:07:52	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 19:22:12	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 19:22:12	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 19:22:12	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE//UpdateServer/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 19:22:16	- SCRAPER:	launchPhantomServer: Launching Phantom... 
+2018-11-24 19:22:16	- SCRAPER:	root: Waiting for ADE... 
+2018-11-24 19:22:16	- SCRAPER:	root: Listening... 
+2018-11-24 19:23:16	- SCRAPER:	root: Error : Timeout for ADE load. 
+2018-11-24 19:23:16	- SCRAPER:	getUrls: Getting urls of 2 files, from 2 months before to 2 after. 
+2018-11-24 19:23:16	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1535752800000'  to base64... 
+2018-11-24 19:23:17	- SCRAPER:	root: '1535752800000'  as base64: WWSAAcA 
+2018-11-24 19:23:17	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1546297200000'  to base64... 
+2018-11-24 19:23:17	- SCRAPER:	root: '1546297200000'  as base64: WgGfs2A 
+2018-11-24 19:23:17	- SCRAPER:	sendRequestToADE: payload: 7|0|11|https://planning.univ-rennes1.fr/direct/gwtdirectplanning/|B641C6F64F3B566C49E23AD3CA9EA1FE|com.adesoft.gwt.core.client.rpc.CorePlanningServiceProxy|method9getGeneratedUrl|J|java.util.List|java.lang.String/2004016611|java.util.Date/3385151746|java.lang.Integer/3438268394|java.util.ArrayList/4159755760|ical|1|2|3|4|6|5|6|7|8|8|9|undefined|10|1|9|11903  Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI|11|8|WWSAAcA|8|WgGfs2A|9|2| 
+2018-11-24 19:23:18	- SCRAPER:	root: Impossible d'obtenir l'url pour 11903  Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI, réponse: //EX[2,1,["com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533","java.lang.NumberFormatException: Expected type \x27int\x27 but received a non-numerical value: 11903  Etudiants"],0,7] 
+2018-11-24 19:23:18	- SCRAPER:	root: Error : 'Error: Error Url for 11903  Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI' 
+2018-11-24 19:23:18	- SCRAPER:	endConnection: Ending the connection... 
+2018-11-24 19:23:19	- SCRAPER:	root: Error: 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 19:23:19	- SCRAPER:	root: Error : 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 19:23:19	- SERVER:	root:	INFO - Done scraping. 
+2018-11-24 19:23:19	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 19:44:32	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 19:44:32	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 19:44:32	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE//UpdateServer/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 19:44:33	- SCRAPER:	launchPhantomServer: Launching Phantom... 
+2018-11-24 19:44:33	- SCRAPER:	root: Waiting for ADE... 
+2018-11-24 19:44:33	- SCRAPER:	root: Listening... 
+2018-11-24 19:45:33	- SCRAPER:	root: Error : Timeout for ADE load. 
+2018-11-24 19:45:33	- SCRAPER:	getUrls: Getting urls of 2 files, from 2 months before to 2 after. 
+2018-11-24 19:45:33	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1535752800000'  to base64... 
+2018-11-24 19:45:34	- SCRAPER:	root: '1535752800000'  as base64: WWSAAcA 
+2018-11-24 19:45:34	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1546297200000'  to base64... 
+2018-11-24 19:45:34	- SCRAPER:	root: '1546297200000'  as base64: WgGfs2A 
+2018-11-24 19:45:34	- SCRAPER:	sendRequestToADE: payload: 7|0|11|https://planning.univ-rennes1.fr/direct/gwtdirectplanning/|B641C6F64F3B566C49E23AD3CA9EA1FE|com.adesoft.gwt.core.client.rpc.CorePlanningServiceProxy|method9getGeneratedUrl|J|java.util.List|java.lang.String/2004016611|java.util.Date/3385151746|java.lang.Integer/3438268394|java.util.ArrayList/4159755760|ical|1|2|3|4|6|5|6|7|8|8|9|undefined|10|1|9|11903|11|8|WWSAAcA|8|WgGfs2A|9|2| 
+2018-11-24 19:45:35	- SCRAPER:	root: Url pour 11903: 8241fc38732002149fc088ab5d12396fbd72d825015315fe78f9ccfd31e8991bec7f554d6ed7ba1bbad7b9bdf5b7bdb2b6e425f4064b0d24a3b3f4c7cc4cd75b8af069ff1fd12df9c54e500f9eb327528edd3cda7b61e593 
+2018-11-24 19:45:35	- SCRAPER:	getUrls: Empty line. 
+2018-11-24 19:45:35	- SCRAPER:	getUrls: Done getting urls of 2 files. 
+2018-11-24 19:45:35	- SCRAPER:	endConnection: Ending the connection... 
+2018-11-24 19:45:36	- SCRAPER:	root: Error: 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 19:45:36	- SCRAPER:	root: Error : 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 19:45:36	- SERVER:	root:	INFO - Done scraping. 
+2018-11-24 19:45:36	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 20:21:33	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 20:21:33	- SERVER:	transformRequests:	INFO - Transforming requests... 
+2018-11-24 20:21:33	- requestsParser:	root:	INFO  - Started.
+2018-11-24 20:21:33	- requestsParser:	parse_file:	INFO  - Successfully parsed all requests.
+2018-11-24 20:21:33	- requestsParser:	root:	INFO  - Finished.
+2018-11-24 20:21:33	- SERVER:	root:	INFO - Parsed request. 
+2018-11-24 20:21:33	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 20:25:40	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 20:25:40	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 20:25:40	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE//UpdateServer/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 20:25:41	- SCRAPER:	launchPhantomServer: Launching Phantom... 
+2018-11-24 20:25:41	- SCRAPER:	root: Waiting for ADE... 
+2018-11-24 20:25:41	- SCRAPER:	root: Listening... 
+2018-11-24 20:26:41	- SCRAPER:	root: Error : Timeout for ADE load. 
+2018-11-24 20:26:41	- SCRAPER:	getUrls: Getting urls of 2 files, from 2 months before to 2 after. 
+2018-11-24 20:26:41	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1535752800000'  to base64... 
+2018-11-24 20:26:41	- SCRAPER:	root: '1535752800000'  as base64: WWSAAcA 
+2018-11-24 20:26:41	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1546297200000'  to base64... 
+2018-11-24 20:26:41	- SCRAPER:	root: '1546297200000'  as base64: WgGfs2A 
+2018-11-24 20:26:41	- SCRAPER:	sendRequestToADE: payload: 7|0|11|https://planning.univ-rennes1.fr/direct/gwtdirectplanning/|B641C6F64F3B566C49E23AD3CA9EA1FE|com.adesoft.gwt.core.client.rpc.CorePlanningServiceProxy|method9getGeneratedUrl|J|java.util.List|java.lang.String/2004016611|java.util.Date/3385151746|java.lang.Integer/3438268394|java.util.ArrayList/4159755760|ical|1|2|3|4|6|5|6|7|8|8|9|undefined|10|1|9|11903|11|8|WWSAAcA|8|WgGfs2A|9|2| 
+2018-11-24 20:26:41	- SCRAPER:	root: Url pour 11903: 8241fc38732002149fc088ab5d12396fbd72d825015315fe78f9ccfd31e8991bec7f554d6ed7ba1bbad7b9bdf5b7bdb2b6e425f4064b0d24a3b3f4c7cc4cd75b8af069ff1fd12df9c54e500f9eb327528edd3cda7b61e593 
+2018-11-24 20:26:41	- SCRAPER:	getUrls: The url of the file 1_11903_7 doesn't match the usual syntax: 8241fc38732002149fc088ab5d12396fbd72d825015315fe78f9ccfd31e8991bec7f554d6ed7ba1bbad7b9bdf5b7bdb2b6e425f4064b0d24a3b3f4c7cc4cd75b8af069ff1fd12df9c54e500f9eb327528edd3cda7b61e593 
+2018-11-24 20:26:41	- SCRAPER:	getUrls: Empty line. 
+2018-11-24 20:26:41	- SCRAPER:	getUrls: Done getting urls of 2 files. 
+2018-11-24 20:26:41	- SCRAPER:	endConnection: Ending the connection... 
+2018-11-24 20:26:42	- SCRAPER:	root: Error: 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 20:26:42	- SCRAPER:	root: Error : 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 20:26:42	- SERVER:	root:	INFO - Done scraping. 
+2018-11-24 20:26:42	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 20:34:02	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 20:34:02	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 20:34:02	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE//UpdateServer/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 20:34:03	- SCRAPER:	launchPhantomServer: Launching Phantom... 
+2018-11-24 20:34:03	- SCRAPER:	root: Waiting for ADE... 
+2018-11-24 20:34:03	- SCRAPER:	root: Listening... 
+2018-11-24 20:35:03	- SCRAPER:	root: Error : Timeout for ADE load. 
+2018-11-24 20:35:03	- SCRAPER:	getUrls: Getting urls of 2 files, from 2 months before to 2 after. 
+2018-11-24 20:35:03	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1535752800000'  to base64... 
+2018-11-24 20:35:03	- SCRAPER:	root: '1535752800000'  as base64: WWSAAcA 
+2018-11-24 20:35:03	- SCRAPER:	dateToBase64WithoutJavaShitButJava: Encoding '1546297200000'  to base64... 
+2018-11-24 20:35:04	- SCRAPER:	root: '1546297200000'  as base64: WgGfs2A 
+2018-11-24 20:35:04	- SCRAPER:	sendRequestToADE: payload: 7|0|11|https://planning.univ-rennes1.fr/direct/gwtdirectplanning/|B641C6F64F3B566C49E23AD3CA9EA1FE|com.adesoft.gwt.core.client.rpc.CorePlanningServiceProxy|method9getGeneratedUrl|J|java.util.List|java.lang.String/2004016611|java.util.Date/3385151746|java.lang.Integer/3438268394|java.util.ArrayList/4159755760|ical|1|2|3|4|6|5|6|7|8|8|9|undefined|10|1|9|11903|11|8|WWSAAcA|8|WgGfs2A|9|2| 
+2018-11-24 20:35:04	- SCRAPER:	root: Url pour 11903: 8241fc38732002149fc088ab5d12396fbd72d825015315fe78f9ccfd31e8991bec7f554d6ed7ba1bbad7b9bdf5b7bdb2b6e425f4064b0d24a3b3f4c7cc4cd75b8af069ff1fd12df9c54e500f9eb327528edd3cda7b61e593 
+2018-11-24 20:35:04	- SCRAPER:	getUrls: Empty line. 
+2018-11-24 20:35:04	- SCRAPER:	getUrls: Done getting urls of 2 files. 
+2018-11-24 20:35:04	- SCRAPER:	endConnection: Ending the connection... 
+2018-11-24 20:35:05	- SCRAPER:	root: Error: 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 20:35:05	- SCRAPER:	root: Error : 'Error: connect ECONNREFUSED 127.0.0.1:4230' 
+2018-11-24 20:35:05	- SERVER:	root:	INFO - Done scraping. 
+2018-11-24 20:35:05	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 21:32:27	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:32:27	- SERVER:	runADEScraper:	INFO - Starting ADE Scraper... 
+2018-11-24 21:32:27	- SERVER:	runADEScraper:	INFO - Command:  node "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE//UpdateServer/ADE_scraper.js" -urls urls_to_get.txt 2 2 
+2018-11-24 21:32:28	- SCRAPER:	launchPhantomServer: Launching Phantom... 
+2018-11-24 21:32:28	- SCRAPER:	root: Waiting for ADE... 
+2018-11-24 21:32:28	- SCRAPER:	root: Listening... 
+2018-11-24 21:32:39	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:32:39	- SERVER:	processUrls:	INFO - Processing urls... 
+2018-11-24 21:32:40	- requestsParser:	root:	INFO  - Started.
+2018-11-24 21:32:40	- requestsParser:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 161, in <module>
+    parse_args()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 149, in parse_args
+    patch_urls_file(file)
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 80, in patch_urls_file
+    file_requests.write(file_cid + ' ' + url + ' ' + file_addresses[file_cid] + '\n')
+TypeError: must be str, not NoneType
+
+request parser failed!
+
+2018-11-24 21:32:40	- SERVER:	root:	ERROR - Unable to patch urls file. 
+2018-11-24 21:32:40	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:32:46	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:32:46	- SERVER:	processUrls:	INFO - Processing urls... 
+2018-11-24 21:32:46	- requestsParser:	root:	INFO  - Started.
+2018-11-24 21:32:46	- requestsParser:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 161, in <module>
+    parse_args()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 149, in parse_args
+    patch_urls_file(file)
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/requestsParser.py", line 80, in patch_urls_file
+    file_requests.write(file_cid + ' ' + url + ' ' + file_addresses[file_cid] + '\n')
+TypeError: must be str, not NoneType
+
+request parser failed!
+
+2018-11-24 21:32:46	- SERVER:	root:	ERROR - Unable to patch urls file. 
+2018-11-24 21:32:46	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:34:18	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:34:18	- SERVER:	processUrls:	INFO - Processing urls... 
+2018-11-24 21:34:18	- requestsParser:	root:	INFO  - Started.
+2018-11-24 21:34:18	- requestsParser:	root:	INFO  - Finished.
+2018-11-24 21:34:18	- SERVER:	root:	INFO - Patched urls file. 
+2018-11-24 21:34:18	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 21:36:25	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:36:25	- SERVER:	downloadFiles:	INFO - Downloading EdTs... 
+2018-11-24 21:36:25	- SCRAPER:	main: Creating the folder 'edt_out'... 
+2018-11-24 21:36:25	- SCRAPER:	dlFiles: Downloading 2 files... 
+2018-11-24 21:36:25	- SCRAPER:	dlFile: Downloading 1_11903_7... 
+2018-11-24 21:36:26	- SCRAPER:	dlFile: Saved 1_11903_7, in 367 ms 
+2018-11-24 21:36:26	- SCRAPER:	dlFiles: Empty line. 
+2018-11-24 21:36:26	- SCRAPER:	dlFiles: Done downloading 2 files. 
+2018-11-24 21:36:26	- SERVER:	root:	ERROR - Error occured when downloading EdTs. 
+2018-11-24 21:36:26	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:45:48	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:45:48	- SERVER:	downloadFiles:	INFO - Downloading EdTs... 
+2018-11-24 21:45:48	- SCRAPER:	dlFiles: Downloading 2 files... 
+2018-11-24 21:45:48	- SCRAPER:	dlFile: Downloading 11903... 
+2018-11-24 21:45:49	- SCRAPER:	dlFile: Saved 11903, in 489 ms 
+2018-11-24 21:45:49	- SCRAPER:	dlFiles: Empty line. 
+2018-11-24 21:45:49	- SCRAPER:	dlFiles: Done downloading 2 files. 
+2018-11-24 21:45:49	- SERVER:	root:	ERROR - Error occured when downloading EdTs. 
+2018-11-24 21:45:49	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:47:30	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:47:30	- SERVER:	downloadFiles:	INFO - Downloading EdTs... 
+2018-11-24 21:47:31	- SCRAPER:	dlFiles: Downloading 2 files... 
+2018-11-24 21:47:31	- SCRAPER:	dlFile: Downloading 11903... 
+2018-11-24 21:47:32	- SCRAPER:	dlFile: Saved 11903, in 564 ms 
+2018-11-24 21:47:32	- SCRAPER:	dlFiles: Empty line. 
+2018-11-24 21:47:32	- SCRAPER:	dlFiles: Done downloading 2 files. 
+2018-11-24 21:47:32	- SERVER:	root:	INFO - Done downloading EdTs. 
+2018-11-24 21:47:32	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 21:50:31	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:50:31	- SERVER:	processEdTs:	INFO - Processing EdTs... 
+2018-11-24 21:50:31	- icsToJson:	new_main:	INFO  - Started.
+2018-11-24 21:50:31	- icsToJson:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/icsToJson.py", line 319, in <module>
+    new_main()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/icsToJson.py", line 307, in new_main
+    address = requests[name]
+KeyError: '11903'
+
+2018-11-24 21:50:31	- icsToJson:	root:	ERROR - Conversion failed.
+
+2018-11-24 21:50:31	- SERVER:	root:	ERROR - icsToJson failed! 
+2018-11-24 21:50:31	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:53:42	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:53:42	- SERVER:	downloadFiles:	INFO - Downloading EdTs... 
+2018-11-24 21:53:43	- SCRAPER:	dlFiles: Downloading 2 files... 
+2018-11-24 21:53:43	- SCRAPER:	root: Error : 'TypeError: Cannot read property 'length' of undefined' 
+2018-11-24 21:53:43	- SERVER:	root:	ERROR - Error occured when downloading EdTs. 
+2018-11-24 21:53:43	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:54:12	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:54:12	- SERVER:	downloadFiles:	INFO - Downloading EdTs... 
+2018-11-24 21:54:13	- SCRAPER:	dlFiles: Downloading 2 files... 
+2018-11-24 21:54:13	- SCRAPER:	dlFile: Downloading 11903... 
+2018-11-24 21:54:13	- SCRAPER:	dlFile: Saved 11903 to 1_11903_7.ics , in 544 ms 
+2018-11-24 21:54:13	- SCRAPER:	dlFiles: Empty line. 
+2018-11-24 21:54:13	- SCRAPER:	dlFiles: Done downloading 2 files. 
+2018-11-24 21:54:13	- SERVER:	root:	INFO - Done downloading EdTs. 
+2018-11-24 21:54:13	- SERVER:	processEdTs:	INFO - Processing EdTs... 
+2018-11-24 21:54:13	- icsToJson:	new_main:	INFO  - Started.
+2018-11-24 21:54:13	- icsToJson:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/icsToJson.py", line 319, in <module>
+    new_main()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/icsToJson.py", line 307, in new_main
+    address = requests[name]
+KeyError: '11903'
+
+2018-11-24 21:54:13	- icsToJson:	root:	ERROR - Conversion failed.
+
+2018-11-24 21:54:13	- SERVER:	root:	ERROR - icsToJson failed! 
+2018-11-24 21:54:13	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 21:55:01	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 21:55:01	- SERVER:	processEdTs:	INFO - Processing EdTs... 
+2018-11-24 21:55:02	- icsToJson:	new_main:	INFO  - Started.
+2018-11-24 21:55:02	- icsToJson:	ics_to_json:	INFO  - Processing 1_11903_7.ics
+2018-11-24 21:55:02	- icsToJson:	ics_to_json:	INFO  - Done. Writing output file to C:\Users\7\Documents\Travail\Univ\App Univ\AHK_Scraper_ADE\edt_out/1_11903_7.json
+2018-11-24 21:55:02	- icsToJson:	ics_to_json:	ERROR - icsToJson
+2018-11-24 21:55:02	- icsToJson:	root:	INFO  - Finished.
+
+2018-11-24 21:55:02	- SERVER:	root:	INFO - Successfully processed EdTs. 
+2018-11-24 21:55:02	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 22:01:21	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:01:21	- SERVER:	updateLocalDatabase:	INFO - Updating local database... 
+2018-11-24 22:01:21	- database:	root:	INFO  - Started.
+2018-11-24 22:01:21	- database:	parse_args:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-update']
+2018-11-24 22:01:21	- database:	update_database:	INFO  - Requests: [('1_11903_7', 'Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI')]
+2018-11-24 22:01:21	- database:	update_database:	INFO  - Files: [WindowsPath('C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/edt_out/1_11903_7.json')]
+2018-11-24 22:01:21	- database:	update_summary:	INFO  - Updated 'Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI' of cid: 1_11903_7
+2018-11-24 22:01:21	- database:	update_database:	INFO  - Done.
+2018-11-24 22:01:21	- database:	save_update_log:	INFO  - Saved update log.
+2018-11-24 22:01:21	- database:	save_summary:	INFO  - Sucessfully saved new summary
+2018-11-24 22:01:21	- database:	remove_ics_files:	INFO  - Removed ics files.
+2018-11-24 22:01:21	- database:	clean_database:	INFO  - Cleaned the summary.
+2018-11-24 22:01:21	- database:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in <module>
+    parse_args()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 414, in parse_args
+    verify_database()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 124, in verify_database
+    arbo_cids.append(root + '_' + file_id + '_' + str(name.count('\t')))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+database failed!
+
+2018-11-24 22:01:21	- SERVER:	root:	ERROR - update of database failed! 
+2018-11-24 22:01:21	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 22:09:03	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:09:03	- SERVER:	updateLocalDatabase:	INFO - Updating local database... 
+2018-11-24 22:09:03	- database:	root:	INFO  - Started.
+2018-11-24 22:09:03	- database:	parse_args:	INFO  - Started with params: ['C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py', '-update']
+2018-11-24 22:09:03	- database:	update_database:	INFO  - Requests: [('1_11903_7', ' Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI')]
+2018-11-24 22:09:03	- database:	update_database:	INFO  - Files: [WindowsPath('C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/edt_out/1_11903_7.json')]
+2018-11-24 22:09:03	- database:	update_summary:	INFO  - Updated ' Etudiants|Beaulieu|SPM|L3 PHYSIQUE S5-S6|L3 PHYSIQUE- S5|_CMI' of cid: 1_11903_7
+2018-11-24 22:09:03	- database:	update_database:	INFO  - Done.
+2018-11-24 22:09:03	- database:	save_update_log:	INFO  - Saved update log.
+2018-11-24 22:09:03	- database:	save_summary:	INFO  - Sucessfully saved new summary
+2018-11-24 22:09:03	- database:	remove_ics_files:	INFO  - Removed ics files.
+2018-11-24 22:09:03	- database:	clean_database:	INFO  - Cleaned the summary.
+2018-11-24 22:09:03	- database:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 463, in <module>
+    parse_args()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 414, in parse_args
+    verify_database()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 139, in verify_database
+    if arbo_names[i] != address[-int(level)]:
+IndexError: list index out of range
+
+database failed!
+
+2018-11-24 22:09:03	- SERVER:	root:	ERROR - update of database failed! 
+2018-11-24 22:09:03	- SERVER:	root:	ERROR - Server failed! Error: 'undefined'
+2018-11-24 22:15:28	- database:	root:	INFO  - Started.
+2018-11-24 22:15:28	- database:	parse_args:	INFO  - Started with params: ['.\\database.py', '-verify']
+2018-11-24 22:15:28	- database:	root:	ERROR - Traceback (most recent call last):
+  File ".\database.py", line 463, in <module>
+    parse_args()
+  File ".\database.py", line 424, in parse_args
+    verify_database()
+  File ".\database.py", line 139, in verify_database
+    if arbo_names[i] != address[int(level)]:
+IndexError: list index out of range
+
+database failed!
+
+2018-11-24 22:16:12	- database:	root:	INFO  - Started.
+2018-11-24 22:16:12	- database:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 465, in <module>
+    verify_database()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 139, in verify_database
+    if arbo_names[i] != address[int(level)]:
+IndexError: list index out of range
+
+database failed!
+
+2018-11-24 22:16:32	- database:	root:	INFO  - Started.
+2018-11-24 22:16:32	- database:	root:	ERROR - Traceback (most recent call last):
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 465, in <module>
+    verify_database()
+  File "C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/database.py", line 139, in verify_database
+    if arbo_names[i] != address[int(level)]:
+IndexError: list index out of range
+
+database failed!
+
+2018-11-24 22:32:39	- database:	root:	INFO  - Started.
+2018-11-24 22:32:39	- database:	verify_database:	INFO  - Aucune erreur trouvée.
+2018-11-24 22:32:39	- database:	root:	INFO  - Finished.
+2018-11-24 22:38:47	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:38:47	- SERVER:	updateFirebase:	INFO - Reading update log... 
+2018-11-24 22:38:47	- SERVER:	updateFirebase:	INFO - Update log:  '[object Object]' 
+2018-11-24 22:38:47	- SERVER:	updateFirebase:	INFO - Updating '1_11903_7'... 
+2018-11-24 22:38:47	- SERVER:	updateFirebase:	ERROR - no such file or directory:  C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/Database/1_11903_7.json  - error:  'Error: ENOENT: no such file or directory, open 'C:\Users\7\Documents\Travail\Univ\App Univ\AHK_Scraper_ADE\Database\1_11903_7.json'' 
+2018-11-24 22:38:47	- SERVER:	root:	ERROR - Server failed! Error: No such file or directory: C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE/Database/1_11903_7.json 
+2018-11-24 22:39:45	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:39:45	- SERVER:	updateFirebase:	INFO - Reading update log... 
+2018-11-24 22:39:45	- SERVER:	updateFirebase:	INFO - Update log:  '[object Object]' 
+2018-11-24 22:39:45	- SERVER:	updateFirebase:	INFO - Updating '1_11903_7'... 
+2018-11-24 22:39:45	- SERVER:	uploadToFirebase:	INFO - Starting to update... 
+2018-11-24 22:39:56	- SERVER:	root:	ERROR - Server failed! Error: 'TypeError: Assignment to constant variable.' 
+2018-11-24 22:39:57	- SERVER:	root:	INFO - Successfully updated '1_11903_7' 
+2018-11-24 22:41:31	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:41:31	- SERVER:	updateFirebase:	INFO - Reading update log... 
+2018-11-24 22:41:31	- SERVER:	updateFirebase:	INFO - Update log:  '[object Object]' 
+2018-11-24 22:41:31	- SERVER:	updateFirebase:	INFO - Updating '1_11903_7'... 
+2018-11-24 22:41:31	- SERVER:	uploadToFirebase:	INFO - Starting to update... 
+2018-11-24 22:41:34	- SERVER:	root:	INFO - Successfully updated '1_11903_7' 
+2018-11-24 22:41:34	- SERVER:	root:	INFO - Update finished. 
+2018-11-24 22:41:34	- SERVER:	root:	INFO - Server Done. 
+2018-11-24 22:53:01	- SERVER:	main:	INFO - Server Start. 
+2018-11-24 22:53:01	- SERVER:	updateFirebase:	INFO - Reading update log... 
+2018-11-24 22:53:01	- SERVER:	updateFirebase:	INFO - Update log:  '[object Object]' 
+2018-11-24 22:53:01	- SERVER:	updateFirebase:	INFO - Updating '1_11903_7'... 
+2018-11-24 22:53:01	- SERVER:	uploadToFirebase:	INFO - Starting to update... 
+2018-11-24 22:53:03	- SERVER:	root:	INFO - Successfully updated '1_11903_7' 
+2018-11-24 22:53:03	- SERVER:	root:	INFO - Update finished. 
+2018-11-24 22:53:03	- SERVER:	root:	INFO - Server Done. 
+2018-11-25 11:56:13	- database:	root:	INFO  - Started.
+2018-11-25 11:56:13	- database:	root:	INFO  - Finished.
+2018-11-25 12:16:08	- database:	root:	INFO  - Started.
+2018-11-25 12:16:08	- database:	root:	INFO  - Finished.
+2018-11-25 12:16:46	- requestsParser:	root:	INFO  - Started.
+2018-11-25 12:16:46	- requestsParser:	root:	INFO  - Finished.
+2018-11-25 12:24:50	- database:	root:	INFO  - Started.
+2018-11-25 12:24:50	- database:	root:	INFO  - Finished.
+2018-11-25 14:24:34	- SERVER:	root:	INFO - oui 
+2018-11-25 17:30:59	- SERVER:	main:	INFO - Server Start. 
+2018-11-25 17:30:59	- SERVER:	clean:	INFO - Cleaning... 
+2018-11-25 17:30:59	- SERVER:	clean:	INFO - Deleting requests array elements... 
+2018-11-25 17:31:11	- SERVER:	root:	INFO - Server Done. 

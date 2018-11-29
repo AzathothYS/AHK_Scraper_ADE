@@ -1,0 +1,36 @@
+[Main]
+WORKING_DIR  = C:/Users/7/Documents/Travail/Univ/App Univ/AHK_Scraper_ADE
+LOG          = ${WORKING_DIR}/log.txt
+ERRORS_LOG   = ${WORKING_DIR}/errors.txt
+
+[Sources]
+SOURCES_DIR     = ${Main:WORKING_DIR}/sources
+DATABASE        = ${SOURCES_DIR}/database.py
+ICS_TO_JSON     = ${SOURCES_DIR}/icsToJson.py
+ARBO_UPDATER    = ${SOURCES_DIR}/arborescenceUpdate.py
+ARBO_ANALYSER   = ${SOURCES_DIR}/arbo_analyser.py
+ARBO_CLEANER    = ${SOURCES_DIR}/arbo_cleaner.py
+REQUESTS_PARSER = ${SOURCES_DIR}/requestsParser.py
+
+[Database]
+DATABASE_DIR = ${Main:WORKING_DIR}/database
+EDT_LIST     = ${DATABASE_DIR}/edt_list
+BACKUPS_DIR  = ${DATABASE_DIR}/Backups
+ARBORESCENCE = ${DATABASE_DIR}/arborescence.txt
+SUMMARY      = ${DATABASE_DIR}/summary.txt
+UPDATE_LOG   = ${DATABASE_DIR}/updateLog.txt
+URLS_LIST    = ${DATABASE_DIR}/files_urls.txt
+
+[Requests]
+REQUESTS      = ${Main:WORKING_DIR}/requests.txt
+FILE_REQUESTS = ${Main:WORKING_DIR}/files_to_dl.txt
+URL_REQUESTS  = ${Main:WORKING_DIR}/urls_to_get.txt
+EDT_OUT_DIR   = ${Main:WORKING_DIR}/edt_out
+ARBO_OUT      = &{Main:WORKING_DIR}/arbo_out.txt
+URLS_OUT      = &{Main:WORKING_DIR}/urls_out.txt
+
+[Server]
+SERVER_DIR     = ${Main:WORKING_DIR}/UpdateServer
+MAIN           = ${SERVER_DIR}/main_reworked.js
+ADE_SCRAPER    = ${SERVER_DIR}/ADE_scraper.js
+PHANTOM_SERVER = ${SERVER_DIR}/phantom_server.js
